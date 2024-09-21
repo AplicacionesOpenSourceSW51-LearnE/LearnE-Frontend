@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import {MatCard, MatCardModule} from "@angular/material/card";
 
 @Component({
   selector: 'app-payment',
   standalone: true,
-  imports: [],
+  imports: [
+    MatCardModule,
+  ],
   templateUrl: './payment.component.html',
   styleUrl: './payment.component.css'
 })
