@@ -7,11 +7,12 @@ import {RegisterComponent} from "./public/pages/register/register.component";
 import {PageNotFoundComponent} from "./public/pages/page-not-found/page-not-found.component";
 import {MatCardImage} from "@angular/material/card";
 import {NgOptimizedImage} from "@angular/common";
+import {MainToolbarComponent} from "./public/components/main-toolbar/main-toolbar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatToolbar, LandingPageComponent, NgOptimizedImage],
+  imports: [RouterOutlet, MatToolbar, LandingPageComponent, NgOptimizedImage, MainToolbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

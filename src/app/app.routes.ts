@@ -3,11 +3,13 @@ import {LandingPageComponent} from "./public/pages/landing-page/landing-page.com
 import {SignInComponent} from "./public/pages/sign-in/sign-in.component";
 import {RegisterComponent} from "./public/pages/register/register.component";
 import {PageNotFoundComponent} from "./public/pages/page-not-found/page-not-found.component";
+import {SuscriptionsComponent} from "./public/pages/subscriptions/suscriptions.component";
 
 export const routes: Routes = [
-  {path: 'home', component: LandingPageComponent},
-  {path: 'home/signIn', component: SignInComponent},
-  {path: 'home/register', component: RegisterComponent},
-  { path: '',                 redirectTo: 'home', pathMatch: 'full' },
-  { path: '**',               component: PageNotFoundComponent }
+  { path: 'home',               component: LandingPageComponent},
+  { path: 'signIn',        component: SignInComponent},
+  { path: 'register',      component: RegisterComponent},
+  { path: 'subscriptions',  component: SuscriptionsComponent},
+  { path: '',                   redirectTo: 'home', pathMatch: 'full' },
+  { path: '**',                 component: PageNotFoundComponent }
 ];
