@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 10px;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: white;
+  text-align: center;
+  color: #333;
+}
+
+header .logo img {
+  width: 100px;
+}
+
+.hero {
+  padding: 50px 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 2em;
+  color: #6200ea;
+}
+
+.hero h3{
+  font-family: Roboto, sans-serif;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin: 20px 0;
+  color: #555;
+}
+
+.primary {
+  background-color: #6200ea;
+  color: white;
+}
+
+.secondary {
+  background-color: white;
+  color: #6200ea;
+  border: 2px solid #6200ea;
+}
+
+.instituciones {
+  margin-top: 50px;
+}
+
+.instituciones h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.instituciones .logos img {
+  width: 100px;
+  margin: 10px;
+}
+
