@@ -7,11 +7,11 @@ import {SuscriptionsComponent} from "./public/pages/subscriptions/suscriptions.c
 import {PaymentComponent} from "./public/pages/payment/payment.component";
 
 export const routes: Routes = [
-  { path: 'home',               component: LandingPageComponent},
-  { path: 'signIn',        component: SignInComponent},
-  { path: 'register',      component: RegisterComponent},
+  { path: 'home',           component: LandingPageComponent},
+  { path: 'signIn',         component: SignInComponent},
+  { path: 'register',       component: RegisterComponent},
   { path: 'subscriptions',  component: SuscriptionsComponent},
-  { path: 'payment',  component: PaymentComponent},
-  { path: '',                   redirectTo: 'home', pathMatch: 'full' },
-  { path: '**',                 component: PageNotFoundComponent }
+  { path: 'payment',        component: PaymentComponent},
+  { path: '',               redirectTo: 'home', pathMatch: 'full' },
+  { path: '**',             component: PageNotFoundComponent }
 ];

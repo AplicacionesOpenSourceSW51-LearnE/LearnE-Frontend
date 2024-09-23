@@ -1,1 +1,34 @@
-<p>payment works!</p>
+<div class="payment-container">
+  <mat-card class="payment-card">
+    <mat-card-header>
+      <mat-card-title>Añadir Pago por Tarjeta</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="payment-form">
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre del Titular</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Número de la Tarjeta</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Fecha de Expiración (MM/AA)</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Código de Seguridad (CVC)</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Correo electrónico</mat-label>
+          <input matInput type="password">
+        </mat-form-field>
+        <div class="buttons">
+          <a mat-raised-button color="primary" routerLink="/subscriptions">Pagar</a>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
