@@ -11,7 +11,7 @@ body {
 }
 
 header .logo img {
-  width: 100px;
+  width: 90px;
 }
 
 .hero {
@@ -35,6 +35,11 @@ header .logo img {
   color: #555;
 }
 
+.hero a {
+  width: 200px;
+  height: 50px;
+}
+
 .primary {
   background-color: #6200ea;
   color: white;
@@ -47,7 +52,7 @@ header .logo img {
 }
 
 .instituciones {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .instituciones h3 {

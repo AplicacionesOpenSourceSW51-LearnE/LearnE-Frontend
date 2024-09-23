@@ -10,7 +10,7 @@
 
 .our-plans {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1000px;
 }
 
 .our-plans-container {
@@ -21,7 +21,7 @@
 
 .plans-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding: 20px;
 }
 
