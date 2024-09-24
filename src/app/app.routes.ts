@@ -8,10 +8,10 @@ import {PaymentComponent} from "./public/pages/payment/payment.component";
 
 export const routes: Routes = [
   { path: 'home',           component: LandingPageComponent},
-  { path: 'signIn',         component: SignInComponent},
-  { path: 'register',       component: RegisterComponent},
-  { path: 'subscriptions',  component: SuscriptionsComponent},
-  { path: 'payment',        component: PaymentComponent},
+  { path: 'home/signIn',         component: SignInComponent},
+  { path: 'home/register',       component: RegisterComponent},
+  { path: 'home/subscriptions',  component: SuscriptionsComponent},
+  { path: 'home/payment',        component: PaymentComponent},
   { path: '',               redirectTo: 'home', pathMatch: 'full' },
   { path: '**',             component: PageNotFoundComponent }
 ];
