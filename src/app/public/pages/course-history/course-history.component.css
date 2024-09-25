@@ -1,0 +1,11 @@
+.course-history-container {
+  padding: 20px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-list-item {
+  margin-bottom: 10px;
+}
