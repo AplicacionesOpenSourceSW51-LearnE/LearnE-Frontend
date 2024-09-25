@@ -8,11 +8,12 @@ import {SuscriptionsComponent} from "./public/pages/subscriptions/suscriptions.c
 import {AllPlansComponent} from "./public/pages/all-plans/all-plans.component";
 import {CardPaymentComponent} from "./public/pages/card-payment/card-payment.component";
 import {PaymentSuccesfulComponent} from "./public/pages/payment-succesful/payment-succesful.component";
+import {ExamComponent} from "./public/pages/exam/exam.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatToolbar, LandingPageComponent, NgOptimizedImage, MainToolbarComponent, SuscriptionsComponent, AllPlansComponent, CardPaymentComponent, PaymentSuccesfulComponent],
+  imports: [RouterOutlet, MatToolbar, LandingPageComponent, NgOptimizedImage, MainToolbarComponent, SuscriptionsComponent, AllPlansComponent, CardPaymentComponent, PaymentSuccesfulComponent, ExamComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
