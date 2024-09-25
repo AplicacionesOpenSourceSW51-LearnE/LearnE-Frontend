@@ -1,0 +1,41 @@
+.plan-container {
+  border-radius: 30px;
+  font-size: 1em;
+  background-color: #F1F1F1;
+  width: 20vw;
+  text-align: center;
+}
+
+.plan-right {
+  margin-left: 2vw;
+}
+
+.plan-left {
+  margin-right: 2vw;
+}
+
+.title-container {
+  font-size: 3em;
+  margin-top: 3vw;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.plans-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5vw;
+}
+
+.button {
+  background-color: #9600CD;
+  padding: 0.7vw;
+  width: 10vw;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  justify-content: center;
+  margin: 1vw auto;
+}
