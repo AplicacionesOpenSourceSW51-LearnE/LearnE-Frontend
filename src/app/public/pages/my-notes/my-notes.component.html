@@ -1,0 +1,17 @@
+<div class="my-notes-container">
+  <h2>Cursos y organizaciones actuales</h2>
+  <mat-card *ngFor="let course of courses" class="note-card">
+    <mat-card-header>
+      <mat-card-title>{{ course.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let unit of course.units">
+          <mat-icon mat-list-icon>description</mat-icon>
+          <div mat-line>{{ unit.name }}</div>
+          <div mat-line class="score">{{ unit.score}}/{{ unit.totalScore}}</div>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,13 @@
+.courses-container {
+  padding: 20px;
+}
+
+.course-card {
+  margin-bottom: 20px;
+}
+
+.score {
+  text-align: right;
+  color: #673ab7;
+  font-weight: bold;
+}
