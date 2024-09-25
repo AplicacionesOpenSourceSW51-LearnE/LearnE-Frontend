@@ -18,3 +18,8 @@
 .options-list p {
   color: white;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+}
