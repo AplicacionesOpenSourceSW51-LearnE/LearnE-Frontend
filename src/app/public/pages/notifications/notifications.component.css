@@ -1,0 +1,18 @@
+.notifications-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+mat-card {
+  margin-bottom: 20px;
+}
+
+mat-list-item {
+  background-color: #e0e0e0;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+mat-icon {
+  color: #673ab7;
+}
