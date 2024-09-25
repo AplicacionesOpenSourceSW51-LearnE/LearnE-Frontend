@@ -9,11 +9,13 @@ import {AllPlansComponent} from "./public/pages/all-plans/all-plans.component";
 import {CardPaymentComponent} from "./public/pages/card-payment/card-payment.component";
 import {PaymentSuccesfulComponent} from "./public/pages/payment-succesful/payment-succesful.component";
 import {ExamComponent} from "./public/pages/exam/exam.component";
+import {MainPageComponent} from "./public/pages/main-page/main-page.component";
+import {CourseRegistrationComponent} from "./public/pages/course-registration/course-registration.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatToolbar, LandingPageComponent, NgOptimizedImage, MainToolbarComponent, SuscriptionsComponent, AllPlansComponent, CardPaymentComponent, PaymentSuccesfulComponent, ExamComponent],
+  imports: [RouterOutlet, MatToolbar, LandingPageComponent, NgOptimizedImage, MainToolbarComponent, SuscriptionsComponent, AllPlansComponent, CardPaymentComponent, PaymentSuccesfulComponent, ExamComponent, MainPageComponent, CourseRegistrationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
