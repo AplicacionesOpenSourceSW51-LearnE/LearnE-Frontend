@@ -8,7 +8,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatInputModule } from "@angular/material/input";
 import { MatListItem, MatListModule, MatNavList } from "@angular/material/list";
 import { MatIcon, MatIconModule } from "@angular/material/icon";
-import { RouterOutlet } from "@angular/router";
+import {RouterLink, RouterOutlet} from "@angular/router";
 
 @Component({
   selector: 'app-main-page',
@@ -29,6 +29,7 @@ import { RouterOutlet } from "@angular/router";
     MatIcon,
     MatIconModule,
     RouterOutlet,
+    RouterLink,
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css'
