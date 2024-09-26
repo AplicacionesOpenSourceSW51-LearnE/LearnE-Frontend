@@ -20,12 +20,10 @@ import {Router} from "@angular/router";
   styleUrl: './my-courses.component.css'
 })
 export class MyCoursesComponent implements OnInit{
-  protected courseData!: Course;
   private courseService: CourseService = inject(CourseService);
   protected dataSource!: Array<any>;
 
   constructor(private router: Router) {
-    this.courseData = new Course({});
     this.dataSource = [];
   }
 
@@ -40,7 +38,8 @@ export class MyCoursesComponent implements OnInit{
     })
   }
 
-  goToCourseSideNav(): void {
+  goToCourseSideNav(course: Course): void {
+    this.courseService.setSelectedCourse(course);
     this.router.navigate(['/mainPage/courseSidenav']);
   }
 }

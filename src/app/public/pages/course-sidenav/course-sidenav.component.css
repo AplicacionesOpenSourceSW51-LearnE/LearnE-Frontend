@@ -1,12 +1,12 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  height: 100vh;
 }
 
 .sidenav-container {
   display: flex;
-  height: 100%; /* Asegura que el sidenav y el contenido ocupen el 100% de la altura */
+  height: 100%;
 }
 
 .header {
@@ -22,13 +22,14 @@
 
 .mat-sidenav {
   height: 100%;
+  width: 25%;
 }
 
 .mat-nav-list {
   height: 100%;
-  overflow: auto; /* Permite el scroll si el contenido es más largo que la pantalla */
+  overflow: auto;
 }
 
 .nested {
-  padding-left: 20px; /* Indentación para las secciones anidadas */
+  padding-left: 20px;
 }

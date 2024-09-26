@@ -1,6 +1,6 @@
 <div class="container">
   <div class="header">
-    <span>Introducción a Python</span>
+    <span class="selectedCourse">{{ selectedCourse?.title }}</span>
     <span class="spacer"></span>
     <button mat-button>Deja una calificación</button>
     <button mat-button>Tu progreso</button>
@@ -9,42 +9,29 @@
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav mode="side" opened position="end">
       <mat-nav-list>
-        <mat-list-item (click)="toggleUnit('unidad1')">
-          Unidad 1: Introducción 1
-        </mat-list-item>
-        <mat-list-item *ngIf="isUnitOpen('unidad1')" class="nested">
-          Sección 1.1
-        </mat-list-item>
-        <mat-list-item *ngIf="isUnitOpen('unidad1')" class="nested">
-          Sección 1.2
-        </mat-list-item>
-        <mat-list-item (click)="toggleUnit('unidad2')">
-          Unidad 2: Introducción 2
-        </mat-list-item>
-        <mat-list-item *ngIf="isUnitOpen('unidad2')" class="nested">
-          Sección 2.1
-        </mat-list-item>
-        <mat-list-item *ngIf="isUnitOpen('unidad2')" class="nested">
-          Sección 2.2
-        </mat-list-item>
-        <mat-list-item (click)="toggleUnit('unidad3')">
-          Unidad 3: Introducción 3
-        </mat-list-item>
-        <mat-list-item *ngIf="isUnitOpen('unidad3')" class="nested">
-          Sección 3.1
-        </mat-list-item>
-        <mat-list-item *ngIf="isUnitOpen('unidad3')" class="nested">
-          Sección 3.2
-        </mat-list-item>
-        <mat-list-item (click)="toggleUnit('unidad4')">
-          Unidad 4: Introducción 4
-        </mat-list-item>
-        <mat-list-item *ngIf="isUnitOpen('unidad4')" class="nested">
-          Sección 4.1
-        </mat-list-item>
-        <mat-list-item *ngIf="isUnitOpen('unidad4')" class="nested">
-          Sección 4.2
-        </mat-list-item>
+        <div *ngFor="let unit of selectedCourse?.units">
+          <mat-list-item (click)="toggleUnit(unit.id)">
+            <span>Unit</span>
+            <span>&nbsp;</span>
+            <span>{{ unit.id }}:</span>
+            {{ unit.title }}
+          </mat-list-item>
+          <div *ngIf="isUnitOpen(unit.id)" class="nested">
+            <div *ngFor="let section of unit.sections">
+              <mat-list-item [routerLink]="['/mainPage/courseSidenav/courseVideo']" [queryParams]="{ id: section.id }">
+                <span>Section</span>
+                <span>&nbsp;</span>
+                <span>{{ section.id }}:</span>
+                {{ section.title }}
+              </mat-list-item>
+            </div>
+            <div *ngFor="let exam of unit.exams">
+              <mat-list-item>
+                Exam {{exam.id}}: {{ exam.title }}
+              </mat-list-item>
+            </div>
+          </div>
+        </div>
       </mat-nav-list>
     </mat-sidenav>
   </mat-sidenav-container>
