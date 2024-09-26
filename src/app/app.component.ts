@@ -17,7 +17,7 @@ import {CourseSidenavComponent} from "./public/pages/course-sidenav/course-siden
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatToolbar, LandingPageComponent, NgOptimizedImage, MainToolbarComponent, SuscriptionsComponent, AllPlansComponent, CardPaymentComponent, PaymentSuccesfulComponent, ExamComponent, MainPageComponent, CourseRegistrationComponent],
+  imports: [RouterOutlet, MatToolbar, LandingPageComponent, NgOptimizedImage, MainToolbarComponent, SuscriptionsComponent, AllPlansComponent, CardPaymentComponent, PaymentSuccesfulComponent, ExamComponent, MainPageComponent, CourseRegistrationComponent, CourseVideoComponent, CourseSidenavComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
