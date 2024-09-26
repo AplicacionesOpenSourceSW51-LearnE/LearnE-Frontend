@@ -21,7 +21,13 @@
             </mat-tab>
             <mat-tab label="Tutorías">
                 <div class="tutoring-info">
-                    <span>Busqueda de tutorías disponibles</span>
+                    <p>Busqueda de tutorías disponibles</p>
+                    <div *ngFor="let tutorial of section.tutorials">
+                        <mat-list-item>{{tutorial.date}}</mat-list-item>
+                        <div class="hours-container">
+                            <button mat-raised-button color="primary" *ngFor="let hour of tutorial.hour">{{hour.hour}}</button>
+                        </div>
+                    </div>
                 </div>
             </mat-tab>
             <mat-tab label="Valoraciones">

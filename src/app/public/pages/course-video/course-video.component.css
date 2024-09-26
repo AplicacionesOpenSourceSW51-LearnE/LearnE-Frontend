@@ -31,3 +31,19 @@ iframe, video {
   margin-top: 16px;
 }
 
+.tutoring-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hours-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hours-container button {
+  flex-grow: 0;
+}
