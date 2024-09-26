@@ -5,7 +5,7 @@
                 <source [src]="videoUrl" type="video/mp4">
                 Tu navegador no soporta la reproducción de videos.
             </video>
-            <iframe *ngIf="!isLocalVideo" width="100%" height="100%"
+            <iframe *ngIf="!isLocalVideo"
                     [src]="videoUrl"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -22,9 +22,6 @@
             <mat-tab label="Tutorías">
                 <div class="tutoring-info">
                     <span>Busqueda de tutorías disponibles</span>
-                    <span class="spacer"></span>
-                    <span>Día:</span>
-                    <span>12/02/2024</span>
                 </div>
             </mat-tab>
             <mat-tab label="Valoraciones">

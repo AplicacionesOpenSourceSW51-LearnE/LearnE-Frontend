@@ -5,6 +5,9 @@ import {MatTab, MatTabGroup} from "@angular/material/tabs";
 import {NgIf} from "@angular/common";
 import {ActivatedRoute} from "@angular/router";
 import {CourseService} from "../../../learning/services/course.service";
+import {MatHint, MatSuffix} from "@angular/material/form-field";
+import {MatDatepicker, MatDatepickerInput, MatDatepickerToggle} from "@angular/material/datepicker";
+import {MatInput} from "@angular/material/input";
 
 @Component({
   selector: 'app-course-video',
@@ -14,7 +17,13 @@ import {CourseService} from "../../../learning/services/course.service";
     MatTabGroup,
     MatTab,
     NgIf,
-    MatSidenavContainer
+    MatSidenavContainer,
+    MatHint,
+    MatDatepickerToggle,
+    MatDatepicker,
+    MatSuffix,
+    MatDatepickerInput,
+    MatInput
   ],
   templateUrl: './course-video.component.html',
   styleUrl: './course-video.component.css'
