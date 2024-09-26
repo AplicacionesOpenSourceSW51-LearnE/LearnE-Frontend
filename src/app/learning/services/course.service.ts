@@ -6,9 +6,17 @@ import {Course} from "../model/course.entity";
   providedIn: 'root'
 })
 export class CourseService extends BaseService<Course>{
-
   constructor() {
     super();
     this.resourceEndPoint='/courses';
+  }
+  private selectedCourse: Course | null = null;
+
+  setSelectedCourse(course: Course): void {
+    this.selectedCourse = course;
+  }
+
+  getSelectedCourse(): Course | null {
+    return this.selectedCourse;
   }
 }
