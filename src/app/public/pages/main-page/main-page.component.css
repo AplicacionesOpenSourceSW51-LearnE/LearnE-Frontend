@@ -23,3 +23,16 @@ a {
   color: white;
   text-decoration: none;
 }
+
+
+.button-language-container {
+  position: absolute;
+  bottom: 0;
+  left: 1vw;
+  margin: 2vw 0;
+  text-align: center;
+}
+
+.options-list {
+  padding-bottom: 50px;
+}

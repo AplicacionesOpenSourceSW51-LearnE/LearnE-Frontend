@@ -9,6 +9,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatListItem, MatNavList} from "@angular/material/list";
 import {MatIcon} from "@angular/material/icon";
 import {RouterLink, RouterOutlet} from "@angular/router";
+import {LanguageSwitcherComponent} from "../../components/language-switcher/language-switcher.component";
 
 @Component({
   selector: 'app-main-page',
@@ -27,6 +28,7 @@ import {RouterLink, RouterOutlet} from "@angular/router";
     MatIcon,
     RouterLink,
     RouterOutlet,
+    LanguageSwitcherComponent,
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css'

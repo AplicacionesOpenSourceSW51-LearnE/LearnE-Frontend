@@ -1,0 +1,11 @@
+<mat-button-toggle-group class="toggle-group" [value]="currentLan" name="language"
+                         aria-label="Preferred Language" appearance="standard">
+  <mat-button-toggle *ngFor="let language of languages" (click)="useLanguage(language)"
+                     [aria-label]="language"
+                     [value]="language">
+    {{language}}
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+
+

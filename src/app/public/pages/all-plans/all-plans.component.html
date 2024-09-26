@@ -1,41 +1,41 @@
 
 <div class="title-container">
-  <h1>Planes disponibles</h1>
+  <h1>{{ 'allPlans.availablePlans' | translate }}</h1>
 </div>
 
 <div class="plans-container">
   <mat-card class="plan-container plan-left">
     <mat-card-header>
-      <mat-card-title>Free S/. 0 al mes</mat-card-title>
+      <mat-card-title>{{ 'allPlans.free' | translate }} S/. 0 {{ 'allPlans.perMonth' | translate }}</mat-card-title>
       <mat-card-subtitle>S/. 00.00</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <ul>
-        <li>Máximo 3 cursos inscritos a la vez</li>
-        <li>Sin tutorías personalizadas</li>
-        <li>Sin acceso a material extra </li>
+        <li>{{ 'allPlans.f1Characteristic' | translate }}</li>
+        <li>{{ 'allPlans.f2Characteristic' | translate }}</li>
+        <li>{{ 'allPlans.f3Characteristic' | translate }}</li>
       </ul>
     </mat-card-content>
     <mat-card-actions>
-      <button class="button">Elegir plan</button>
+      <button class="button">{{ 'allPlans.choosePlan' | translate }}</button>
     </mat-card-actions>
   </mat-card>
 
 
   <mat-card class="plan-container plan-right">
     <mat-card-header>
-      <mat-card-title>Learner S/. 20 al mes</mat-card-title>
+      <mat-card-title>{{ 'allPlans.learner' | translate }} S/. 20 {{ 'allPlans.perMonth' | translate }}</mat-card-title>
       <mat-card-subtitle>S/. 20.00</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <ul>
-        <li>Inscríbete a cursos ilimitados</li>
-        <li>Tutorías personalizadas</li>
-        <li>Acceso a material extra </li>
+        <li>{{ 'allPlans.p1Characteristic' | translate }}</li>
+        <li>{{ 'allPlans.p2Characteristic' | translate }}</li>
+        <li>{{ 'allPlans.p3Characteristic' | translate }}</li>
       </ul>
     </mat-card-content>
     <mat-card-actions>
-      <button class="button" (click)="goToCardPayment()">Elegir plan</button>
+      <button class="button" (click)="goToCardPayment()">{{ 'allPlans.choosePlan' | translate }}</button>
     </mat-card-actions>
   </mat-card>
 </div>

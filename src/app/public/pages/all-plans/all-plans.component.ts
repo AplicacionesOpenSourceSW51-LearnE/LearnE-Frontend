@@ -9,6 +9,7 @@ import {
 } from "@angular/material/card";
 import {MainPageComponent} from "../main-page/main-page.component";
 import {Router} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-all-plans',
@@ -20,7 +21,8 @@ import {Router} from "@angular/router";
     MatCardHeader,
     MatCardSubtitle,
     MatCardTitle,
-    MainPageComponent
+    MainPageComponent,
+    TranslateModule
   ],
   templateUrl: './all-plans.component.html',
   styleUrl: './all-plans.component.css'

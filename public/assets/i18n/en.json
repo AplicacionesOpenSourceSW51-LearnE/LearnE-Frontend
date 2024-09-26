@@ -1,0 +1,15 @@
+{
+  "allPlans": {
+    "availablePlans": "Available plans",
+    "free": "Free",
+    "perMonth": "per month",
+    "f1Characteristic": "Maximum 3 courses enrolled at a time",
+    "f2Characteristic": "No personalized tutoring",
+    "f3Characteristic": "No access to extra material",
+    "p1Characteristic": "Sign up for unlimited courses",
+    "p2Characteristic": "Personalized tutoring",
+    "p3Characteristic": "Access to extra material",
+    "choosePlan": "Choose plan",
+    "learner": "Learner"
+  }
+}
