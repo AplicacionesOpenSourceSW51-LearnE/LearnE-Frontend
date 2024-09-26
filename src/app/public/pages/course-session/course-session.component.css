@@ -1,0 +1,152 @@
+.content-section {
+  text-align: center;
+  margin-top: 20px;
+}
+.course-wrapper {
+  display: flex; /* Alinea la imagen y el contenido en línea */
+}
+
+.course-details {
+  display: flex; /* Alinea la imagen y el texto en línea */
+  align-items: flex-start; /* Alinea los elementos al inicio */
+}
+
+.course-image {
+  width: 100px; /* Ancho de la imagen */
+  height: 100px; /* Altura de la imagen */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  margin-right: 20px; /* Espacio entre la imagen y el contenido */
+  margin-left: 200px; /* Asegúrate de que no tenga margen derecho */
+
+}
+
+.course-info {
+  flex: 1; /* Permite que la información del curso ocupe el espacio restante */
+}
+
+
+
+
+.side-image {
+  width: 250px; /* Mantén el tamaño deseado de la imagen */
+  height: 250px; /* Mantiene la proporción de la imagen */
+  margin-left: auto; /* Empuja la imagen hacia la derecha */
+  margin-right: 200px; /* Asegúrate de que no tenga margen derecho */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.content-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.content-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.course-features {
+  width: 30%;
+  text-align: left;
+}
+
+.video-section {
+  width: 70%;
+  text-align: left;
+}
+
+.video-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.video-title {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.requirement-image {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.subtitle {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.small-subtitle {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.description {
+  margin-top: 10px;
+  text-align: left;
+}
+
+/* Nuevos estilos para aumentar el tamaño de letra */
+.course-prerequisites,
+.subtitle,
+.small-subtitle,
+.description {
+  font-size: 1.1em; /* Ajusta según tus necesidades */
+}
+
+/* Estilos para la sección del instructor */
+.instructor-section {
+  margin-top: 40px;
+}
+
+.instructor-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.instructor-image {
+  width: 250px; /* Ajusta según sea necesario */
+  height: 250px; /* Ajusta según sea necesario */
+  border-radius: 50%; /* Para hacerlo circular */
+}
+
+.learn-more-button {
+  margin-top: 10px;
+}
+
+/* Estilos para la sección de reconocimiento */
+.recognition-section {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.recognition-image {
+  width: 20%; /* Mantiene el tamaño reducido */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-left: 300px; /* Empuja la imagen hacia la derecha */
+  margin-right: 20px; /* Opcional: espacio entre la imagen y el texto */
+}
+
+.recognition-text {
+  width: 80%; /* Mantiene el ancho del texto */
+}
+
+.recognition-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.recognition-description {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+
+.bullet {
+  margin-right: 5px; /* Espacio entre la viñeta y el texto */
+  font-weight: bold; /* Puedes ajustar esto según tus preferencias */
+}
