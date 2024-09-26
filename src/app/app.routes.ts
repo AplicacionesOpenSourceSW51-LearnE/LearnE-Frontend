@@ -10,6 +10,7 @@ import {RegisterConfirmationComponent} from "./public/pages/register-confirmatio
 import {CalendarComponent} from "./public/pages/calendar/calendar.component";
 import {CourseSessionComponent} from "./public/pages/course-session/course-session.component";
 import {CourseDetailsComponent} from "./public/pages/course-details/course-details.component";
+import {RatingDialogComponent} from "./public/pages/rating-dialog/rating-dialog.component";
 
 export const routes: Routes = [
   { path: 'home',                component: LandingPageComponent},
@@ -18,9 +19,10 @@ export const routes: Routes = [
   { path: 'home/subscriptions',  component: SuscriptionsComponent},
   { path: 'home/payment',        component: PaymentComponent},
   { path: 'home/payment/success',component: RegisterConfirmationComponent},
-  { path: 'calendar',            component:  CalendarComponent},
-  {path: 'course-session',component: CourseSessionComponent},
-  {path: 'course-details',component:CourseDetailsComponent},
+  { path: 'calendar',            component: CalendarComponent},
+  {path: 'course-session',       component: CourseSessionComponent},
+  {path: 'course-details',       component: CourseDetailsComponent},
+  {path:'rating-dialog',         component: RatingDialogComponent},
   { path: 'mainPage',            component: MainPageComponent},
   { path: '',                    redirectTo: 'home', pathMatch: 'full' },
   { path: '**',                  component: PageNotFoundComponent }

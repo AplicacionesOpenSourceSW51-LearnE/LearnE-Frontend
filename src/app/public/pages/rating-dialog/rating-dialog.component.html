@@ -1,0 +1,21 @@
+<h2>¿Cómo calificarías este curso?</h2>
+
+<div class="rating-container">
+  <span class="star" *ngFor="let star of stars; let i = index"
+        (click)="setRating(i + 1)"
+        (mouseenter)="hoverRating(i + 1)"
+        (mouseleave)="hoverRating(0)">
+    <mat-icon [class.filled]="i < (hoveredRating || rating)">
+      {{ i < (hoveredRating || rating) ? 'star' : 'star_outline' }}
+    </mat-icon>
+  </span>
+</div>
+
+<div>
+  <p>Valoración del curso: {{ rating }} estrellas</p>
+</div>
+
+<div>
+  <button mat-button (click)="submitRating()">Enviar calificación</button>
+  <button mat-button (click)="close()">Cancelar</button>
+</div>

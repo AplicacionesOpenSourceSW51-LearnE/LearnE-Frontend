@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -25,7 +25,6 @@ import { RouterOutlet } from "@angular/router";
     MatInputModule,
     MatNavList,
     MatListItem,
-    Inject,
     MatIcon,
     MatIconModule,
     RouterOutlet,
