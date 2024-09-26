@@ -14,6 +14,7 @@ import {MyCoursesComponent} from "./public/pages/my-courses/my-courses.component
 import {CourseSidenavComponent} from "./public/pages/course-sidenav/course-sidenav.component";
 import {CourseVideoComponent} from "./public/pages/course-video/course-video.component";
 import {CalendarComponent} from "./public/pages/calendar/calendar.component";
+import {CourseDetailsComponent} from "./public/pages/course-details/course-details.component";
 
 export const routes: Routes = [
   { path: 'home',                component: LandingPageComponent},
@@ -31,6 +32,7 @@ export const routes: Routes = [
     ]},
   { path: 'courseSidenav', component: CourseSidenavComponent, children: [
       { path: 'courseVideo', component: CourseVideoComponent },
+      { path: 'course-details', component: CourseDetailsComponent},
     ]},
   { path: '',                    redirectTo: 'home', pathMatch: 'full' },
   { path: '**',                  component: PageNotFoundComponent }

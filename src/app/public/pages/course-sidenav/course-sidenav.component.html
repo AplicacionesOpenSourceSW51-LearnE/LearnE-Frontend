@@ -2,7 +2,7 @@
   <div class="header">
     <span class="selectedCourse">{{ selectedCourse?.title }}</span>
     <span class="spacer"></span>
-    <button mat-button>Deja una calificación</button>
+    <button mat-button (click)="openRatingDialog()">Deja una calificación</button>
     <button mat-button>Tu progreso</button>
   </div>
 
