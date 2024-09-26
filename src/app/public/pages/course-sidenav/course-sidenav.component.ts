@@ -6,6 +6,8 @@ import {NgForOf, NgIf} from "@angular/common";
 import {CourseService} from "../../../learning/services/course.service";
 import {Course} from "../../../learning/model/course.entity";
 import {Router, RouterLink, RouterOutlet} from "@angular/router";
+import {MatDialog } from "@angular/material/dialog";
+import {RatingDialogComponent} from "../rating-dialog/rating-dialog.component";
 
 @Component({
   selector: 'app-course-sidenav',
@@ -20,7 +22,8 @@ import {Router, RouterLink, RouterOutlet} from "@angular/router";
     NgIf,
     NgForOf,
     RouterLink,
-    RouterOutlet
+    RouterOutlet,
+    RatingDialogComponent
   ],
   templateUrl: './course-sidenav.component.html',
   styleUrl: './course-sidenav.component.css'
@@ -29,7 +32,7 @@ export class CourseSidenavComponent implements OnInit{
   selectedCourse: Course | null = null
   openedUnits: Set<number> = new Set();
 
-  constructor(private courseService: CourseService, private router: Router) {
+  constructor(private courseService: CourseService, private router: Router,private dialog: MatDialog) {
   }
 
   ngOnInit(): void {
@@ -37,6 +40,16 @@ export class CourseSidenavComponent implements OnInit{
     if (this.selectedCourse) {
       console.log('Selected course:', this.selectedCourse);
     }
+  }
+
+  openRatingDialog(): void {
+    const dialogRef = this.dialog.open(RatingDialogComponent);
+
+    dialogRef.afterClosed().subscribe(rating => {
+      if (rating) {
+        console.log('Calificación recibida: ', rating);
+      }
+    });
   }
 
   toggleUnit(unitId: number) {
