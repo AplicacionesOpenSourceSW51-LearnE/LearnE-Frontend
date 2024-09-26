@@ -16,7 +16,8 @@
     "exam": "Exam",
     "minutes": "minutes",
     "aRemaining": "attempts remaining",
-    "send": "Send"
+    "send": "Send",
+    "rAnswer": "Write your answer"
   },
   "courseRegistration": {
     "opinions": "Opinions",

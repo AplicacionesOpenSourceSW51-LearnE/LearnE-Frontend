@@ -2,21 +2,23 @@
 <mat-card class="exam-container">
 
   <mat-card-header class="exam-header-container">
-    <mat-card-title class="title">{{ 'exams.exam' | translate}} #: Nombre del examen</mat-card-title>
+    <mat-card-title class="title">{{ 'exams.exam' | translate}} {{exam.id}}: {{exam.title}}</mat-card-title>
     <mat-card-subtitle class="detail-container">
-      <p class="detail-left"><mat-icon>access_time</mat-icon># {{ 'exams.minutes' | translate}}</p>
-      <p class="detail-right"># {{ 'exams.aRemaining' | translate}}</p>
+      <p class="detail-left"><mat-icon>access_time</mat-icon>{{exam.time}} {{ 'exams.minutes' | translate}}</p>
+      <p class="detail-right">{{exam.retries}} {{ 'exams.aRemaining' | translate}}</p>
     </mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-content class="exam-content-container">
     <div class="exam-content">
-      <p>#. pregunta</p>
+        <div *ngFor="let question of exam.questions">
+            <p>{{question.id}}. {{question.question}}</p>
 
-      <mat-form-field class="input" appearance="fill">
-        <mat-label>Escribe tu respuesta aquí</mat-label>
-        <input matInput placeholder="Escribe tu respuesta" required>
-      </mat-form-field>
+            <mat-form-field class="input" appearance="fill">
+                <mat-label>{{ 'exams.rAnswer' | translate}}</mat-label>
+                <input matInput placeholder="{{ 'exams.rAnswer' | translate}}" required>
+            </mat-form-field>
+        </div>
     </div>
   </mat-card-content>
 

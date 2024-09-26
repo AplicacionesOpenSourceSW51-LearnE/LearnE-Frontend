@@ -54,4 +54,8 @@ export class CourseSidenavComponent implements OnInit{
   navigateToVideo(sectionId: number) {
     this.router.navigate(['/courseSidenav/courseVideo'], { queryParams: { id: sectionId } });
   }
+
+  navigateToExam(examId: number) {
+    this.router.navigate(['/courseSidenav/exam'], { queryParams: { id: examId } });
+  }
 }

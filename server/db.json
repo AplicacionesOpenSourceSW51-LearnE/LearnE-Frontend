@@ -71,6 +71,7 @@
               "id": 1,
               "title": "Theory of object-oriented programming",
               "time": 30,
+              "retries": 3,
               "questions": [
                 {
                   "id": 1,
