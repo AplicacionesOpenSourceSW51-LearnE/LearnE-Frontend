@@ -11,5 +11,11 @@
     "p3Characteristic": "Access to extra material",
     "choosePlan": "Choose plan",
     "learner": "Learner"
+  },
+  "exams": {
+    "exam": "Exam",
+    "minutes": "minutes",
+    "aRemaining": "attempts remaining",
+    "send": "Send"
   }
 }

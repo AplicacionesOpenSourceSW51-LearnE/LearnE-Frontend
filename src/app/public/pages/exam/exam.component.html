@@ -2,10 +2,10 @@
 <mat-card class="exam-container">
 
   <mat-card-header class="exam-header-container">
-    <mat-card-title class="title">Examen #: Nombre del examen</mat-card-title>
+    <mat-card-title class="title">{{ 'exams.exam' | translate}} #: Nombre del examen</mat-card-title>
     <mat-card-subtitle class="detail-container">
-      <p class="detail-left"><mat-icon>access_time</mat-icon>Tiempo del examen</p>
-      <p class="detail-right"># intentos restantos</p>
+      <p class="detail-left"><mat-icon>access_time</mat-icon># {{ 'exams.minutes' | translate}}</p>
+      <p class="detail-right"># {{ 'exams.aRemaining' | translate}}</p>
     </mat-card-subtitle>
   </mat-card-header>
 
@@ -21,7 +21,7 @@
   </mat-card-content>
 
   <mat-card-actions class="button-container">
-    <button class="button" mat-button>Enviar</button>
+    <button class="button" mat-button>{{ 'exams.send' | translate}}</button>
   </mat-card-actions>
 </mat-card>
 
