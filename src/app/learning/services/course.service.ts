@@ -19,4 +19,27 @@ export class CourseService extends BaseService<Course>{
   getSelectedCourse(): Course | null {
     return this.selectedCourse;
   }
+
+  getSectionById(sectionId: number): any {
+    if (!this.selectedCourse) {
+      console.error('No course selected');
+      return null;
+    }
+
+    console.log('Selected course:', this.selectedCourse);
+
+    for (const unit of this.selectedCourse.units) {
+      console.log('Unit:', unit);
+
+      const section = unit.sections.find(s => s.id === sectionId);
+      if (section) {
+        console.log('Found section:', section);
+        return section;
+      }
+    }
+
+    console.error('No section found with id:', sectionId);
+    return null;
+  }
+
 }

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="main-container">
   <div class="header">
     <span class="selectedCourse">{{ selectedCourse?.title }}</span>
     <span class="spacer"></span>
@@ -18,7 +18,7 @@
           </mat-list-item>
           <div *ngIf="isUnitOpen(unit.id)" class="nested">
             <div *ngFor="let section of unit.sections">
-              <mat-list-item [routerLink]="['/mainPage/courseSidenav/courseVideo']" [queryParams]="{ id: section.id }">
+              <mat-list-item (click)="navigateToVideo(section.id)">
                 <span>Section</span>
                 <span>&nbsp;</span>
                 <span>{{ section.id }}:</span>
@@ -34,5 +34,10 @@
         </div>
       </mat-nav-list>
     </mat-sidenav>
+
+    <mat-sidenav-content class="content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
   </mat-sidenav-container>
+
 </div>

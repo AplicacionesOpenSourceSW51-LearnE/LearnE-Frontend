@@ -1,12 +1,7 @@
-.container {
+.main-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
-}
-
-.sidenav-container {
-  display: flex;
-  height: 100%;
 }
 
 .header {
@@ -20,16 +15,18 @@
   flex: 1;
 }
 
+.sidenav-container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
 .mat-sidenav {
   height: 100%;
   width: 25%;
 }
 
-.mat-nav-list {
-  height: 100%;
-  overflow: auto;
-}
-
-.nested {
-  padding-left: 20px;
+.mat-sidenav-content {
+  display: flex;
+  flex: 1;
 }

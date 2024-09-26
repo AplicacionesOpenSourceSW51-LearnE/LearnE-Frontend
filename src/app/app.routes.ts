@@ -26,9 +26,9 @@ export const routes: Routes = [
       { path: 'cardPayment', component: CardPaymentComponent},
       { path: 'paymentSuccesful', component: PaymentSuccesfulComponent},
       { path: 'myCourses', component: MyCoursesComponent},
-      { path: 'courseSidenav', component: CourseSidenavComponent, children: [
-          { path: 'courseVideo', component: CourseVideoComponent },
-        ]},
+    ]},
+  { path: 'courseSidenav', component: CourseSidenavComponent, children: [
+      { path: 'courseVideo', component: CourseVideoComponent },
     ]},
   { path: '',                    redirectTo: 'home', pathMatch: 'full' },
   { path: '**',                  component: PageNotFoundComponent }
