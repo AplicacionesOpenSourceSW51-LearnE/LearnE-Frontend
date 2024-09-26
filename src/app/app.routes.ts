@@ -10,6 +10,8 @@ import {RegisterConfirmationComponent} from "./public/pages/register-confirmatio
 import {AllPlansComponent} from "./public/pages/all-plans/all-plans.component";
 import {CardPaymentComponent} from "./public/pages/card-payment/card-payment.component";
 import {PaymentSuccesfulComponent} from "./public/pages/payment-succesful/payment-succesful.component";
+import {MyCoursesComponent} from "./public/pages/my-courses/my-courses.component";
+import {CourseSidenavComponent} from "./public/pages/course-sidenav/course-sidenav.component";
 
 export const routes: Routes = [
   { path: 'home',                component: LandingPageComponent},
@@ -21,7 +23,9 @@ export const routes: Routes = [
   { path: 'mainPage',            component: MainPageComponent, children: [
       { path: 'allPlans', component:AllPlansComponent},
       { path: 'cardPayment', component: CardPaymentComponent},
-      { path: 'paymentSuccesful', component: PaymentSuccesfulComponent}
+      { path: 'paymentSuccesful', component: PaymentSuccesfulComponent},
+      { path: 'myCourses', component: MyCoursesComponent},
+      { path: 'courseSidenav', component: CourseSidenavComponent},
     ]},
   { path: '',                    redirectTo: 'home', pathMatch: 'full' },
   { path: '**',                  component: PageNotFoundComponent }

@@ -11,6 +11,8 @@ import {PaymentSuccesfulComponent} from "./public/pages/payment-succesful/paymen
 import {ExamComponent} from "./public/pages/exam/exam.component";
 import {MainPageComponent} from "./public/pages/main-page/main-page.component";
 import {CourseRegistrationComponent} from "./public/pages/course-registration/course-registration.component";
+import {CourseVideoComponent} from "./public/pages/course-video/course-video.component";
+import {CourseSidenavComponent} from "./public/pages/course-sidenav/course-sidenav.component";
 
 @Component({
   selector: 'app-root',
