@@ -1,0 +1,47 @@
+.payment-container {
+  height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+mat-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  background-color: #9600CD;
+  padding: 0.7vw;
+  width: 10vw;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  justify-content: center;
+  margin: 1vw auto;
+}
+
+.buttons {
+  margin: auto;
+}
+
+.title-container {
+  font-size: 3em;
+  margin-top: 3vw;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+

@@ -1,0 +1,21 @@
+{
+  "allPlans": {
+    "availablePlans": "Planes disponibles",
+    "free": "Gratis",
+    "perMonth": "por mes",
+    "f1Characteristic": "Máximo 3 cursos inscritos a la vez",
+    "f2Characteristic": "Sin tutorías personalizadas",
+    "f3Characteristic": "Sin acceso a material extra",
+    "p1Characteristic": "Inscríbete a cursos ilimitados",
+    "p2Characteristic": "Tutorías personalizadas",
+    "p3Characteristic": "Acceso a material extra",
+    "choosePlan": "Elegir plan",
+    "learner": "Alumno"
+  },
+  "exams": {
+    "exam": "Examen",
+    "minutes": "minutos",
+    "aRemaining": "intentos restantes",
+    "send": "Enviar"
+  }
+}

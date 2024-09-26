@@ -1,0 +1,38 @@
+.sidenav-container {
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.main-sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  background: rgb(103, 58, 182);
+  text-decoration-color: white;
+}
+
+.options-list p {
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.button-language-container {
+  position: absolute;
+  bottom: 0;
+  left: 1vw;
+  margin: 2vw 0;
+  text-align: center;
+}
+
+.options-list {
+  padding-bottom: 50px;
+}
