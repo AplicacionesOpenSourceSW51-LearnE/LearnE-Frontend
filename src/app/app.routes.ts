@@ -7,6 +7,9 @@ import {SuscriptionsComponent} from "./public/pages/subscriptions/suscriptions.c
 import {PaymentComponent} from "./public/pages/payment/payment.component";
 import {MainPageComponent} from "./public/pages/main-page/main-page.component";
 import {RegisterConfirmationComponent} from "./public/pages/register-confirmation/register-confirmation.component";
+import {CalendarComponent} from "./public/pages/calendar/calendar.component";
+import {CourseSessionComponent} from "./public/pages/course-session/course-session.component";
+import {CourseDetailsComponent} from "./public/pages/course-details/course-details.component";
 
 export const routes: Routes = [
   { path: 'home',                component: LandingPageComponent},
@@ -15,6 +18,9 @@ export const routes: Routes = [
   { path: 'home/subscriptions',  component: SuscriptionsComponent},
   { path: 'home/payment',        component: PaymentComponent},
   { path: 'home/payment/success',component: RegisterConfirmationComponent},
+  { path: 'calendar',            component:  CalendarComponent},
+  {path: 'course-session',component: CourseSessionComponent},
+  {path: 'course-details',component:CourseDetailsComponent},
   { path: 'mainPage',            component: MainPageComponent},
   { path: '',                    redirectTo: 'home', pathMatch: 'full' },
   { path: '**',                  component: PageNotFoundComponent }
