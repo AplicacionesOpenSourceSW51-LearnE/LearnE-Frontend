@@ -17,5 +17,9 @@
     "minutes": "minutes",
     "aRemaining": "attempts remaining",
     "send": "Send"
+  },
+  "courseRegistration": {
+    "opinions": "Opinions",
+    "join": "Join"
   }
 }

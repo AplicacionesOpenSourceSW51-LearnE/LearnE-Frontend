@@ -17,5 +17,9 @@
     "minutes": "minutos",
     "aRemaining": "intentos restantes",
     "send": "Enviar"
+  },
+  "courseRegistration": {
+    "opinions": "Opiniones",
+    "join": "Unirse"
   }
 }
