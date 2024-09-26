@@ -1,0 +1,94 @@
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.course-info {
+  display: flex; /* Usar flexbox para alinear los botones */
+  gap: 10px; /* Espacio entre los botones */
+}
+
+.course-content {
+  display: flex; /* Usar flexbox para organizar el video y la lista de sesiones */
+}
+
+.video-container {
+  flex: 0 0 70%; /* Ocupa el 70% del ancho */
+  margin-right: 20px; /* Espacio entre el video y la lista */
+  margin-top: 20px; /* Añadir margen superior para espacio adicional */
+}
+
+
+.session-list {
+  flex: 0 0 30%; /* Ocupa el 30% del ancho */
+  margin-top: 20px; /* Añadir margen superior para espacio adicional */
+}
+
+.session-list h3 {
+  margin-top: 0; /* Eliminar margen superior del encabezado de sesiones */
+}
+.button-container {
+  display: flex; /* Usar flexbox para alinear los botones */
+  gap: 20px; /* Espacio entre los botones */
+  margin-top: 10px; /* Espacio entre el video y los botones */
+}
+
+.info-button {
+  position: relative; /* Para usar el subrayado */
+  text-decoration: none; /* Eliminar subrayado por defecto */
+}
+
+.info-button:hover {
+  text-decoration: underline; /* Subrayar al pasar el mouse */
+  color: #1976d2; /* Cambiar color al pasar el mouse (opcional) */
+}
+
+.rating-section {
+  display: flex; /* Usar flexbox para la alineación */
+  justify-content: space-between; /* Espacio entre los elementos */
+  align-items: center; /* Centrar verticalmente */
+  margin-top: 20px; /* Espacio superior */
+}
+
+.rating-left {
+  display: flex; /* Usar flexbox para alinear número y estrellas */
+  flex-direction: column; /* Colocar el número encima de las estrellas */
+  text-align: left; /* Alinear texto a la izquierda */
+  margin-right: 20px; /* Espacio a la derecha del número */
+}
+
+.large-rating {
+  font-size: 48px; /* Tamaño de la puntuación */
+  font-weight: bold; /* Negrita para destacar */
+  margin-bottom: 5px; /* Espacio debajo de la puntuación */
+}
+
+.star-rating {
+  font-size: 24px; /* Tamaño de las estrellas */
+  color: gold; /* Color de las estrellas */
+}
+
+.star.filled {
+  color: gold; /* Color de las estrellas llenas */
+}
+
+.star {
+  color: lightgray; /* Color de las estrellas vacías */
+}
+
+.score-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinear las barras al final */
+  margin-top: 10px; /* Espacio superior */
+  width: 100%; /* Ocupa el 100% del ancho */
+}
+
+.score {
+  height: 10px; /* Altura de la barra */
+  background-color: lightgray; /* Color de fondo de la barra */
+  margin-bottom: 5px; /* Espacio entre barras */
+}
+
