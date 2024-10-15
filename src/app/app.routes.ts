@@ -33,7 +33,7 @@ export const routes: Routes = [
     ]},
   { path: 'courseSidenav', component: CourseSidenavComponent, children: [
       { path: 'courseVideo', component: CourseVideoComponent },
-      { path: 'exam', component: ExamComponent}
+      { path: 'exam', component: ExamComponent},
       { path: 'course-details', component: CourseDetailsComponent},
     ]},
   { path: '',                    redirectTo: 'home', pathMatch: 'full' },
