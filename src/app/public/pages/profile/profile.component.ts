@@ -17,10 +17,5 @@ import {MatIcon} from "@angular/material/icon";
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent {
-  user = {
-    firstname: 'Benito Bruno',
-    lastname: 'Benitez Balbuena',
-    email: 'benitobenitez@gmail.com',
-    role: 'Alumno'
-  }
+
 }
