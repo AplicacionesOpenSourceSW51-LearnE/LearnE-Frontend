@@ -1,0 +1,41 @@
+.rating-container {
+  display: flex;
+  gap: 15px; /* Espacio entre las estrellas */
+  justify-content: center;
+  margin-bottom: 10px;
+  min-width: 300px; /* Ajusta según el diseño deseado */
+}
+
+.star {
+  cursor: pointer;
+  font-size: 50px; /* Tamaño de las estrellas */
+  line-height: 1; /* Asegura que no haya espacio vertical extra */
+  transition: transform 0.2s; /* Efecto de transición al pasar el mouse */
+  display: flex; /* Añadir display flex para centrar el contenido */
+  align-items: center; /* Alinear verticalmente el contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  height: 60px; /* Aumentar la altura para asegurar que no se corten */
+}
+
+.star:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+mat-icon {
+  font-size: 50px; /* Aumenta el tamaño de los iconos */
+  color: lightgray; /* Color para las estrellas vacías */
+}
+
+mat-icon.filled {
+  color: gold; /* Color para las estrellas llenas */
+}
+
+/* Estilo para el cuadro del diálogo */
+.mat-dialog-content {
+  border: 1px solid #ccc; /* Borde del cuadro */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  background-color: white; /* Fondo blanco */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  text-align: center; /* Centra el contenido del cuadro */
+}

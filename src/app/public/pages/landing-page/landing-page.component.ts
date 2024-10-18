@@ -19,5 +19,4 @@ export class LandingPageComponent {
   signInPath = 'signIn';
   registerPath = 'register';
 
-
 }

@@ -1,0 +1,62 @@
+.button {
+  background-color: #9600CD;
+  padding: 0.7vw;
+  width: 10vw;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  justify-content: center;
+  margin: 1vw auto;
+  cursor: pointer;
+}
+
+
+.course {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3vw auto;
+  box-sizing: border-box;
+}
+
+.course-card-container, .img-container {
+  display: inline-block;
+  vertical-align: top;
+  width: 30vw;
+  box-sizing: border-box;
+}
+
+.img-container {
+  background-color: lightgray;
+  height: 25vw;
+  width: 20vw;
+  margin-left: 3vw;
+}
+
+.course-card-container {
+  background-color: white;
+  width: 30vw;
+  margin-right: 3vw;
+  text-align: center;
+  padding: 2vw;
+  border-radius: 30px;
+}
+
+.header-container {
+  text-align: center;
+  justify-content: center;
+}
+
+.course-description {
+  margin: 2vw;
+}
+
+.level-button {
+  background-color: #9600CD50;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  padding: 0.5vw 1vw;
+  display: flex;
+  margin:auto;
+}

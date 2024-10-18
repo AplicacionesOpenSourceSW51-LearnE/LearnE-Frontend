@@ -1,0 +1,43 @@
+<div class="main-container">
+  <div class="header">
+    <span class="selectedCourse">{{ selectedCourse?.title }}</span>
+    <span class="spacer"></span>
+    <button mat-button (click)="openRatingDialog()">Deja una calificación</button>
+    <button mat-button>Tu progreso</button>
+  </div>
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened position="end">
+      <mat-nav-list>
+        <div *ngFor="let unit of selectedCourse?.units">
+          <mat-list-item (click)="toggleUnit(unit.id)">
+            <span>Unit</span>
+            <span>&nbsp;</span>
+            <span>{{ unit.id }}:</span>
+            {{ unit.title }}
+          </mat-list-item>
+          <div *ngIf="isUnitOpen(unit.id)" class="nested">
+            <div *ngFor="let section of unit.sections">
+              <mat-list-item (click)="navigateToVideo(section.id)">
+                <span>Section</span>
+                <span>&nbsp;</span>
+                <span>{{ section.id }}:</span>
+                {{ section.title }}
+              </mat-list-item>
+            </div>
+            <div *ngFor="let exam of unit.exams">
+              <mat-list-item (click)="navigateToExam(exam.id)">
+                Exam {{exam.id}}: {{ exam.title }}
+              </mat-list-item>
+            </div>
+          </div>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>

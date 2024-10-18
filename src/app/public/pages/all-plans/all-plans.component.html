@@ -1,0 +1,45 @@
+
+<div class="title-container">
+  <h1>{{ 'allPlans.availablePlans' | translate }}</h1>
+</div>
+
+<div class="plans-container">
+  <mat-card class="plan-container plan-left">
+    <mat-card-header>
+      <mat-card-title>{{ 'allPlans.free' | translate }} S/. 0 {{ 'allPlans.perMonth' | translate }}</mat-card-title>
+      <mat-card-subtitle>S/. 00.00</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>{{ 'allPlans.f1Characteristic' | translate }}</li>
+        <li>{{ 'allPlans.f2Characteristic' | translate }}</li>
+        <li>{{ 'allPlans.f3Characteristic' | translate }}</li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="button">{{ 'allPlans.choosePlan' | translate }}</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+  <mat-card class="plan-container plan-right">
+    <mat-card-header>
+      <mat-card-title>{{ 'allPlans.learner' | translate }} S/. 20 {{ 'allPlans.perMonth' | translate }}</mat-card-title>
+      <mat-card-subtitle>S/. 20.00</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>{{ 'allPlans.p1Characteristic' | translate }}</li>
+        <li>{{ 'allPlans.p2Characteristic' | translate }}</li>
+        <li>{{ 'allPlans.p3Characteristic' | translate }}</li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="button" (click)="goToCardPayment()">{{ 'allPlans.choosePlan' | translate }}</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
+
+

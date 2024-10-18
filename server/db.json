@@ -1,19 +1,91 @@
 {
-  "posts": [
+  "users": [],
+  "students": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "firstname": "Jorge",
+      "lastName": "Orrego",
+      "username": "jorge1201",
+      "email": "example@gmail.com",
+      "password": "1234A"
+    },
+    {
+      "id": 2,
+      "firstName": "John",
+      "lastName": "Doe",
+      "username": "jdoe1234",
+      "email": "example@gmail.com",
+      "password": "1234"
     }
   ],
-  "comments": [
+  "courses": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "title": "Python's Introduction",
+      "description": "Basic Python course focused on people who are beginners in the world of programming. In addition, basic programming concepts will be taught.",
+      "teacher": [
+        {
+          "name": "John Doe",
+          "lastname": "Doe Doe",
+          "speciality": "Fronted Dev",
+          "image": "https://covalto.com/static/78498ccda70933a5f1e3edc3e40d3cbe/34aca/Hero_Mobile_Cuenta_Personas_V1_1_8046e424ea.webp"
+        }
+      ],
+      "level": "Beginner",
+      "duration": "3 hours content",
+      "prior_knowledge": "Nothing",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA47f0Lhu3roG-3duVbKXDq0kPeDDOakrYZg&s",
+      "units": [
+        {
+          "id": 1,
+          "title": "Introduction",
+          "link": "https://www.youtube.com/embed/Rv910T1BJUw",
+          "sections": [
+            {
+              "id": 1,
+              "title": "Introduction video",
+              "link": "https://www.youtube.com/embed/DAdRO6ByBoU",
+              "tutorials": [
+                {
+                  "date": "12/07/2024",
+                  "hour": [
+                    {
+                      "hour": "12:10"
+                    },
+                    {
+                      "hour": "13:10"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "title": "Introduction video 2",
+              "link": "https://www.youtube.com/embed/UzHFkEdnRuc"
+            }
+          ],
+          "exams": [
+            {
+              "id": 1,
+              "title": "Theory of object-oriented programming",
+              "time": 30,
+              "retries": 3,
+              "questions": [
+                {
+                  "id": 1,
+                  "question": "Briefly describe the four pillars of object-oriented programming."
+                },
+                {
+                  "id": 2,
+                  "question": "Explain how you could implement the above in developing an application."
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

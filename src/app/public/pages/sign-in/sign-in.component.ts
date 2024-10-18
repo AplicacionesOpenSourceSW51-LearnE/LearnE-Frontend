@@ -5,6 +5,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {FormsModule} from "@angular/forms";
 import {MatInput} from "@angular/material/input";
 import {MatLabel} from "@angular/material/form-field";
+import {RouterLink, RouterModule} from "@angular/router";
 
 @Component({
   selector: 'app-sign-in',
@@ -15,7 +16,9 @@ import {MatLabel} from "@angular/material/form-field";
     MatButtonModule,
     FormsModule,
     MatInput,
-    MatLabel
+    MatLabel,
+    RouterModule,
+    RouterLink
   ],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.css'

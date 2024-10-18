@@ -1,0 +1,32 @@
+<div class="course">
+  <mat-card class="course-card-container">
+    <mat-card-header class="header-container">
+      <mat-card-title>
+        <img src="" alt="Logo">
+        <p>Nombre del curso</p>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <mat-icon>lock_open</mat-icon>
+        <p>stars</p>
+        <p># {{ 'courseRegistration.opinions' | translate }}</p>
+        <button class="level-button"><mat-icon>bar_chart</mat-icon> Básico </button>
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content class="course-description">
+      <p>Publicado DD/MM/AA</p>
+      <p>
+        Descripción
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-button class="button">{{ 'courseRegistration.join' | translate }}</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <div class="img-container">
+    Imagen
+  </div>
+</div>
+

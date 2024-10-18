@@ -1,0 +1,40 @@
+<div class="video-wrapper">
+    <div class="video-content">
+        <div class="video-container" *ngIf="videoUrl">
+            <video *ngIf="isLocalVideo" controls>
+                <source [src]="videoUrl" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <iframe *ngIf="!isLocalVideo"
+                    [src]="videoUrl"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+        <mat-tab-group class="tab-group">
+            <mat-tab label="Descripción general">
+                <div class="description-content">
+                    <p>Aquí puedes colocar la descripción general del curso o la sección.</p>
+                </div>
+            </mat-tab>
+            <mat-tab label="Tutorías">
+                <div class="tutoring-info">
+                    <p>Busqueda de tutorías disponibles</p>
+                    <div *ngFor="let tutorial of section.tutorials">
+                        <mat-list-item>{{tutorial.date}}</mat-list-item>
+                        <div class="hours-container">
+                            <button mat-raised-button color="primary" *ngFor="let hour of tutorial.hour">{{hour.hour}}</button>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Valoraciones">
+                <div class="ratings-content">
+                    <p>Aquí puedes mostrar las valoraciones de los estudiantes.</p>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>
