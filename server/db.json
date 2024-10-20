@@ -1,21 +1,22 @@
 {
-  "users": [],
-  "students": [
+  "users": [
     {
       "id": 1,
-      "firstname": "Jorge",
+      "firstName": "Jorge",
       "lastName": "Orrego",
-      "username": "jorge1201",
-      "email": "example@gmail.com",
-      "password": "1234A"
+      "username": "testing1234",
+      "email": "testing1234@gmail.com",
+      "password": "1234",
+      "type": 0
     },
     {
       "id": 2,
-      "firstName": "John",
-      "lastName": "Doe",
-      "username": "jdoe1234",
-      "email": "example@gmail.com",
-      "password": "1234"
+      "firstName": "Pepe",
+      "lastName": "Vazques",
+      "username": "PepeProfe",
+      "email": "pepeprofe@gmail.com",
+      "password": "1234",
+      "type": 1
     }
   ],
   "courses": [
