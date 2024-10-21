@@ -17,6 +17,7 @@ import {CalendarComponent} from "./public/pages/calendar/calendar.component";
 import {ExamComponent} from "./public/pages/exam/exam.component";
 import {CourseDetailsComponent} from "./public/pages/course-details/course-details.component";
 import {MyNotesComponent} from "./public/pages/my-notes/my-notes.component";
+import {ProfileComponent} from "./public/pages/profile/profile.component";
 
 export const routes: Routes = [
   { path: 'home',                component: LandingPageComponent},
@@ -32,7 +33,7 @@ export const routes: Routes = [
       { path: 'myCourses', component: MyCoursesComponent},
       {path: 'calendar',component: CalendarComponent},
       { path: 'myNotes', component: MyNotesComponent},
-
+      { path: 'profile', component: ProfileComponent}
     ]},
   { path: 'courseSidenav', component: CourseSidenavComponent, children: [
       { path: 'courseVideo', component: CourseVideoComponent },
