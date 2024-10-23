@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MatCard, MatCardContent, MatCardHeader} from "@angular/material/card";
+import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from "@angular/material/card";
 import {NgForOf} from "@angular/common";
 import {MatList, MatListItem} from "@angular/material/list";
 import {MatIcon} from "@angular/material/icon";
@@ -25,7 +25,8 @@ interface Course {
     MatList,
     MatListItem,
     MatIcon,
-    MatLine
+    MatLine,
+    MatCardTitle
   ],
   templateUrl: './my-notes.component.html',
   styleUrl: './my-notes.component.css'
