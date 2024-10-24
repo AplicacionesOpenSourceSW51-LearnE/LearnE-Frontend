@@ -4,6 +4,7 @@ import {CourseService} from "../../../learning/services/course.service";
 import {MatCard, MatCardContent, MatCardHeader, MatCardImage, MatCardTitle} from "@angular/material/card";
 import {NgForOf} from "@angular/common";
 import {Router} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-my-courses',
@@ -14,7 +15,8 @@ import {Router} from "@angular/router";
     MatCardImage,
     MatCardContent,
     MatCardTitle,
-    NgForOf
+    NgForOf,
+    TranslateModule
   ],
   templateUrl: './my-courses.component.html',
   styleUrl: './my-courses.component.css'

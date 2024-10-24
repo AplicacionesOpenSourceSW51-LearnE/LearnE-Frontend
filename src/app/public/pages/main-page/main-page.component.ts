@@ -10,6 +10,7 @@ import {MatListItem, MatNavList} from "@angular/material/list";
 import {MatIcon} from "@angular/material/icon";
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {LanguageSwitcherComponent} from "../../components/language-switcher/language-switcher.component";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-main-page',
@@ -29,6 +30,7 @@ import {LanguageSwitcherComponent} from "../../components/language-switcher/lang
     RouterLink,
     RouterOutlet,
     LanguageSwitcherComponent,
+    TranslateModule,
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css'

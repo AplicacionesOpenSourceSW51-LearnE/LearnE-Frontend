@@ -22,5 +22,26 @@
   "courseRegistration": {
     "opinions": "Opiniones",
     "join": "Unirse"
+  },
+  "courses": {
+    "courses": "Mis cursos",
+    "rating": "Deja tu calificación",
+    "progress": "Tu progreso",
+    "unit": "Unidad",
+    "section": "Sección",
+    "exam": "Exámen",
+    "description": "Descripción general",
+    "tutorials": "Tutorías",
+    "ratings": "Valoraciones"
+  },
+  "mainPage": {
+    "courses": "Mis cursos",
+    "activities": "Actividades",
+    "history": "Historial de Cursos",
+    "calendar": "Calendario",
+    "plans": "Planes",
+    "scores": "Mis Notas",
+    "profile": "Perfil",
+    "logOut": "Cerrar Sesión"
   }
 }
