@@ -1,45 +1,44 @@
 
 <div class="title-container">
-  <h1>{{ 'allPlans.availablePlans' | translate }}</h1>
+  <h1 class="main-title">{{ 'allPlans.availablePlans' | translate }}</h1>
 </div>
 
 <div class="plans-container">
+  <!-- Free Plan Card -->
   <mat-card class="plan-container plan-left">
-    <mat-card-header>
-      <mat-card-title>{{ 'allPlans.free' | translate }} S/. 0 {{ 'allPlans.perMonth' | translate }}</mat-card-title>
-      <mat-card-subtitle>S/. 00.00</mat-card-subtitle>
+    <mat-card-header class="plan-header">
+      <mat-card-title class="plan-title">{{ 'allPlans.free' | translate }} S/. 0 {{ 'allPlans.perMonth' | translate }}</mat-card-title>
+      <mat-card-subtitle class="plan-subtitle">S/. 00.00</mat-card-subtitle>
     </mat-card-header>
-    <mat-card-content>
-      <ul>
+    <mat-card-content class="plan-content">
+      <ul class="plan-features">
         <li>{{ 'allPlans.f1Characteristic' | translate }}</li>
         <li>{{ 'allPlans.f2Characteristic' | translate }}</li>
         <li>{{ 'allPlans.f3Characteristic' | translate }}</li>
       </ul>
     </mat-card-content>
-    <mat-card-actions>
-      <button class="button">{{ 'allPlans.choosePlan' | translate }}</button>
+    <mat-card-actions class="plan-actions">
+      <button class="button choose-button">{{ 'allPlans.choosePlan' | translate }}</button>
     </mat-card-actions>
   </mat-card>
 
-
+  <!-- Learner Plan Card -->
   <mat-card class="plan-container plan-right">
-    <mat-card-header>
-      <mat-card-title>{{ 'allPlans.learner' | translate }} S/. 20 {{ 'allPlans.perMonth' | translate }}</mat-card-title>
-      <mat-card-subtitle>S/. 20.00</mat-card-subtitle>
+    <mat-card-header class="plan-header">
+      <mat-card-title class="plan-title">{{ 'allPlans.learner' | translate }} S/. 20 {{ 'allPlans.perMonth' | translate }}</mat-card-title>
+      <mat-card-subtitle class="plan-subtitle">S/. 20.00</mat-card-subtitle>
     </mat-card-header>
-    <mat-card-content>
-      <ul>
+    <mat-card-content class="plan-content">
+      <ul class="plan-features">
         <li>{{ 'allPlans.p1Characteristic' | translate }}</li>
         <li>{{ 'allPlans.p2Characteristic' | translate }}</li>
         <li>{{ 'allPlans.p3Characteristic' | translate }}</li>
       </ul>
     </mat-card-content>
-    <mat-card-actions>
-      <button class="button" (click)="goToCardPayment()">{{ 'allPlans.choosePlan' | translate }}</button>
+    <mat-card-actions class="plan-actions">
+      <button class="button choose-button" (click)="openCardPayment()">{{ 'allPlans.choosePlan' | translate }}</button>
     </mat-card-actions>
   </mat-card>
 </div>
-
-
 
 

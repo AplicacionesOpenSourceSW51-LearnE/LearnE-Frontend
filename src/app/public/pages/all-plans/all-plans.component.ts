@@ -10,6 +10,8 @@ import {
 import {MainPageComponent} from "../main-page/main-page.component";
 import {Router} from "@angular/router";
 import {TranslateModule} from "@ngx-translate/core";
+import {MatDialog} from "@angular/material/dialog";
+import {CardPaymentComponent} from "../card-payment/card-payment.component";
 
 @Component({
   selector: 'app-all-plans',
@@ -28,9 +30,15 @@ import {TranslateModule} from "@ngx-translate/core";
   styleUrl: './all-plans.component.css'
 })
 export class AllPlansComponent {
-  constructor(private router: Router) {}  // Inyectas el servicio Router aquí
+  constructor(private router: Router, public dialog: MatDialog) {}  // Inyectas el servicio Router aquí
 
   goToCardPayment(): void {
     this.router.navigate(['/mainPage/cardPayment']);
+  }
+
+  openCardPayment(): void {
+    this.dialog.open(CardPaymentComponent, {
+
+    });
   }
 }

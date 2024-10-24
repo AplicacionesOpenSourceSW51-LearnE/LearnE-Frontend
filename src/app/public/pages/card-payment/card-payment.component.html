@@ -1,38 +1,40 @@
-<div class="title-container">
-  <h1>Añadir Pago por Tarjeta</h1>
-</div>
-
 <div class="payment-container">
   <mat-card class="payment-card">
-    <mat-card-header>
-      <!--<mat-card-title>Añadir Pago por Tarjeta</mat-card-title>-->
+    <mat-card-header class="header-container">
+      <mat-icon class="payment-icon">payment</mat-icon>
+      <span class="header-text">{{ 'cardPayment.myPayment' | translate }}</span>
     </mat-card-header>
     <mat-card-content>
       <form class="payment-form">
         <mat-form-field appearance="fill">
-          <mat-label>Nombre del Titular</mat-label>
+          <mat-label>{{ 'cardPayment.nameCard' | translate }}</mat-label>
           <input matInput>
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <mat-label>Número de la Tarjeta</mat-label>
+          <mat-label>{{ 'cardPayment.numberCard' | translate }}</mat-label>
           <input matInput>
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <mat-label>Fecha de Expiración (MM/AA)</mat-label>
+          <mat-label>{{ 'cardPayment.eDate' | translate }}</mat-label>
           <input matInput>
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <mat-label>Código de Seguridad (CVC)</mat-label>
+          <mat-label>{{ 'cardPayment.sCode' | translate }}</mat-label>
           <input matInput>
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <mat-label>Correo electrónico</mat-label>
+          <mat-label>{{ 'cardPayment.email' | translate }}</mat-label>
           <input matInput type="password">
         </mat-form-field>
         <div class="buttons">
-          <button class="button" mat-button (click)="goTopPaymentSuccesful()">Pagar</button>
+          <button class="button pay" (click)="goTopPaymentSuccesful()">{{ 'cardPayment.pay' | translate }}</button>
+          <button class="button cancel" (click)="cancelPayment()">{{ 'cardPayment.cancel' | translate }}</button>
         </div>
       </form>
     </mat-card-content>
   </mat-card>
 </div>
+
+
+
+
