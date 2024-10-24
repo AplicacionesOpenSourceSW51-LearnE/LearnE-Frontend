@@ -12,6 +12,22 @@
     "choosePlan": "Elegir plan",
     "learner": "Alumno"
   },
+  "cardPayment": {
+    "myPayment": "Realice su pago",
+    "nameCard": "Nombre en la tarjeta",
+    "numberCard": "Número de tarjeta",
+    "eDate": "Fecha de vencimiento (MM/AA)",
+    "sCode": "Código de seguridad (CVC)",
+    "email": "Correo electrónico",
+    "pay": "Pagar",
+    "cancel": "Cancelar"
+  },
+  "paymentSuccessful": {
+    "title": "Pago Exitoso",
+    "thankYouMessage": "¡Gracias por contar con nosotros!",
+    "subscriptionBenefits": "Tendrás acceso a nuevos beneficios con tu nueva suscripción. Aprovecha y sigue estudiando con LearnE.",
+    "goToPlans": "Ir a planes"
+  },
   "exams": {
     "exam": "Examen",
     "minutes": "minutos",

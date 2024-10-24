@@ -8,7 +8,6 @@ import {PaymentComponent} from "./public/pages/payment/payment.component";
 import {MainPageComponent} from "./public/pages/main-page/main-page.component";
 import {RegisterConfirmationComponent} from "./public/pages/register-confirmation/register-confirmation.component";
 import {AllPlansComponent} from "./public/pages/all-plans/all-plans.component";
-import {CardPaymentComponent} from "./public/pages/card-payment/card-payment.component";
 import {PaymentSuccesfulComponent} from "./public/pages/payment-succesful/payment-succesful.component";
 import {MyCoursesComponent} from "./public/pages/my-courses/my-courses.component";
 import {CourseSidenavComponent} from "./public/pages/course-sidenav/course-sidenav.component";
@@ -27,8 +26,7 @@ export const routes: Routes = [
   { path: 'home/payment',        component: PaymentComponent},
   { path: 'home/payment/success',component: RegisterConfirmationComponent},
   { path: 'mainPage',            component: MainPageComponent, children: [
-      { path: 'allPlans', component:AllPlansComponent},
-      { path: 'cardPayment', component: CardPaymentComponent},
+      { path: 'plans', component:AllPlansComponent},
       { path: 'paymentSuccesful', component: PaymentSuccesfulComponent},
       { path: 'myCourses', component: MyCoursesComponent},
       {path: 'calendar',component: CalendarComponent},
