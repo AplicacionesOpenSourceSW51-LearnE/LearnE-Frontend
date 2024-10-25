@@ -7,7 +7,10 @@ import { MatCardModule } from '@angular/material/card';
 @Component({
   selector: 'app-course-session',
   standalone: true,
-  imports: [NgForOf, MatIconModule, MatButtonModule, MatCardModule],
+  imports: [NgForOf,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule],
   templateUrl: './course-session.component.html',
   styleUrls: ['./course-session.component.css'],
 })

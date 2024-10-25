@@ -22,7 +22,7 @@
     {
       "id": 1,
       "title": "Python's Introduction",
-      "description": "Basic Python course focused on people who are beginners in the world of programming. In addition, basic programming concepts will be taught.",
+      "description": "Basic Python course focused on people who are  beginners in the world of programming. In addition, basic programming concepts will be taught.",
       "image_lateral": "https://i.ytimg.com/vi/K9ndJGNjsKY/maxresdefault.jpg",
 
       "teacher": [
@@ -113,3 +113,4 @@
     }
   ]
 }
+

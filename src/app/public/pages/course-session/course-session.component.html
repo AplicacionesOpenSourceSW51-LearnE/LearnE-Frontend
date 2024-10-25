@@ -1,8 +1,12 @@
 <mat-card class="course-card">
   <div class="course-wrapper">
     <div class="course-details">
+
+
       <img src="https://pontia.tech/wp-content/uploads/2023/06/Python-Symbol_0-1024x576.png" alt="Imagen del curso" class="course-image" />
+
       <div class="course-info">
+
         <h2 mat-card-title>Título del Curso</h2>
         <div class="rating-info">
           <mat-icon *ngFor="let star of stars" class="star">star</mat-icon>
@@ -12,7 +16,9 @@
         <p mat-card-subtitle class="course-description">
           Curso básico de Python enfocado a personas que son<br> principiantes en el mundo de la programación.<br> Además, se enseñarán conceptos básicos de programación.
           En total, hay cuatro unidades enfocadas en el desarrollo<br> de ejercicios prácticos para reforzar lo aprendido<br> con la teoría.</p>
+
         <button mat-raised-button color="primary" class="enroll-button">Inscribirse</button>
+
       </div>
     </div>
     <img src="https://i.ytimg.com/vi/K9ndJGNjsKY/maxresdefault.jpg" alt="Imagen lateral" class="side-image" />
@@ -40,12 +46,7 @@
         <p>Se requiere de una computadora con Python instalado</p>
         <img src="https://i.ytimg.com/vi/tWnyBD2src0/maxresdefault.jpg" alt="Requerimiento" class="requirement-image" />
 
-        <!-- Subtítulos y Descripción dentro del 30% -->
-        <h4 class="subtitle">Proyectos del curso</h4>
-        <h5 class="small-subtitle">Tema de proyecto o examen</h5>
-        <p class="description">
-          Se tendrá que hacer una pequeña aplicación de escritorio como proyecto final. El tema queda a elección del estudiante.
-        </p>
+
       </mat-card-content>
     </mat-card>
 
@@ -55,6 +56,7 @@
         <mat-card-title>Unidades:</mat-card-title>
       </mat-card-header>
       <mat-card-content>
+
         <div class="video-container">
           <iframe
           width="300"
@@ -63,7 +65,6 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
-
           <span class="video-title">APRENDE FUNCIONES en PYTHON: def, pass, sintaxis</span>
         </div>
 
@@ -75,10 +76,9 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
           </iframe>
-
-
           <span class="video-title">Estructuras de Control de Flujo en Python: if, else, elif, while, for, break, continue</span>
         </div>
+
         <div class="video-container">
           <iframe
             width="300"
@@ -87,9 +87,9 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
           </iframe>
-
           <span class="video-title">Estructuras de datos con Python en 8 minutos: Listas, Tuplas, Conjuntos y Diccionarios</span>
         </div>
+
       </mat-card-content>
     </mat-card>
   </div>

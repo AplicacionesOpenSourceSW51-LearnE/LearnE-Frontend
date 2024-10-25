@@ -1,14 +1,19 @@
 import { Injectable } from '@angular/core';
-import { BaseService } from '../../shared/services/base.service';
-import {Description} from "../model/description.entity"; // Asegúrate de que la ruta sea correcta
+import { Course } from '../model/course.entity';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class CourseDetailsService extends BaseService<Description> {
+export class CourseService {
+  private selectedCourse: Course | null = null; // Aquí puedes inicializarlo como null
 
-  constructor() {
-    super();
-    this.resourceEndPoint = '/course-details';
+
+  setSelectedCourse(course: Course): void {
+    this.selectedCourse = course;
   }
+
+  getSelectedCourse(): Course | null {
+    return this.selectedCourse;
+  }
+
 }

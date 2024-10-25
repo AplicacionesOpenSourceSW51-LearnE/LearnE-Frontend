@@ -1,1 +1,99 @@
-<p>description works!</p>
+<mat-card class="course-card">
+  <div class="course-wrapper">
+    <div class="course-details">
+      <div *ngFor="let course of courses">
+        <img class="course-logo" [src]="course.logo" alt="{{ course.title }}" />
+      </div>
+      <div class="course-info">
+        <div *ngIf="courses.length > 0">
+          <div *ngFor="let course of courses">
+            <h2 mat-card-title>{{ course.title }}</h2>
+
+            <div class="rating-info">
+              <mat-icon class="star">star</mat-icon>
+              <mat-icon class="star">star</mat-icon>
+              <mat-icon class="star">star</mat-icon>
+              <mat-icon class="star">star</mat-icon>
+              <span class="reviews-count"> (120 opiniones) </span>
+              <span class="level">{{ course.level }}</span>
+            </div>
+            <p>Nivel: {{ course.level }}</p>
+            <p mat-card-subtitle class="course-description">{{ course.description }}</p>
+          </div>
+        </div>
+        <button mat-raised-button color="primary" class="enroll-button">Inscribirse</button>
+      </div>
+    </div>
+    <div *ngFor="let course of courses">
+      <img class="side-image" [src]="course.image_lateral" alt="{{}}" />
+    </div>
+  </div>
+</mat-card>
+
+
+<div class="content-section">
+  <h3 class="content-title">Contenido y Recursos</h3>
+
+  <div class="content-grid">
+<mat-card class="course-features">
+  <mat-card-header>
+    <mat-card-title>Características del Curso:</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="feature">
+      <mat-icon>hourglass_empty</mat-icon>
+      <span class="feature-text">3 Horas de contenido</span>
+    </div>
+    <div class="feature">
+      <mat-icon>fitness_center</mat-icon>
+      <span class="feature-text">1 Examen</span>
+    </div>
+
+    <h4 class="course-prerequisites"><br>Conocimientos Previos:</h4>
+    <p><span class="bullet">•</span> Ninguno</p>
+    <p>Se requiere de una computadora con Python instalado</p>
+    <img src="https://i.ytimg.com/vi/tWnyBD2src0/maxresdefault.jpg" alt="Requerimiento" class="requirement-image" />
+  </mat-card-content>
+</mat-card>
+
+<!-- caracteristicas del curso -->
+<!-- unidades -->
+<mat-card class="video-section">
+  <mat-card-header>
+    <mat-card-title>Unidades:</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+
+      <div *ngIf="unidades.length > 0;">
+
+        <div class="video-container" *ngFor="let unidad of unidades">
+          <iframe  [src]="safeUrl(unidad.url)" width="300" height="200"  allowfullscreen></iframe>
+          <span class="video-title" >{{ unidad.name }}</span>
+        </div>
+      </div>
+
+  </mat-card-content>
+</mat-card>
+  </div>
+<!-- perfil de profe -->
+<div class="instructor-section">
+  <h3 class="instructor-title">Conoce quién enseña el curso de Introducción a Python</h3>
+
+  <div *ngIf="teachers.length > 0; ">
+    <div *ngFor="let teacher of teachers">
+      <h3 class="instructor-center">{{ teacher.name }} {{ teacher.lastname }}</h3>
+      <img class="instructor-image"  [src]="teacher.image" alt="{{ teacher.name }}"  />
+      <p class="instructor-center">Especialidad:🌟 {{ teacher.speciality }}</p>
+      <p class="instructor-center">Cargo: 🙋🏻‍♀️{{ teacher.cargo }}</p> <!-- Aquí agregamos el campo 'cargo' -->
+    </div>
+  </div>
+  <button mat-raised-button color="accent" class="learn-more-button">Conoce más</button>
+</div>
+<div class="recognition-section">
+  <img src="https://marketplace.canva.com/EAFQNGff-B8/1/0/1600w/canva-certificado-de-reconocimiento-simple-azul-y-amarillo-jVqupEcSv7g.jpg" alt="Reconocimiento" class="recognition-image" />
+  <div class="recognition-text">
+    <h2 class="recognition-title">¡Obtén reconocimiento por tu trabajo!</h2>
+    <p class="recognition-description">Cada vez que completas un curso obtienes un certificado de participación.</p>
+  </div>
+</div>
+</div>
