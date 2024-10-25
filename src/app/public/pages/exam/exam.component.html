@@ -2,28 +2,41 @@
 <mat-card class="exam-container">
 
   <mat-card-header class="exam-header-container">
+    <div class="grade"> 0 / 20 </div>
     <mat-card-title class="title">{{ 'exams.exam' | translate}} {{exam.id}}: {{exam.title}}</mat-card-title>
-    <mat-card-subtitle class="detail-container">
-      <p class="detail-left"><mat-icon>access_time</mat-icon>{{exam.time}} {{ 'exams.minutes' | translate}}</p>
-      <p class="detail-right">{{exam.retries}} {{ 'exams.aRemaining' | translate}}</p>
-    </mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-content class="exam-content-container">
     <div class="exam-content">
         <div *ngFor="let question of exam.questions">
-            <p>{{question.id}}. {{question.question}}</p>
+            <p class="question">{{question.id}}. {{question.question}}</p>
 
-            <mat-form-field class="input" appearance="fill">
-                <mat-label>{{ 'exams.rAnswer' | translate}}</mat-label>
-                <input matInput placeholder="{{ 'exams.rAnswer' | translate}}" required>
-            </mat-form-field>
+<!--anadir un for dentro de este for para cargar las respuestas-->
+
+          <div class="option">
+            <mat-checkbox class="checkbox">
+            </mat-checkbox>
+            <span class="response-text">Respuesta</span>
+          </div>
+
+          <div class="option">
+            <mat-checkbox class="checkbox">
+            </mat-checkbox>
+            <span class="response-text">Respuesta</span>
+          </div>
+
+          <div class="option">
+            <mat-checkbox class="checkbox">
+            </mat-checkbox>
+            <span class="response-text">Respuesta</span>
+          </div>
+
         </div>
     </div>
   </mat-card-content>
 
   <mat-card-actions class="button-container">
-    <button class="button" mat-button>{{ 'exams.send' | translate}}</button>
+    <button class="button">{{ 'exams.send' | translate}}</button>
   </mat-card-actions>
 </mat-card>
 

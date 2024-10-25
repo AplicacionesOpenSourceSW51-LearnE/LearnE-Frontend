@@ -37,7 +37,9 @@
   },
   "courseRegistration": {
     "opinions": "Opinions",
-    "join": "Join"
+    "join": "Join",
+    "publishedDate": "Published",
+    "description": "Description"
   },
   "courses": {
     "courses": "My courses",

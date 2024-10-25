@@ -37,7 +37,9 @@
   },
   "courseRegistration": {
     "opinions": "Opiniones",
-    "join": "Unirse"
+    "join": "Unirse",
+    "publishedDate": "Publicado",
+    "description": "Descripción"
   },
   "courses": {
     "courses": "Mis cursos",
