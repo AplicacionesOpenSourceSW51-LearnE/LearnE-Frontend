@@ -4,9 +4,11 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {RouterLink} from "@angular/router";
-import {Student} from "../../../learning/model/student.entity";
 import {FormsModule} from "@angular/forms";
-import {StudentService} from "../../../learning/services/student.service";
+import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
+import {User} from "../../../learning/model/user.entity";
+import {UserService} from "../../../learning/services/user.service";
+import {UserType} from "../../../learning/model/user.enum";
 
 @Component({
   selector: 'app-register',
@@ -17,22 +19,26 @@ import {StudentService} from "../../../learning/services/student.service";
     MatInputModule,
     MatButtonModule,
     RouterLink,
-    FormsModule
+    FormsModule,
+    MatRadioGroup,
+    MatRadioButton
 
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
-  @Input() student!: Student;
-  @Output() protected studentAddRequested = new EventEmitter<Student>();
+  @Input() user!: User;
+  @Output() protected userAddRequested = new EventEmitter<User>();
+  protected UserType = UserType;
 
-  private studentService: StudentService = inject(StudentService);
+  private userService: UserService = inject(UserService);
+
   constructor() {
-    this.student = new Student({});
+    this.user = new User({});
   }
 
-  protected createStudent(){
-    this.studentService.create(this.student).subscribe();
+  protected createNewUser(){
+    this.userService.create(this.user).subscribe();
   }
 }
