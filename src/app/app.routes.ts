@@ -18,6 +18,7 @@ import {CourseDetailsComponent} from "./public/pages/course-details/course-detai
 import {MyNotesComponent} from "./public/pages/my-notes/my-notes.component";
 import {ProfileComponent} from "./public/pages/profile/profile.component";
 
+
 export const routes: Routes = [
   { path: 'home',                component: LandingPageComponent},
   { path: 'home/signIn',         component: SignInComponent},
@@ -29,7 +30,7 @@ export const routes: Routes = [
       { path: 'plans', component:AllPlansComponent},
       { path: 'paymentSuccesful', component: PaymentSuccesfulComponent},
       { path: 'myCourses', component: MyCoursesComponent},
-      {path: 'calendar',component: CalendarComponent},
+      { path: 'calendar',component: CalendarComponent},
       { path: 'myNotes', component: MyNotesComponent},
       { path: 'profile', component: ProfileComponent}
     ]},

@@ -14,6 +14,4 @@ export class Student {
     this.email = student.email || '';
     this.password = student.password || '';
   }
-
-
 }

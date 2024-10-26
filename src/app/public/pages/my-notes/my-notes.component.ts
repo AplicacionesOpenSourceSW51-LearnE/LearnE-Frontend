@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from "@angular/material/card";
+import {MatCard, MatCardContent, MatCardHeader, MatCardTitle, MatCardModule} from "@angular/material/card";
 import {NgForOf} from "@angular/common";
 import {MatList, MatListItem} from "@angular/material/list";
 import {MatIcon} from "@angular/material/icon";
@@ -18,7 +18,7 @@ interface Course {
   selector: 'app-my-notes',
   standalone: true,
   imports: [
-    MatCard,
+    MatCardModule,
     NgForOf,
     MatCardHeader,
     MatCardContent,
