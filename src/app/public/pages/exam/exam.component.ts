@@ -15,6 +15,7 @@ import {TranslateModule} from "@ngx-translate/core";
 import {ActivatedRoute} from "@angular/router";
 import {CourseService} from "../../../learning/services/course.service";
 import {NgForOf} from "@angular/common";
+import {MatCheckbox} from "@angular/material/checkbox";
 
 @Component({
   selector: 'app-exam',
@@ -35,6 +36,7 @@ import {NgForOf} from "@angular/common";
         MatCardAvatar,
         TranslateModule,
         NgForOf,
+      MatCheckbox
     ],
   templateUrl: './exam.component.html',
   styleUrl: './exam.component.css'

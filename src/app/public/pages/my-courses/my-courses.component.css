@@ -1,10 +1,9 @@
 .header {
-  font-size: 2em;
-  margin-top: 3vw;
-  text-align: left;
-  justify-content: center;
-  font-weight: bold;
-  margin-left: 2vw;
+  font-size: 2.5rem;
+  /*color: #7027C3;*/
+  color: black;
+  font-weight: 500;
+  margin:3vw;
 }
 
 .container {
@@ -14,8 +13,9 @@
   margin-right: 2vw;
   width: 95%;
   height: 82%;
-  background: #D9D9D9;
+  background: white;
   border-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .course-card {
@@ -24,6 +24,7 @@
   height: 25vw;
   border-radius: 30px;
   justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .imageCard {

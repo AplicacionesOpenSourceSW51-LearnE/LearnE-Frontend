@@ -16,6 +16,7 @@ import { MatInput } from "@angular/material/input";
 import { MatNativeDateModule } from "@angular/material/core";
 import {MatListItem} from "@angular/material/list";
 import {MatButton} from "@angular/material/button";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-course-video',
@@ -38,10 +39,11 @@ import {MatButton} from "@angular/material/button";
     MatNativeDateModule,
     NgForOf,
     MatListItem,
-    MatButton
+    MatButton,
+    TranslateModule
   ],
   templateUrl: './course-video.component.html',
-  styleUrls: ['./course-video.component.css'] // Debe ser styleUrls, no styleUrl
+  styleUrls: ['./course-video.component.css']
 })
 export class CourseVideoComponent {
   sectionId: number | null = null;

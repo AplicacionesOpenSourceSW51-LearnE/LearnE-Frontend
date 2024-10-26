@@ -14,12 +14,12 @@
         </div>
 
         <mat-tab-group class="tab-group">
-            <mat-tab label="Descripción general">
+            <mat-tab label="{{'courses.description' | translate }}">
                 <div class="description-content">
                     <p>Aquí puedes colocar la descripción general del curso o la sección.</p>
                 </div>
             </mat-tab>
-            <mat-tab label="Tutorías">
+            <mat-tab label="{{'courses.tutorials' | translate }}">
                 <div class="tutoring-info">
                     <p>Busqueda de tutorías disponibles</p>
                     <div *ngFor="let tutorial of section.tutorials">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
             </mat-tab>
-            <mat-tab label="Valoraciones">
+            <mat-tab label="{{'courses.ratings' | translate }}">
                 <div class="ratings-content">
                     <p>Aquí puedes mostrar las valoraciones de los estudiantes.</p>
                 </div>

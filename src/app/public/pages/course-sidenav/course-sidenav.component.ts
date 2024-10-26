@@ -8,6 +8,8 @@ import {Course} from "../../../learning/model/course.entity";
 import {Router, RouterLink, RouterOutlet} from "@angular/router";
 import {MatDialog } from "@angular/material/dialog";
 import {RatingDialogComponent} from "../rating-dialog/rating-dialog.component";
+import {TranslateModule} from "@ngx-translate/core";
+import {LanguageSwitcherComponent} from "../../components/language-switcher/language-switcher.component";
 
 @Component({
   selector: 'app-course-sidenav',
@@ -23,7 +25,9 @@ import {RatingDialogComponent} from "../rating-dialog/rating-dialog.component";
     NgForOf,
     RouterLink,
     RouterOutlet,
-    RatingDialogComponent
+    RatingDialogComponent,
+    TranslateModule,
+    LanguageSwitcherComponent
   ],
   templateUrl: './course-sidenav.component.html',
   styleUrl: './course-sidenav.component.css'
