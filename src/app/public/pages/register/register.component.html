@@ -20,16 +20,25 @@
         <mat-form-field appearance="fill">
           <input [(ngModel)]="user.password" matInput type="password" name="password" placeholder="Contraseña" required>
         </mat-form-field>
-        <label id="user-radio-group-label">Escoge tu rol</label>
-        <mat-radio-group
-          aria-labelledby="user-radio-group-label"
-          class="user-radio-group"
-          [(ngModel)]="user.type" name="userType">
-          <mat-radio-button class="user-radio-button" [value]="UserType.STUDENT">Alumno</mat-radio-button>
-          <mat-radio-button class="user-radio-button" [value]="UserType.TEACHER">Profesor</mat-radio-button>
-        </mat-radio-group>
+        <mat-form-field>
+          <mat-label>Escoge tu rol</mat-label>
+          <mat-select [(ngModel)]="user.type" [(value)]="user.type">
+            <mat-option></mat-option>
+            <mat-option [value]="UserType.STUDENT">Alumno</mat-option>
+            <mat-option [value]="UserType.TEACHER">Profesor</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-button color="primary" routerLink="/home/subscriptions">Planes Disponibles</button>
+        <mat-form-field>
+          <mat-label>Escoge tu plan</mat-label>
+          <mat-select [(ngModel)]="user.plan" [(value)]="user.plan">
+            <mat-option></mat-option>
+              <mat-option [value]="PlanType.FREE">Gratis</mat-option>
+              <mat-option [value]="PlanType.PREMIUM">LearnE Premium</mat-option>
+          </mat-select>
+        </mat-form-field>
         <ng-container class="buttons">
-          <button mat-raised-button color="primary" (click)="createNewUser()" routerLink="/home/subscriptions">Crear Cuenta</button>
+          <button mat-raised-button color="primary" (click)="createNewUser()" routerLink="/home/payment">Crear Cuenta</button>
         </ng-container>
       </form>
       <p class="login-link">¿Ya tienes una cuenta? <a routerLink="/home/signIn">Inicia sesión aquí</a></p>

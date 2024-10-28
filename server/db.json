@@ -2,21 +2,13 @@
   "users": [
     {
       "id": 1,
-      "firstName": "Jorge",
-      "lastName": "Orrego",
-      "username": "testing1234",
-      "email": "testing1234@gmail.com",
-      "password": "1234",
-      "type": 0
-    },
-    {
-      "id": 2,
-      "firstName": "Pepe",
-      "lastName": "Vazques",
-      "username": "PepeProfe",
-      "email": "pepeprofe@gmail.com",
-      "password": "1234",
-      "type": 1
+      "firstName": "jorge",
+      "lastName": "orrego",
+      "username": "123sjorege",
+      "email": "asdasd@adasd.com",
+      "password": "123453",
+      "type": 0,
+      "plan": 1
     }
   ],
   "courses": [

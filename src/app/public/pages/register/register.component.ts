@@ -9,6 +9,8 @@ import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 import {User} from "../../../learning/model/user.entity";
 import {UserService} from "../../../learning/services/user.service";
 import {UserType} from "../../../learning/model/user.enum";
+import {MatOption, MatSelect} from "@angular/material/select";
+import {Plans} from "../../../learning/model/plans.enum";
 
 @Component({
   selector: 'app-register',
@@ -21,7 +23,9 @@ import {UserType} from "../../../learning/model/user.enum";
     RouterLink,
     FormsModule,
     MatRadioGroup,
-    MatRadioButton
+    MatRadioButton,
+    MatSelect,
+    MatOption
 
   ],
   templateUrl: './register.component.html',
@@ -31,6 +35,7 @@ export class RegisterComponent {
   @Input() user!: User;
   @Output() protected userAddRequested = new EventEmitter<User>();
   protected UserType = UserType;
+  protected PlanType = Plans;
 
   private userService: UserService = inject(UserService);
 
