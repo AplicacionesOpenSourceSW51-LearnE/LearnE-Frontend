@@ -10,6 +10,15 @@ import {MatDialog } from "@angular/material/dialog";
 import {RatingDialogComponent} from "../rating-dialog/rating-dialog.component";
 import {TranslateModule} from "@ngx-translate/core";
 import {LanguageSwitcherComponent} from "../../components/language-switcher/language-switcher.component";
+import {Unit} from "../../../learning/model/unit.entity";
+import {UnitService} from "../../../learning/services/unit.service";
+import {SectionService} from "../../../learning/services/section.service";
+import {Section} from "../../../learning/model/section.entity";
+import {ExamService} from "../../../learning/services/exam.service";
+import {Exam} from "../../../learning/model/exam.entity";
+import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
+import {TutorialCourses} from "../../../learning/model/tutorial-courses.entity";
+import {TutorialCoursesService} from "../../../learning/services/tutorial-courses.service";
 
 @Component({
   selector: 'app-course-sidenav',
@@ -33,10 +42,19 @@ import {LanguageSwitcherComponent} from "../../components/language-switcher/lang
   styleUrl: './course-sidenav.component.css'
 })
 export class CourseSidenavComponent implements OnInit{
-  selectedCourse: Course | null = null
+  selectedCourse: Course | null = null;
+  units: Array<Unit> = [];
+  sections: Array<Section> = [];
+  exams: Array<Exam> = [];
+  tutoring: Array<TutorialCourses> = [];
+  videoUrl: SafeResourceUrl = '';
+  isLocalVideo: boolean = false;
   openedUnits: Set<number> = new Set();
 
-  constructor(private courseService: CourseService, private router: Router,private dialog: MatDialog) {
+  constructor(private courseService: CourseService, private router: Router, private dialog: MatDialog,
+              private unitService: UnitService, private sectionService: SectionService,
+              private examService: ExamService, private sanitizer: DomSanitizer,
+              private tutoringService: TutorialCoursesService) {
   }
 
   ngOnInit(): void {
@@ -44,6 +62,41 @@ export class CourseSidenavComponent implements OnInit{
     if (this.selectedCourse) {
       console.log('Selected course:', this.selectedCourse);
     }
+    this.getAllUnits();
+    this.getAllTutoring();
+    this.getAllSections();
+    this.getAllExams();
+    this.loadVideo(0);
+  }
+
+  private getAllUnits() {
+    this.unitService.getAll().subscribe((response: Array<Unit>) => {
+      this.units = response.filter(unit => this.selectedCourse?.id);
+      console.log(this.units);
+    })
+  }
+
+  private getAllSections() {
+    this.sectionService.getAll().subscribe((response: Array<Section>) => {
+      const unitIds = this.units.map(unit => unit.id);
+      this.sections = response.filter(section => unitIds.includes(section.unit_id));
+      console.log(this.sections);
+    })
+  }
+
+  private getAllExams() {
+    this.examService.getAll().subscribe((response: Array<Exam>) => {
+      const unitIds = this.units.map(unit => unit.id);
+      this.exams = response.filter(exam => unitIds.includes(exam.unit_id));
+      console.log(this.exams);
+    })
+  }
+
+  private getAllTutoring() {
+    this.tutoringService.getAll().subscribe((response: Array<TutorialCourses>) => {
+      this.tutoring = response.filter(tutorial => this.selectedCourse?.id);
+      console.log(this.tutoring);
+    })
   }
 
   openRatingDialog(): void {
@@ -74,5 +127,25 @@ export class CourseSidenavComponent implements OnInit{
 
   navigateToExam(examId: number) {
     this.router.navigate(['/courseSidenav/exam'], { queryParams: { id: examId } });
+  }
+
+  loadVideo(index: number) {
+    const selectedUnit = this.units[index];
+    if (selectedUnit) {
+      this.unitService.getById(selectedUnit.id).subscribe(unit => {
+        if (selectedUnit && selectedUnit.url_video) {
+          this.videoUrl = this.sanitizeUrl(selectedUnit.url_video);
+          this.isLocalVideo = selectedUnit.url_video.endsWith('.mp4');
+          console.log('Video URL cargada:', this.videoUrl);
+          console.log('Es video local:', this.isLocalVideo);
+        } else {
+          console.error('Enlace inválido');
+        }
+      });
+    }
+  }
+
+  sanitizeUrl(url: string): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

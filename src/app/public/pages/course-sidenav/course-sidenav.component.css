@@ -35,3 +35,18 @@
   font-weight: bolder;
   font-size: large;
 }
+
+.video-container {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video, iframe {
+  max-width: 100%;
+  height: auto;
+}

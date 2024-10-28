@@ -17,6 +17,7 @@ import { MatNativeDateModule } from "@angular/material/core";
 import {MatListItem} from "@angular/material/list";
 import {MatButton} from "@angular/material/button";
 import {TranslateModule} from "@ngx-translate/core";
+import {SectionService} from "../../../learning/services/section.service";
 
 @Component({
   selector: 'app-course-video',
@@ -51,18 +52,16 @@ export class CourseVideoComponent {
   isLocalVideo: boolean = false;
   section: any;
 
-  constructor(private sanitizer: DomSanitizer, private route: ActivatedRoute, private courseService: CourseService) { }
+  constructor(private sanitizer: DomSanitizer, private route: ActivatedRoute,
+              private sectionService: SectionService) { }
 
-  /*ngOnInit() {
+  ngOnInit() {
     this.route.queryParams.subscribe(params => {
-      console.log('queryParams: ', params);
-      const id = params['id'];
-      this.sectionId = id ? Number(id) : null;
-      console.log('sectionId: ', this.sectionId);
+      this.sectionId = params['id'] ? Number(params['id']) : null;
+      if (this.sectionId) {
+        this.loadVideo();
+      }
     });
-    if (this.sectionId) {
-      this.loadVideo();
-    }
   }
 
   sanitizeUrl(url: string): SafeResourceUrl {
@@ -70,12 +69,16 @@ export class CourseVideoComponent {
   }
 
   loadVideo() {
-    this.section = this.courseService.getSectionById(this.sectionId || 0);
-    if (this.section && this.section.link) {
-      this.videoUrl = this.sanitizeUrl(this.section.link);
-      this.isLocalVideo = this.section.link.endsWith('.mp4');
-    } else {
-      console.error('No se encontró la sección o el enlace es inválido');
+    if (this.sectionId) {
+      this.sectionService.getById(this.sectionId).subscribe(section => {
+        this.section = section;
+        if (this.section && this.section.url_video) {
+          this.videoUrl = this.sanitizeUrl(this.section.url_video);
+          this.isLocalVideo = this.section.url_video.endsWith('.mp4');
+        } else {
+          console.error('Enlace inválido');
+        }
+      })
     }
-  }*/
+  }
 }

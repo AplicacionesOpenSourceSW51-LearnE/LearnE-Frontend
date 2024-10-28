@@ -36,17 +36,19 @@ export class MyCoursesComponent implements OnInit{
     this.getAllCoursesEnrollment();
   }
 
-  private getAllCourses() {
+  private getAllCourses(enrolledCourses: Array<CoursesEnrollment>) {
+    const courseIds = enrolledCourses.map(enrollment => enrollment.course_id);
     this.courseService.getAll().subscribe((response: Array<Course>) => {
-      this.dataSource = response;
-      console.log(response);
+      this.dataSource = response.filter(course => courseIds.includes(course.id));
+      console.log(this.dataSource);
     })
   }
 
   private getAllCoursesEnrollment() {
     this.courseEnrollmentService.getAll().subscribe((response: Array<CoursesEnrollment>) => {
-      this.dataSource = response;
-      console.log(this.dataSource);
+      const enrolledCourses = response.filter(enrollment =>
+          enrollment.student_id === Number(sessionStorage.getItem('id')));
+      this.getAllCourses(enrolledCourses);
     })
   }
 

@@ -12,7 +12,7 @@
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav mode="side" opened position="end">
       <mat-nav-list>
-        <!--<div *ngFor="let unit of selectedCourse?.units">
+        <div *ngFor="let unit of units">
           <mat-list-item (click)="toggleUnit(unit.id)">
             <span>{{'courses.unit' | translate}}</span>
             <span>&nbsp;</span>
@@ -20,7 +20,7 @@
             {{ unit.title }}
           </mat-list-item>
           <div *ngIf="isUnitOpen(unit.id)" class="nested">
-            <div *ngFor="let section of unit.sections">
+            <div *ngFor="let section of sections">
               <mat-list-item (click)="navigateToVideo(section.id)">
                 <span>{{ 'courses.section' | translate }}</span>
                 <span>&nbsp;</span>
@@ -28,17 +28,29 @@
                 {{ section.title }}
               </mat-list-item>
             </div>
-            <div *ngFor="let exam of unit.exams">
+            <div *ngFor="let exam of exams">
               <mat-list-item (click)="navigateToExam(exam.id)">
                 {{ 'courses.exam' | translate }} {{exam.id}}: {{ exam.title }}
               </mat-list-item>
             </div>
           </div>
-        </div>-->
+        </div>
       </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content class="content">
+      <div class="video-container" *ngIf="videoUrl">
+        <video *ngIf="isLocalVideo" controls>
+          <source [src]="videoUrl" type="video/mp4">
+          Tu navegador no soporta la reproducción de videos.
+        </video>
+        <iframe *ngIf="!isLocalVideo"
+                [src]="videoUrl"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+      </div>
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>

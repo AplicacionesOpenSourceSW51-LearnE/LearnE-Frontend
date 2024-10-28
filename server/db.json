@@ -60,7 +60,7 @@
       "level": "Beginner",
       "duration": "4 hours content",
       "prior_knowledge": "Basic HTML and CSS",
-      "principal_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_cWJ7dXtDdpsJmd_Vovvw6Lp_NUkdhlXQ7A&s"
+      "principal_image": "https://stride.com.co/wp-content/uploads/2023/01/gabriel-heinzer-g5jpH62pwes-unsplash-768x576.jpg"
     }
   ],
   "courses_enrollment": [
@@ -91,7 +91,7 @@
       "url_video": "https://www.youtube.com/embed/DAdRO6ByBoU"
     },
     {
-      "id": 1,
+      "id": 2,
       "unit_id": 1,
       "title": "Introduction video 2",
       "url_video": "https://www.youtube.com/embed/UzHFkEdnRuc"
@@ -157,6 +157,7 @@
   "tutorials_courses": [
     {
       "id": 1,
+      "courses_id": 1,
       "teacher_id": 3,
       "date": "2024-06-22",
       "hour": "11:50",
@@ -165,6 +166,7 @@
     },
     {
       "id": 2,
+      "courses_id": 1,
       "teacher_id": 3,
       "date": "2024-06-22",
       "hour": "14:20",
@@ -173,6 +175,7 @@
     },
     {
       "id": 3,
+      "courses_id": 1,
       "teacher_id": 3,
       "date": "2024-06-22",
       "hour": "17:20",
