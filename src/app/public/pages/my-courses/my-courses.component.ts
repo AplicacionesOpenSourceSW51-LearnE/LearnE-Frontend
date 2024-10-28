@@ -5,6 +5,8 @@ import {MatCard, MatCardContent, MatCardHeader, MatCardImage, MatCardTitle} from
 import {NgForOf} from "@angular/common";
 import {Router} from "@angular/router";
 import {TranslateModule} from "@ngx-translate/core";
+import {CoursesEnrollmentService} from "../../../learning/services/courses-enrollment.service";
+import {CoursesEnrollment} from "../../../learning/model/courses-enrollment.entity";
 
 @Component({
   selector: 'app-my-courses',
@@ -23,6 +25,7 @@ import {TranslateModule} from "@ngx-translate/core";
 })
 export class MyCoursesComponent implements OnInit{
   private courseService: CourseService = inject(CourseService);
+  private courseEnrollmentService: CoursesEnrollmentService = inject(CoursesEnrollmentService);
   protected dataSource!: Array<any>;
 
   constructor(private router: Router) {
@@ -30,13 +33,20 @@ export class MyCoursesComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.getAllCourses();
+    this.getAllCoursesEnrollment();
   }
 
   private getAllCourses() {
     this.courseService.getAll().subscribe((response: Array<Course>) => {
       this.dataSource = response;
       console.log(response);
+    })
+  }
+
+  private getAllCoursesEnrollment() {
+    this.courseEnrollmentService.getAll().subscribe((response: Array<CoursesEnrollment>) => {
+      this.dataSource = response;
+      console.log(this.dataSource);
     })
   }
 

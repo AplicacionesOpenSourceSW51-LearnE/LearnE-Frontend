@@ -44,5 +44,6 @@ export class SuscriptionsComponent {
   public updatePlan(planSelected: Plan) {
     this.user.type_plan = planSelected;
     this.userApiService.update(Number(sessionStorage.getItem('id')), this.user).subscribe();
+    sessionStorage.setItem('type_plan', String(this.user.type_plan));
   }
 }

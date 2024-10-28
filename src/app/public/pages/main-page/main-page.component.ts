@@ -51,6 +51,8 @@ export class MainPageComponent {
     sessionStorage.removeItem('email');
     sessionStorage.removeItem('password');
     sessionStorage.removeItem('type_user');
+    sessionStorage.removeItem('type_plan');
+    sessionStorage.removeItem('id');
     this.router.navigate(['/home']);
   }
 }
