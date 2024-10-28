@@ -18,7 +18,12 @@
       </ul>
     </mat-card-content>
     <mat-card-actions class="plan-actions">
-      <button class="button choose-button">{{ 'allPlans.choosePlan' | translate }}</button>
+      <div *ngIf="typePlan===0">
+        <button class="button disable-button" disabled>{{ 'allPlans.choosePlan' | translate }}</button>
+      </div>
+      <div *ngIf="typePlan===1">
+        <button class="button enable-button" (click)="openConfirmCancelDialog()">{{ 'allPlans.choosePlan' | translate }}</button>
+      </div>
     </mat-card-actions>
   </mat-card>
 
@@ -36,7 +41,12 @@
       </ul>
     </mat-card-content>
     <mat-card-actions class="plan-actions">
-      <button class="button choose-button" (click)="openCardPayment()">{{ 'allPlans.choosePlan' | translate }}</button>
+      <div *ngIf="typePlan===1">
+        <button class="button disable-button" disabled>{{ 'allPlans.choosePlan' | translate }}</button>
+      </div>
+      <div *ngIf="typePlan===0">
+        <button class="button enable-button" (click)="openCardPayment()">{{ 'allPlans.choosePlan' | translate }}</button>
+      </div>
     </mat-card-actions>
   </mat-card>
 </div>

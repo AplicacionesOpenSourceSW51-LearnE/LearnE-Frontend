@@ -189,5 +189,16 @@
       "student_id": 2,
       "tutorial_id": 3
     }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "name_card": "Jorge Orrego",
+      "number_card": "378282246310005",
+      "expire_date": "09/26",
+      "security_code": "2506",
+      "email": "testing1234@gmail.com",
+      "student_id": 1
+    }
   ]
 }
