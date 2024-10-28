@@ -58,12 +58,12 @@ export class ExamComponent {
         })
 
         if (this.examId) {
-            this.loadExam();
+            //this.loadExam();
         }
 
     }
 
-    loadExam() {
+    /*loadExam() {
         this.exam = this.courseService.getExamById(this.examId || 0);
-    }
+    }*/
 }

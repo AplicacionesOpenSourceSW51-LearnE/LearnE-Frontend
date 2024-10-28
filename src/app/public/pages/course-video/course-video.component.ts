@@ -53,7 +53,7 @@ export class CourseVideoComponent {
 
   constructor(private sanitizer: DomSanitizer, private route: ActivatedRoute, private courseService: CourseService) { }
 
-  ngOnInit() {
+  /*ngOnInit() {
     this.route.queryParams.subscribe(params => {
       console.log('queryParams: ', params);
       const id = params['id'];
@@ -77,5 +77,5 @@ export class CourseVideoComponent {
     } else {
       console.error('No se encontró la sección o el enlace es inválido');
     }
-  }
+  }*/
 }

@@ -20,7 +20,7 @@ export class CourseService extends BaseService<Course>{
     return this.selectedCourse;
   }
 
-  getSectionById(sectionId: number): any {
+  /*getSectionById(sectionId: number): any {
     if (!this.selectedCourse) {
       console.error('No course selected');
       return null;
@@ -62,6 +62,6 @@ export class CourseService extends BaseService<Course>{
 
     console.error('No section found with id:', examId);
     return null;
-  }
+  }*/
 
 }
