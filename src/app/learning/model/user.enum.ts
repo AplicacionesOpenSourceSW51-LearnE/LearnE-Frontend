@@ -1,4 +1,4 @@
 export enum UserType {
-  STUDENT,
   TEACHER,
+  STUDENT,
 }

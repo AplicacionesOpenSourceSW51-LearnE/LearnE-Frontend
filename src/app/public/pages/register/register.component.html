@@ -24,12 +24,12 @@
         <mat-radio-group
           aria-labelledby="user-radio-group-label"
           class="user-radio-group"
-          [(ngModel)]="user.type" name="userType">
-          <mat-radio-button class="user-radio-button" [value]="UserType.STUDENT">Alumno</mat-radio-button>
+          [(ngModel)]="user.type_user" name="userType">
           <mat-radio-button class="user-radio-button" [value]="UserType.TEACHER">Profesor</mat-radio-button>
+          <mat-radio-button class="user-radio-button" [value]="UserType.STUDENT">Alumno</mat-radio-button>
         </mat-radio-group>
         <ng-container class="buttons">
-          <button mat-raised-button color="primary" (click)="createNewUser()" routerLink="/home/subscriptions">Crear Cuenta</button>
+          <button mat-raised-button color="primary" (click)="createNewUser()">Crear Cuenta</button>
         </ng-container>
       </form>
       <p class="login-link">¿Ya tienes una cuenta? <a routerLink="/home/signIn">Inicia sesión aquí</a></p>

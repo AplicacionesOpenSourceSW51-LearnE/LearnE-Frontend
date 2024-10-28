@@ -53,12 +53,10 @@
     "ratings": "Ratings"
   },
   "mainPage": {
-    "courses": "My courses",
-    "activities": "Activities",
-    "history": "Course History",
+    "courses": "My Courses",
+    "management": "Course Management",
     "calendar": "Calendar",
     "plans": "Plans",
-    "scores": "My scores",
     "profile": "Profile",
     "logOut": "Log Out"
   }
