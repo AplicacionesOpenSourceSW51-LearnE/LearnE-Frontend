@@ -1,15 +1,13 @@
-import {Tutorial} from "./tutorial.entity";
-
 export class Section {
   id: number;
+  unit_id: number;
   title: string;
-  link: string;
-  tutorials: Array<Tutorial>;
+  url_video: string;
 
-  constructor(section: {id?: number, title?: string, link?: string, tutorials?: Array<Tutorial>}) {
+  constructor(section: {id?: number, unit_id?: number, title?: string, url_video?: string}) {
     this.id = section.id || 0;
+    this.unit_id = section.unit_id || 0;
     this.title = section.title || "";
-    this.link = section.link || "";
-    this.tutorials = section.tutorials || [];
+    this.url_video = section.url_video || "";
   }
 }
