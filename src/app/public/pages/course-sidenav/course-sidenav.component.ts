@@ -129,6 +129,10 @@ export class CourseSidenavComponent implements OnInit{
     this.router.navigate(['/courseSidenav/exam'], { queryParams: { id: examId } });
   }
 
+  navigateToTutoring(tutoringId: number) {
+    this.router.navigate(['/courseTutoring/tutoring'], { queryParams: { id: tutoringId } });
+  }
+
   loadVideo(index: number) {
     const selectedUnit = this.units[index];
     if (selectedUnit) {

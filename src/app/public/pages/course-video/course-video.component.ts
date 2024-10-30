@@ -4,7 +4,6 @@ import { MatSidenavContainer, MatSidenavContent } from "@angular/material/sidena
 import { MatTab, MatTabGroup } from "@angular/material/tabs";
 import {NgForOf, NgIf} from "@angular/common";
 import { ActivatedRoute } from "@angular/router";
-import { CourseService } from "../../../learning/services/course.service";
 import { MatFormField, MatHint, MatLabel, MatSuffix } from "@angular/material/form-field";
 import {
   MatDatepicker,
