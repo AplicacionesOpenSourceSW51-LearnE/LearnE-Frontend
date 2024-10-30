@@ -17,8 +17,6 @@ import {Section} from "../../../learning/model/section.entity";
 import {ExamService} from "../../../learning/services/exam.service";
 import {Exam} from "../../../learning/model/exam.entity";
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
-import {TutorialCourses} from "../../../learning/model/tutorial-courses.entity";
-import {TutorialCoursesService} from "../../../learning/services/tutorial-courses.service";
 
 @Component({
   selector: 'app-course-sidenav',
@@ -46,15 +44,13 @@ export class CourseSidenavComponent implements OnInit{
   units: Array<Unit> = [];
   sections: Array<Section> = [];
   exams: Array<Exam> = [];
-  tutoring: Array<TutorialCourses> = [];
   videoUrl: SafeResourceUrl = '';
   isLocalVideo: boolean = false;
   openedUnits: Set<number> = new Set();
 
   constructor(private courseService: CourseService, private router: Router, private dialog: MatDialog,
               private unitService: UnitService, private sectionService: SectionService,
-              private examService: ExamService, private sanitizer: DomSanitizer,
-              private tutoringService: TutorialCoursesService) {
+              private examService: ExamService, private sanitizer: DomSanitizer) {
   }
 
   ngOnInit(): void {
@@ -63,7 +59,6 @@ export class CourseSidenavComponent implements OnInit{
       console.log('Selected course:', this.selectedCourse);
     }
     this.getAllUnits();
-    this.getAllTutoring();
     this.getAllSections();
     this.getAllExams();
     this.loadVideo(0);
@@ -89,13 +84,6 @@ export class CourseSidenavComponent implements OnInit{
       const unitIds = this.units.map(unit => unit.id);
       this.exams = response.filter(exam => unitIds.includes(exam.unit_id));
       console.log(this.exams);
-    })
-  }
-
-  private getAllTutoring() {
-    this.tutoringService.getAll().subscribe((response: Array<TutorialCourses>) => {
-      this.tutoring = response.filter(tutorial => this.selectedCourse?.id);
-      console.log(this.tutoring);
     })
   }
 
@@ -129,8 +117,12 @@ export class CourseSidenavComponent implements OnInit{
     this.router.navigate(['/courseSidenav/exam'], { queryParams: { id: examId } });
   }
 
-  navigateToTutoring(tutoringId: number) {
-    this.router.navigate(['/courseTutoring/tutoring'], { queryParams: { id: tutoringId } });
+  navigateToTutoring() {
+    if (this.selectedCourse) {
+      this.router.navigate(['/courseSidenav/tutoring'], { queryParams: { id: this.selectedCourse.id } });
+    } else {
+      console.error('No selected course');
+    }
   }
 
   loadVideo(index: number) {

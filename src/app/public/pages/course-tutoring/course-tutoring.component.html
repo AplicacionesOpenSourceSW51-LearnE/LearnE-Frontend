@@ -1,1 +1,12 @@
-<p>course-tutoring works!</p>
+<div class="container">
+  <mat-card class="tutoring-card" *ngFor="let tutorial of tutoring">
+    <mat-card-header>
+      <mat-card-title>
+        {{tutorial.date}}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-card-subtitle>{{tutorial.hour}}</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+</div>

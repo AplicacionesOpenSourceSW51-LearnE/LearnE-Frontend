@@ -39,7 +39,7 @@ export const routes: Routes = [
       { path: 'courseVideo', component: CourseVideoComponent },
       { path: 'exam', component: ExamComponent},
       { path: 'course-details', component: CourseDetailsComponent},
-      { path: 'course-tutoring', component: CourseTutoringComponent },
+      { path: 'tutoring', component: CourseTutoringComponent },
     ]},
   { path: '',                    redirectTo: 'home', pathMatch: 'full' },
   { path: '**',                  component: PageNotFoundComponent }

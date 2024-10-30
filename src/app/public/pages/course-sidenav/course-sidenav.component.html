@@ -35,8 +35,8 @@
             </div>
           </div>
         </div>
-        <div *ngFor="let tutorial of tutoring">
-          <mat-list-item (click)="navigateToTutoring(tutorial.id)">
+        <div class="tutoring-part">
+          <mat-list-item (click)="navigateToTutoring()">
             {{ 'courses.tutorials' | translate }}
           </mat-list-item>
         </div>
