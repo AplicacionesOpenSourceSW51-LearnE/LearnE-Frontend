@@ -1,0 +1,26 @@
+.dialog {
+  border-radius: 4rem;
+  padding: 1rem;
+}
+
+.button {
+  border: none;
+  padding: 10px 30px;
+  font-size: 1rem;
+  border-radius: 1.5rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.close {
+
+}
+
+.confirm {
+  color: white;
+  background-color: #9600CD;
+}
+
+.buttons {
+  gap: 1rem;
+}
