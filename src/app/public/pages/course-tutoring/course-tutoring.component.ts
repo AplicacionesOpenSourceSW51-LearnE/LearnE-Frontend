@@ -8,6 +8,7 @@ import {MatButtonToggle} from "@angular/material/button-toggle";
 import {TutorialReservated} from "../../../learning/model/tutorial-reservated.entity";
 import {TutorialReservatedService} from "../../../learning/services/tutorial-reservated.service";
 import {MatButton} from "@angular/material/button";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-course-tutoring',
@@ -21,7 +22,8 @@ import {MatButton} from "@angular/material/button";
     MatCardSubtitle,
     MatButtonToggle,
     MatButton,
-    NgIf
+    NgIf,
+    TranslateModule
   ],
   templateUrl: './course-tutoring.component.html',
   styleUrl: './course-tutoring.component.css'

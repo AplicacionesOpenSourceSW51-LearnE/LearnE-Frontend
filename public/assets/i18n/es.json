@@ -59,5 +59,10 @@
     "plans": "Planes",
     "profile": "Perfil",
     "logOut": "Cerrar Sesión"
+  },
+  "tutoring": {
+    "register": "Inscribirse",
+    "reserved": "Reservado",
+    "enter": "Ingresar"
   }
 }

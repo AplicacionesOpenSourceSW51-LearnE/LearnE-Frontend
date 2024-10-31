@@ -59,5 +59,10 @@
     "plans": "Plans",
     "profile": "Profile",
     "logOut": "Log Out"
+  },
+  "tutoring": {
+    "register": "Register",
+    "reserved": "Reserved",
+    "enter": "Enter"
   }
 }
