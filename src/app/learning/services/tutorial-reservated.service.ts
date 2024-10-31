@@ -9,6 +9,6 @@ export class TutorialReservatedService extends BaseService<TutorialReservated>{
 
   constructor() {
     super();
-    this.resourceEndPoint='/tutorial_reservated';
+    this.resourceEndPoint='/tutorials_reservated';
   }
 }

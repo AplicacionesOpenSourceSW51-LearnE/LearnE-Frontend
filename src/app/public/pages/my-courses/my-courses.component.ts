@@ -54,6 +54,6 @@ export class MyCoursesComponent implements OnInit{
 
   goToCourseSideNav(course: Course): void {
     this.courseService.setSelectedCourse(course);
-    this.router.navigate(['/courseSidenav']);
+    this.router.navigate(['/courseSidenav'], {queryParams: {description: course.description}});
   }
 }

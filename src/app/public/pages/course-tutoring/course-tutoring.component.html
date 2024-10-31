@@ -8,5 +8,22 @@
     <mat-card-content>
       <mat-card-subtitle>{{tutorial.hour}}</mat-card-subtitle>
     </mat-card-content>
+    <div class="actions">
+      <button *ngIf="!tutorial.is_reservated"
+              mat-raised-button
+              color="primary"
+              (click)="registerTutorial(tutorial.id, studentId)">
+        Register
+      </button>
+      <span *ngIf="tutorial.is_reservated" class="reserved">
+        Reserved
+      </span>
+    </div>
+    <div class="actions">
+      <button *ngIf="tutorial.link != ''"
+              mat-raised-button
+              color="primary"
+              (click)="enterLink(tutorial.id)">Enter</button>
+    </div>
   </mat-card>
 </div>
