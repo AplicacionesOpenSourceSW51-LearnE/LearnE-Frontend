@@ -64,5 +64,17 @@
     "register": "Inscribirse",
     "reserved": "Reservado",
     "enter": "Ingresar"
+  },
+  "profile": {
+    "teacher": "Profesor",
+    "student": "Estudiante",
+    "information": "Información",
+    "fullName": "Nombre completo",
+    "username": "Nombre de usuario",
+    "email": "Correo",
+    "typePlan": "Tipo de plan",
+    "free": "Gratis",
+    "premium": "Premium",
+    "nothing": "Ninguno"
   }
 }

@@ -38,7 +38,7 @@ export class AllPlansComponent {
   user: User = new User({});
   typePlan: number = Number(sessionStorage.getItem('type_plan'));
 
-  constructor(private router: Router, public dialog: MatDialog, private userApiService: UserService) {}  // Inyectas el servicio Router aquí
+  constructor(private router: Router, public dialog: MatDialog, private userApiService: UserService) {}
 
   ngOnInit() {
     this.getUser();
