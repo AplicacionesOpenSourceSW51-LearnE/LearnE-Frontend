@@ -3,7 +3,7 @@
 
   <mat-card-header class="exam-header-container">
     <div class="grade">
-      {{examSend && savedExamNote ? savedExamNote?.note : '0'}} / 20
+      {{displayNote}} / 20
     </div>
     <mat-card-title class="title">{{ 'exams.exam' | translate}} {{exam?.id}}: {{exam?.title}}</mat-card-title>
   </mat-card-header>

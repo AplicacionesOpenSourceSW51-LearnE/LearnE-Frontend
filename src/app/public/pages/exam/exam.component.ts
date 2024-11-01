@@ -86,7 +86,11 @@ export class ExamComponent {
         })
     }
 
-    loadExam() {
+  get displayNote(): number {
+    return this.examSend && this.savedExamNote ? this.savedExamNote.note : 0;
+  }
+
+  loadExam() {
         if (this.examId) {
             this.examService.getById(this.examId).subscribe(exam => {
                 this.exam = exam;

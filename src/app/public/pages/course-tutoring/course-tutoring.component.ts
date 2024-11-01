@@ -31,6 +31,8 @@ import {TranslateModule} from "@ngx-translate/core";
 export class CourseTutoringComponent {
   courseId: number | null = null;
   tutoring: Array<TutorialCourses> = [];
+  tutorialRes: Array<TutorialReservated> = [];
+  tutorialResInfo: Array<TutorialCourses> = [];
   studentId = Number(sessionStorage.getItem('id'));
 
   constructor(private route: ActivatedRoute, private tutoringService: TutorialCoursesService,
@@ -42,6 +44,7 @@ export class CourseTutoringComponent {
       this.courseId = params['id'] ? Number(params['id']) : null;
       if (this.courseId) {
         this.loadTutorial();
+        this.loadTutorialReservated();
       }
     })
   }
@@ -49,11 +52,30 @@ export class CourseTutoringComponent {
   loadTutorial() {
     if (this.courseId) {
       this.tutoringService.getAll().subscribe((response: Array<TutorialCourses>) => {
-        this.tutoring = response.filter(tutorial => tutorial.courses_id === this.courseId);
+        this.tutoring = response.filter(
+          tutorial => tutorial.courses_id === this.courseId && !tutorial.is_reservated);
         console.log(this.tutoring);
       })
     }
   }
+
+  loadTutorialReservated() {
+    if (this.courseId) {
+      // Filtra las reservaciones del estudiante
+      this.tutorialReservatedService.getAll().subscribe((response: Array<TutorialReservated>) => {
+        this.tutorialRes = response.filter(tuto => tuto.student_id === this.studentId);
+
+        // Obtén las tutorías reservadas para el estudiante
+        this.tutoringService.getAll().subscribe((tutorial: Array<TutorialCourses>) => {
+          // Filtra solo las tutorías que están reservadas y que coinciden con las reservaciones del estudiante
+          this.tutorialResInfo = tutorial.filter(response =>
+            response.is_reservated && this.tutorialRes.some(res => res.tutorial_id === response.id)
+          );
+        });
+      });
+    }
+  }
+
 
   registerTutorial(tutorialId: number, studentId: number) {
     const tutorial = this.tutoring.find(tut => tut.id === tutorialId);

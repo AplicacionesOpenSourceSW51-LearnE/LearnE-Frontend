@@ -66,7 +66,7 @@ export class CourseSidenavComponent implements OnInit{
 
   private getAllUnits() {
     this.unitService.getAll().subscribe((response: Array<Unit>) => {
-      this.units = response.filter(unit => this.selectedCourse?.id);
+      this.units = response.filter(unit => unit.course_id == this.selectedCourse?.id);
       console.log(this.units);
     })
   }
