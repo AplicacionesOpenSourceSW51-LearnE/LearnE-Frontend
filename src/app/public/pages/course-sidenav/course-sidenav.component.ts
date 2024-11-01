@@ -125,6 +125,12 @@ export class CourseSidenavComponent implements OnInit{
     }
   }
 
+  navigateToMaterial() {
+    if (this.selectedCourse) {
+      this.router.navigate(['/courseSidenav/material'], {queryParams: {id: this.selectedCourse.id}});
+    }
+  }
+
   loadVideo(index: number) {
     const selectedUnit = this.units[index];
     if (selectedUnit) {

@@ -1,5 +1,8 @@
 <mat-toolbar color="primary">
-  <a [routerLink]="homePath">
+  <a [routerLink]="redirectPath">
     <img src="https://i.imgur.com/1DP47wd.jpeg" alt="LearneLogo" width="80" height="50">
   </a>
 </mat-toolbar>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, RouterLink} from "@angular/router";
 import {TutorialCoursesService} from "../../../learning/services/tutorial-courses.service";
 import {TutorialCourses} from "../../../learning/model/tutorial-courses.entity";
 import {MatCard, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardTitle} from "@angular/material/card";
@@ -7,7 +7,7 @@ import {NgForOf, NgIf} from "@angular/common";
 import {MatButtonToggle} from "@angular/material/button-toggle";
 import {TutorialReservated} from "../../../learning/model/tutorial-reservated.entity";
 import {TutorialReservatedService} from "../../../learning/services/tutorial-reservated.service";
-import {MatButton} from "@angular/material/button";
+import {MatAnchor, MatButton} from "@angular/material/button";
 import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
@@ -23,7 +23,9 @@ import {TranslateModule} from "@ngx-translate/core";
     MatButtonToggle,
     MatButton,
     NgIf,
-    TranslateModule
+    TranslateModule,
+    MatAnchor,
+    RouterLink
   ],
   templateUrl: './course-tutoring.component.html',
   styleUrl: './course-tutoring.component.css'
@@ -34,6 +36,7 @@ export class CourseTutoringComponent {
   tutorialRes: Array<TutorialReservated> = [];
   tutorialResInfo: Array<TutorialCourses> = [];
   studentId = Number(sessionStorage.getItem('id'));
+  studentPlan = Number(sessionStorage.getItem('type_plan'));
 
   constructor(private route: ActivatedRoute, private tutoringService: TutorialCoursesService,
               private tutorialReservatedService: TutorialReservatedService) {
@@ -61,13 +64,10 @@ export class CourseTutoringComponent {
 
   loadTutorialReservated() {
     if (this.courseId) {
-      // Filtra las reservaciones del estudiante
       this.tutorialReservatedService.getAll().subscribe((response: Array<TutorialReservated>) => {
         this.tutorialRes = response.filter(tuto => tuto.student_id === this.studentId);
 
-        // Obtén las tutorías reservadas para el estudiante
         this.tutoringService.getAll().subscribe((tutorial: Array<TutorialCourses>) => {
-          // Filtra solo las tutorías que están reservadas y que coinciden con las reservaciones del estudiante
           this.tutorialResInfo = tutorial.filter(response =>
             response.is_reservated && this.tutorialRes.some(res => res.tutorial_id === response.id)
           );

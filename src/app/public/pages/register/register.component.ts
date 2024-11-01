@@ -73,7 +73,7 @@ export class RegisterComponent {
 
   private typeUserIdentification() {
     if (Number(sessionStorage.getItem('type_user')) == 1) {
-      this.router.navigate(['/home/subscriptions']);
+      this.router.navigate(['/subscriptions']);
     } else {
       sessionStorage.setItem('type_plan', String(this.user.type_plan));
       this.router.navigate(['/mainPage']);

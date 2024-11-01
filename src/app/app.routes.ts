@@ -18,15 +18,19 @@ import {CourseDetailsComponent} from "./public/pages/course-details/course-detai
 import {MyNotesComponent} from "./public/pages/my-notes/my-notes.component";
 import {ProfileComponent} from "./public/pages/profile/profile.component";
 import {CourseTutoringComponent} from "./public/pages/course-tutoring/course-tutoring.component";
+import {CourseMaterialComponent} from "./public/pages/course-material/course-material.component";
+import {MainToolbarComponent} from "./public/components/main-toolbar/main-toolbar.component";
 
 
 export const routes: Routes = [
-  { path: 'home',                component: LandingPageComponent},
-  { path: 'home/signIn',         component: SignInComponent},
-  { path: 'home/register',       component: RegisterComponent},
-  { path: 'home/subscriptions',  component: SuscriptionsComponent},
-  { path: 'home/payment',        component: PaymentComponent},
-  { path: 'home/payment/success',component: RegisterConfirmationComponent},
+  { path: 'mainToolbar', component: MainToolbarComponent, children: [
+      { path: 'home',                component: LandingPageComponent },
+      { path: 'signIn',         component: SignInComponent},
+      { path: 'register',       component: RegisterComponent}
+    ]},
+  { path: 'subscriptions',  component: SuscriptionsComponent},
+  { path: 'payment',        component: PaymentComponent},
+  { path: 'payment/success',component: RegisterConfirmationComponent},
   { path: 'mainPage',            component: MainPageComponent, children: [
       { path: 'plans', component:AllPlansComponent},
       { path: 'paymentSuccesful', component: PaymentSuccesfulComponent},
@@ -40,7 +44,8 @@ export const routes: Routes = [
       { path: 'exam', component: ExamComponent},
       { path: 'course-details', component: CourseDetailsComponent},
       { path: 'tutoring', component: CourseTutoringComponent },
+      { path: 'material', component: CourseMaterialComponent },
     ]},
-  { path: '',                    redirectTo: 'home', pathMatch: 'full' },
+  { path: '',                    redirectTo: 'mainToolbar/home', pathMatch: 'full' },
   { path: '**',                  component: PageNotFoundComponent }
 ];

@@ -53,6 +53,6 @@ export class MainPageComponent {
     sessionStorage.removeItem('type_user');
     sessionStorage.removeItem('type_plan');
     sessionStorage.removeItem('id');
-    this.router.navigate(['/home']);
+    this.router.navigate(['/mainToolbar/home']);
   }
 }

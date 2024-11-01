@@ -9,7 +9,7 @@ import {provideRouter, RouterLink, RouterOutlet} from "@angular/router";
     MatButton,
     RouterLink,
     MatAnchor,
-    RouterOutlet
+    RouterOutlet,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'

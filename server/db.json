@@ -8,7 +8,7 @@
       "email": "testing1234@gmail.com",
       "password": "1234",
       "type_user": 1,
-      "type_plan": 1
+      "type_plan": 0
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
       "email": "pepeprofe@gmail.com",
       "password": "1234",
       "type_user": 1,
-      "type_plan": 0
+      "type_plan": 1
     },
     {
       "id": 3,
@@ -88,12 +88,14 @@
       "id": 1,
       "unit_id": 1,
       "title": "Introduction video",
+      "description": "Explain about variables and functions",
       "url_video": "https://www.youtube.com/embed/DAdRO6ByBoU"
     },
     {
       "id": 2,
       "unit_id": 1,
       "title": "Introduction video 2",
+      "description": "Explain the differences of the functions",
       "url_video": "https://www.youtube.com/embed/UzHFkEdnRuc"
     }
   ],
@@ -101,6 +103,7 @@
     {
       "id": 1,
       "unit_id": 1,
+      "course_id": 1,
       "title": "Theory of object-oriented programming"
     }
   ],
@@ -201,5 +204,14 @@
       "student_id": 1
     }
   ],
-  "notes": []
+  "notes": [],
+  "materials": [
+    {
+      "id": 1,
+      "course_id": 1,
+      "title": "Python Basics",
+      "format": "PDF",
+      "link": "https://bugs.python.org/file47781/Tutorial_EDIT.pdf"
+    }
+  ]
 }
