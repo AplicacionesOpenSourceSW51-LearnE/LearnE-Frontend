@@ -22,6 +22,8 @@ import {Question} from "../../../learning/model/question.entity";
 import {Answers} from "../../../learning/model/answers.entity";
 import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 import {FormsModule} from "@angular/forms";
+import {ExamNote} from "../../../learning/model/exam-note.entity";
+import {ExamsNoteService} from "../../../learning/services/exams-note.service";
 
 @Component({
   selector: 'app-exam',
@@ -57,16 +59,29 @@ export class ExamComponent {
     questions: Array<Question> = [];
     answers: Array<Answers> = [];
     selectedAnswers: Array<number | null> = [];
+    note: number = 0;
+    finalScore: number = 0;
+    examSend: boolean = false;
+    savedExamNote: ExamNote | null = null;
 
     constructor(private route: ActivatedRoute, private examService: ExamService,
-                private questionService: QuestionService, private answerService: AnswersService) {
+                private questionService: QuestionService, private answerService: AnswersService,
+                private examsNoteService: ExamsNoteService) {
     }
 
     ngOnInit() {
         this.route.queryParams.subscribe(params => {
             this.examId = params['id'] ? Number(params['id']) : null;
             if (this.examId) {
-                this.loadExam();
+              this.examsNoteService.getAll().subscribe((notes: ExamNote[]) => {
+                const existingNote = notes.find(
+                  note => note.student_id === Number(sessionStorage.getItem('id')) && note.exam_id === this.examId);
+                  if (existingNote) {
+                    this.savedExamNote = existingNote;
+                    this.examSend = true;
+                  }
+              })
+              this.loadExam();
             }
         })
     }
@@ -98,5 +113,35 @@ export class ExamComponent {
                 console.log(this.answers);
             })
         }
+    }
+
+    calculateScore() {
+      if (this.examSend) return;
+      this.note = 0;
+      this.questions.forEach((question, index) => {
+        const correctAnswer = this.answers.find(
+          answer => answer.question_id === question.id && answer.is_correct
+        );
+        if (correctAnswer && this.selectedAnswers[index] === correctAnswer.id) {
+          this.note += 1;
+        }
+      });
+      this.finalScore = (this.note / this.questions.length) * 20;
+      alert('Your exam is send');
+      this.saveExamNote();
+    }
+
+    private saveExamNote() {
+      if (this.examId) {
+        const examNote = new ExamNote({
+          student_id: Number(sessionStorage.getItem('id')),
+          exam_id: this.examId,
+          note: this.finalScore
+        });
+        this.examsNoteService.create(examNote).subscribe((createdNote) => {
+          this.savedExamNote = createdNote;
+          this.examSend = true;
+        })
+      }
     }
 }
