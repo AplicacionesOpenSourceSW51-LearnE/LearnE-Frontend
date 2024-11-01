@@ -18,6 +18,7 @@ import {CourseDetailsComponent} from "./public/pages/course-details/course-detai
 import {MyNotesComponent} from "./public/pages/my-notes/my-notes.component";
 import {ProfileComponent} from "./public/pages/profile/profile.component";
 import {CourseTutoringComponent} from "./public/pages/course-tutoring/course-tutoring.component";
+import {CourseMaterialComponent} from "./public/pages/course-material/course-material.component";
 
 
 export const routes: Routes = [
@@ -40,6 +41,7 @@ export const routes: Routes = [
       { path: 'exam', component: ExamComponent},
       { path: 'course-details', component: CourseDetailsComponent},
       { path: 'tutoring', component: CourseTutoringComponent },
+      { path: 'material', component: CourseMaterialComponent },
     ]},
   { path: '',                    redirectTo: 'home', pathMatch: 'full' },
   { path: '**',                  component: PageNotFoundComponent }

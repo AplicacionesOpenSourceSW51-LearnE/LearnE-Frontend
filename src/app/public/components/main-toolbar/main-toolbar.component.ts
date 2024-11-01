@@ -15,5 +15,9 @@ import {RouterLink} from "@angular/router";
   styleUrl: './main-toolbar.component.css'
 })
 export class MainToolbarComponent {
-  homePath = "home"
+  redirectPath = "home"
+  ngOnInit() {
+    const sessionValue = sessionStorage.getItem('id');
+    this.redirectPath = sessionValue ? 'mainPage' : 'home';
+  }
 }

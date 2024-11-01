@@ -1,0 +1,11 @@
+.material-card {
+  margin-bottom: 16px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 5px;
+}
