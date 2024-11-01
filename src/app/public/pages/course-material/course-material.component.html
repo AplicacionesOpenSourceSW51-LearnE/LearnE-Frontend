@@ -15,7 +15,7 @@
       </mat-card-content>
     </mat-card>
   </div>
-  <div *ngIf="studentType === 0">
+  <div *ngIf="studentType === 0" class="free-part">
     <p>{{ 'material.free' | translate }}</p>
     <div class="buttons">
       <a mat-raised-button color="primary" class="subscription" routerLink="/mainPage/plans">{{ 'material.enter' | translate }}</a>
