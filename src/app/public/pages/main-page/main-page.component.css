@@ -36,3 +36,24 @@ a {
 .options-list {
   padding-bottom: 50px;
 }
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.options-list mat-list-item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.options-list mat-list-item a {
+  display: flex;
+  width: 100%;
+}

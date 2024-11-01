@@ -3,8 +3,17 @@
     <mat-sidenav #sidenav mode="side" opened class="main-sidenav"
                  [fixedInViewport]="false">
       <mat-nav-list class="options-list">
+        <div class="logo-container">
+          <img class="logo" src="https://i.imgur.com/1DP47wd.jpeg" alt="LearneLogo" width="100" height="100" routerLink="/mainPage/myCourses">
+        </div>
+        <mat-list-item>
+          <a routerLink="/mainPage/myCourses"><mat-icon>class</mat-icon>{{ 'mainPage.catalog' | translate }}</a>
+        </mat-list-item>
         <mat-list-item>
           <a routerLink="/mainPage/myCourses"><mat-icon>class</mat-icon>{{ 'mainPage.courses' | translate }}</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a routerLink="/mainPage/grades"><mat-icon>class</mat-icon>{{ 'mainPage.grades' | translate }}</a>
         </mat-list-item>
         <mat-list-item>
           <a routerLink="/mainPage/calendar"><mat-icon>calendar_today</mat-icon>{{ 'mainPage.calendar' | translate }}</a>

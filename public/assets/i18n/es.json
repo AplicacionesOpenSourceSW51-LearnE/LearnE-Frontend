@@ -59,7 +59,9 @@
     "calendar": "Calendario",
     "plans": "Planes",
     "profile": "Perfil",
-    "logOut": "Cerrar Sesión"
+    "logOut": "Cerrar Sesión",
+    "grades": "Calificaciones",
+    "catalog": "Catálogo"
   },
   "tutoring": {
     "res": "Tutorías reservadas",

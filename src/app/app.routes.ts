@@ -20,7 +20,7 @@ import {ProfileComponent} from "./public/pages/profile/profile.component";
 import {CourseTutoringComponent} from "./public/pages/course-tutoring/course-tutoring.component";
 import {CourseMaterialComponent} from "./public/pages/course-material/course-material.component";
 import {MainToolbarComponent} from "./public/components/main-toolbar/main-toolbar.component";
-
+import {GradesComponent} from "./public/pages/grades/grades.component";
 
 export const routes: Routes = [
   { path: 'mainToolbar', component: MainToolbarComponent, children: [
@@ -37,7 +37,8 @@ export const routes: Routes = [
       { path: 'myCourses', component: MyCoursesComponent},
       { path: 'calendar',component: CalendarComponent},
       { path: 'myNotes', component: MyNotesComponent},
-      { path: 'profile', component: ProfileComponent}
+      { path: 'profile', component: ProfileComponent},
+      { path: 'grades', component: GradesComponent}
     ]},
   { path: 'courseSidenav', component: CourseSidenavComponent, children: [
       { path: 'courseVideo', component: CourseVideoComponent },

@@ -59,7 +59,9 @@
     "calendar": "Calendar",
     "plans": "Plans",
     "profile": "Profile",
-    "logOut": "Log Out"
+    "logOut": "Log Out",
+    "grades": "Grades",
+    "catalog": "Catalog"
   },
   "tutoring": {
     "res": "Tutoring reserved",
