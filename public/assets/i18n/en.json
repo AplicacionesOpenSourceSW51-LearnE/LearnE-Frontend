@@ -64,5 +64,17 @@
     "register": "Register",
     "reserved": "Reserved",
     "enter": "Enter"
+  },
+  "profile": {
+    "teacher": "Teacher",
+    "student": "Student",
+    "information": "Information",
+    "fullName": "Full name",
+    "username": "Username",
+    "email": "Email",
+    "typePlan": "Type plan",
+    "free": "Free",
+    "premium": "Premium",
+    "nothing": "Nothing"
   }
 }
