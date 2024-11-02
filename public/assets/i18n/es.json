@@ -104,5 +104,21 @@
     "prior": "Conocimientos Previos",
     "presentation": "Presentación",
     "who": "Conoce quién enseña el curso de"
+  },
+  "tutorialsManagement": {
+    "tutoring": "Tutorías",
+    "date": "Fecha",
+    "hour": "Hora",
+    "state": "Estado",
+    "add": "Añadir",
+    "rTutorials": "Tutoriales reservados",
+    "uTutorials": "Tutoriales no reservados",
+    "reserved": "Reservado",
+    "unreserved": "No reservado",
+    "student": "Estudiante",
+    "link": "Enlace",
+    "update": "Actualizar",
+    "cancel": "Cancelar",
+    "uLink": "Actualizar link"
   }
 }
