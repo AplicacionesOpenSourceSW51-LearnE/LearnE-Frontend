@@ -31,6 +31,7 @@ import {AddSectionFormComponent} from "./public/pages/add-section-form/add-secti
 import {AddUnitFormComponent} from "./public/pages/add-unit-form/add-unit-form.component";
 import {ExamEditComponent} from "./public/pages/exam-edit/exam-edit.component";
 import {CourseVideoEditComponent} from "./public/pages/course-video-edit/course-video-edit.component";
+import {TutoringManagementComponent} from "./public/pages/tutoring-management/tutoring-management.component";
 
 export const routes: Routes = [
   { path: 'mainToolbar', component: MainToolbarComponent, children: [
@@ -56,7 +57,8 @@ export const routes: Routes = [
       { path: 'courseAdd', component: CourseAddComponent },
       { path: 'unitAdd', component: AddUnitFormComponent },
       { path: 'examAdd', component: ExamManagementComponent },
-      { path: 'sectionAdd', component: AddSectionFormComponent }
+      { path: 'sectionAdd', component: AddSectionFormComponent },
+      { path: 'tutoringManagement', component: TutoringManagementComponent}
     ]},
   { path: 'courseEditContent', component: CourseEditContentComponent, children: [
       { path: 'sectionEdit', component: CourseVideoEditComponent },

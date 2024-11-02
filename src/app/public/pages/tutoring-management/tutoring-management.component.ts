@@ -11,6 +11,7 @@ import {ReservedTutorialDetail} from "../../../learning/model/reserved-tutorial-
 import {NgForOf, NgIf} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {TranslateModule} from "@ngx-translate/core";
+import {CourseService} from "../../../learning/services/course.service";
 
 
 @Component({
@@ -30,9 +31,10 @@ import {TranslateModule} from "@ngx-translate/core";
   styleUrl: './tutoring-management.component.css'
 })
 export class TutoringManagementComponent {
-  // teacherId = Number(sessionStorage.getItem('id'));
-  teacherId = Number(3);
-  courseId = Number(1);
+  teacherId = Number(sessionStorage.getItem('id'));
+  // teacherId = Number(3);
+  // courseId = Number(1);
+  courseId: number | undefined;
   date: string = "";
   hour: string = "";
   link: string = "";
@@ -47,11 +49,17 @@ export class TutoringManagementComponent {
 
   constructor(private reservedTutorialsApiService: TutorialReservatedService,
               private reservedTutorialsInfoApiService: TutorialCoursesService,
-              private userApiService: UserService) {
+              private userApiService: UserService, private courseApiService: CourseService) {
   }
 
   ngOnInit() {
+    this.getCourseId();
     this.getTutorials();
+  }
+
+  private getCourseId() {
+    // this.courseId = this.courseApiService.getSelectedCourse()?.id;
+    this.courseId = this.courseApiService.getSelectedCourse()?.id ?? -1;
   }
 
   private getTutorials() {
