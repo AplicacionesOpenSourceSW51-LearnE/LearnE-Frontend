@@ -28,7 +28,15 @@ export class CourseAddComponent {
     this.course = new Course({teacher_id: this.teacherId});
   }
 
+  formatEmbedUrl(url: string): string {
+    const videoIdMatch = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|.*[?&]v=))([^?&"'>]+)/);
+    return videoIdMatch ? `https://www.youtube.com/embed/${videoIdMatch[1]}` : url;
+  }
+
   protected async createNewCourse() {
+    if (this.course.url_video) {
+      this.course.url_video = this.formatEmbedUrl(this.course.url_video);
+    }
     this.courseService.create(this.course).subscribe();
     this.router.navigate(['/mainPage/management']);
 

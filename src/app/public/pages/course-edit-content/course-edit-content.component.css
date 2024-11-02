@@ -1,0 +1,50 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.add-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  color: #4a4a4a;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #D8B9FC;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.sidenav-container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.mat-sidenav {
+  height: 100%;
+  width: 25%;
+  background-color: #D8B9FC;
+}
+
+.mat-sidenav-content {
+  flex: 1;
+  width: 100%;
+}
+
+.selectedCourse {
+  font-weight: bolder;
+  font-size: large;
+}

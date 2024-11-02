@@ -1,0 +1,20 @@
+<div class="title-container">
+  <h1 class="title">{{'courses.section' | translate }}</h1>
+</div>
+<div class="form">
+  <div class="input-content">
+    <mat-label class="label">Title:</mat-label>
+    <input [(ngModel)]="section.title" class="input" matInput name="title" placeholder="Title" required>
+  </div>
+  <div class="input-content">
+    <mat-label class="label">Description:</mat-label>
+    <input [(ngModel)]="section.description" class="input" matInput name="description" placeholder="Description" required>
+  </div>
+  <div class="input-content">
+    <mat-label class="label">Video URL:</mat-label>
+    <input [(ngModel)]="section.url_video" class="input" matInput name="url_video" placeholder="Video URL" required>
+  </div>
+  <div class="question-container">
+    <button class="button" (click)="addNewSection()">Add Section</button>
+  </div>
+</div>

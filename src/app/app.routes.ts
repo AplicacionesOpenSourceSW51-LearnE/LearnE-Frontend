@@ -26,6 +26,11 @@ import {ManagementComponent} from "./public/pages/management/management.componen
 import {CourseManagementComponent} from "./public/pages/course-management/course-management.component";
 import {CourseEditContentComponent} from "./public/pages/course-edit-content/course-edit-content.component";
 import {CourseAddComponent} from "./public/pages/course-add/course-add.component";
+import {ExamManagementComponent} from "./public/pages/exam-management/exam-management.component";
+import {AddSectionFormComponent} from "./public/pages/add-section-form/add-section-form.component";
+import {AddUnitFormComponent} from "./public/pages/add-unit-form/add-unit-form.component";
+import {ExamEditComponent} from "./public/pages/exam-edit/exam-edit.component";
+import {CourseVideoEditComponent} from "./public/pages/course-video-edit/course-video-edit.component";
 
 export const routes: Routes = [
   { path: 'mainToolbar', component: MainToolbarComponent, children: [
@@ -48,9 +53,15 @@ export const routes: Routes = [
       { path: 'grades', component: GradesComponent},
       { path: 'management', component: ManagementComponent },
       { path: 'courseManagement', component: CourseManagementComponent },
-      { path: 'courseAdd', component: CourseAddComponent }
+      { path: 'courseAdd', component: CourseAddComponent },
+      { path: 'unitAdd', component: AddUnitFormComponent },
+      { path: 'examAdd', component: ExamManagementComponent },
+      { path: 'sectionAdd', component: AddSectionFormComponent }
     ]},
-  { path: 'courseEditContent', component: CourseEditContentComponent },
+  { path: 'courseEditContent', component: CourseEditContentComponent, children: [
+      { path: 'sectionEdit', component: CourseVideoEditComponent },
+      { path: 'examEdit', component: ExamEditComponent }
+    ]},
   { path: 'courseSidenav', component: CourseSidenavComponent, children: [
       { path: 'courseVideo', component: CourseVideoComponent },
       { path: 'exam', component: ExamComponent},
