@@ -1,8 +1,7 @@
-
 <mat-card class="exam-container">
 
   <mat-card-header class="exam-header-container">
-    <div class="grade">
+    <div class="grade" [ngClass]="{'passed-grade': displayNote > 0, 'default-grade': displayNote === 0}">
       {{displayNote}} / 20
     </div>
     <mat-card-title class="title">{{ 'exams.exam' | translate}}: {{exam?.title}}</mat-card-title>

@@ -15,16 +15,14 @@
         <div *ngFor="let unit of units">
           <mat-list-item (click)="toggleUnit(unit.id)">
             <span>{{'courses.unit' | translate}}</span>
-            <span>&nbsp;</span>
-            <span>{{ unit.id }}:</span>
+            <span>: </span>
             {{ unit.title }}
           </mat-list-item>
           <div *ngIf="isUnitOpen(unit.id)" class="nested">
             <div *ngFor="let section of sections">
               <mat-list-item (click)="navigateToVideo(section.id)">
                 <span>{{ 'courses.section' | translate }}</span>
-                <span>&nbsp;</span>
-                <span>{{ section.id }}:</span>
+                <span>: </span>
                 {{ section.title }}
               </mat-list-item>
             </div>

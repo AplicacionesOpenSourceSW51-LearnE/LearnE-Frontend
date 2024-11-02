@@ -25,10 +25,10 @@
         </mat-card-header>
         <mat-card-content>
           <div class="feature">
-            <mat-icon>fitness_center</mat-icon>
+            <mat-icon class="icon">fitness_center</mat-icon>
             <span class="feature-text">{{'courses.exam' | translate}}: {{this.exams.length}}</span>
           </div>
-          <h4 class="course-prerequisites"><br>{{ 'courseDetails.prior' | translate }}:</h4>
+          <mat-card-title>{{ 'courseDetails.prior' | translate }}:</mat-card-title>
           <p>{{this.selectedCourse?.prior_knowledge}}</p>
         </mat-card-content>
       </mat-card>

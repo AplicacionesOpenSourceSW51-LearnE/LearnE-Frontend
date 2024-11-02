@@ -1,6 +1,6 @@
 <div class="container">
-  <div *ngIf="studentPlan === 1">
-    <h3 class="mat-subtitle-1">{{ 'tutoring.res' | translate }}</h3>
+  <div *ngIf="studentPlan === 1" class="premium-part">
+    <h3 class="mat-subtitle-1"><b>{{ 'tutoring.res' | translate }}</b></h3>
     <mat-card class="tutoring-card" *ngFor="let reserved of tutorialResInfo">
       <mat-card-header>
         <mat-card-title>
@@ -22,7 +22,7 @@
                 (click)="enterLink(reserved.id)">{{ 'tutoring.enter' | translate }}</button>
       </div>
     </mat-card>
-    <h3 class="mat-subtitle-1">{{ 'tutoring.dis' | translate }}</h3>
+    <h3 class="mat-subtitle-1"><b>{{ 'tutoring.dis' | translate }}</b></h3>
     <mat-card class="tutoring-card" *ngFor="let tutorial of tutoring">
       <mat-card-header>
         <mat-card-title>
@@ -42,7 +42,7 @@
     </mat-card>
   </div>
   <div *ngIf="studentPlan === 0" class="free-part">
-    <p>{{ 'tutoring.free' | translate }}</p>
+    <p><b>{{ 'tutoring.free' | translate }}</b></p>
     <div class="buttons">
       <a mat-raised-button color="primary" class="subscription" routerLink="/mainPage/plans">{{ 'tutoring.enter' | translate }}</a>
     </div>

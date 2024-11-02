@@ -13,7 +13,7 @@ import {MatInput} from "@angular/material/input";
 import {MatButton} from "@angular/material/button";
 import {TranslateModule} from "@ngx-translate/core";
 import {ActivatedRoute} from "@angular/router";
-import {NgForOf, NgIf} from "@angular/common";
+import {NgClass, NgForOf, NgIf} from "@angular/common";
 import {MatCheckbox} from "@angular/material/checkbox";
 import {ExamService} from "../../../learning/services/exam.service";
 import {QuestionService} from "../../../learning/services/question.service";
@@ -48,7 +48,8 @@ import {ExamsNoteService} from "../../../learning/services/exams-note.service";
         MatRadioGroup,
         MatRadioButton,
         NgIf,
-        FormsModule
+        FormsModule,
+        NgClass
     ],
   templateUrl: './exam.component.html',
   styleUrl: './exam.component.css'

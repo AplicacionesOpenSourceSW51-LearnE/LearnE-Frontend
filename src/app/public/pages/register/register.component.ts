@@ -76,7 +76,7 @@ export class RegisterComponent {
       this.router.navigate(['/subscriptions']);
     } else {
       sessionStorage.setItem('type_plan', String(this.user.type_plan));
-      this.router.navigate(['/mainPage']);
+      this.router.navigate(['/mainPage/catalog']);
     }
   }
 }

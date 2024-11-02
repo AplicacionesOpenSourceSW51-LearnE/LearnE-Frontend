@@ -49,7 +49,7 @@ export class SignInComponent {
   }
 
   private enterUser() {
-    this.router.navigate(['/mainPage']);
+    this.router.navigate(['/mainPage/catalog']);
   }
 
   public validateUser() {
