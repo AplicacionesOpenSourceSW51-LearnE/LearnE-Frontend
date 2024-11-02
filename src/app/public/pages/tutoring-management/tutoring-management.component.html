@@ -1,40 +1,67 @@
-<div class="title-container">
-  <h1 class="title">Tutoring</h1>
-</div>
+<div class="tutoring-container">
+  <div class="title-container">
+    <h1 class="title">{{ 'tutorialsManagement.tutoring' | translate }}</h1>
+  </div>
 
-<div class="form">
-  <div class="column-left">
-    <div class="input-content">
-      <mat-label>Date</mat-label>
-      <input type="date" class="input">
+  <div class="form">
+    <div class="column-left">
+      <div class="input-content">
+        <mat-label>{{ 'tutorialsManagement.date' | translate }}</mat-label>
+        <input type="date" class="input" [(ngModel)]="date">
+      </div>
+      <div class="input-content">
+        <mat-label>{{ 'tutorialsManagement.hour' | translate }}</mat-label>
+        <input type="time" class="input" [(ngModel)]="hour">
+      </div>
     </div>
-    <div class="input-content">
-      <mat-label>Hour</mat-label>
-      <input type="time" class="input">
+    <div class="column-right">
+      <div class="input-content">
+        <mat-label>{{ 'tutorialsManagement.state' | translate }}</mat-label>
+        <input [placeholder]="'tutorialsManagement.unreserved' | translate " class="input" disabled>
+      </div>
+      <div class="button-container">
+        <button class="button" (click)="addReservedTutorial()">{{ 'tutorialsManagement.add' | translate }}</button>
+      </div>
     </div>
   </div>
-  <div class="column-right">
-    <div class="input-content">
-      <mat-label>State</mat-label>
-      <input placeholder="Reservado" class="input" disabled>
+
+
+  <div class="tutorials-container">
+
+
+    <div class="tutorials-container-left">
+      <h3 class="subtitle">{{ 'tutorialsManagement.rTutorials' | translate }}</h3>
+
+      <mat-card class="tutoring-card" *ngFor="let tutorial of reservedTutorialsDetails">
+        <mat-card-content>
+          <p>{{ 'tutorialsManagement.date' | translate }}: {{tutorial.date}}</p>
+          <p>{{ 'tutorialsManagement.hour' | translate }}: {{tutorial.hour}}</p>
+          <p>{{ 'tutorialsManagement.state' | translate }}: {{ 'tutorialsManagement.reserved' | translate }}</p>
+          <p>{{ 'tutorialsManagement.student' | translate }}: {{tutorial.studentFullName}}</p>
+          <p>{{ 'tutorialsManagement.link' | translate }}: {{tutorial.link}}</p>
+          <button class="button"  *ngIf="!isEditingLink" (click)="openInputLink()">{{ 'tutorialsManagement.uLink' | translate }}</button>
+          <div class="link-container" *ngIf="isEditingLink">
+            <input [placeholder]="'tutorialsManagement.link' | translate " class="input-link" [(ngModel)]="link">
+            <button class="button" (click)="updateLink(tutorial)">{{ 'tutorialsManagement.update' | translate }}</button>
+            <button class="button" (click)="cancelUpdateLink()" style="background-color: white; color: black;">{{ 'tutorialsManagement.cancel' | translate }}</button>
+          </div>
+        </mat-card-content>
+      </mat-card>
     </div>
-    <div class="button-container">
-      <button class="button">Add</button>
+
+
+    <div class="tutorials-container-right">
+      <h3 class="subtitle">{{ 'tutorialsManagement.uTutorials' | translate }}</h3>
+
+      <mat-card class="tutoring-card" *ngFor="let tutorial of unreservedTutorials">
+        <mat-card-content>
+          <p>{{ 'tutorialsManagement.date' | translate }}: {{tutorial.date}}</p>
+          <p>{{ 'tutorialsManagement.hour' | translate }}: {{tutorial.hour}}</p>
+          <p>{{ 'tutorialsManagement.state' | translate }}: {{ 'tutorialsManagement.unreserved' | translate }}</p>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
 </div>
 
 
-<mat-card class="tutoring-card">
-  <mat-card-content>
-    <p>Date: </p>
-    <p>Hour: </p>
-    <p>Status:</p>
-    <p>Student: </p>
-    <button class="button">Add link</button>
-    <div class="link-container">
-      <input placeholder="Link" class="input-link">
-      <button class="button">Send</button>
-    </div>
-  </mat-card-content>
-</mat-card>

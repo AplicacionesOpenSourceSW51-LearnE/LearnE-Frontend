@@ -102,5 +102,21 @@
     "prior": "Prior Knowledge",
     "presentation": "Presentation",
     "who": "Find out who teaches the course of"
+  },
+  "tutorialsManagement": {
+    "tutoring": "Tutoring",
+    "date": "Date",
+    "hour": "Hour",
+    "state": "State",
+    "add": "Add",
+    "rTutorials": "Reserved tutorials",
+    "uTutorials": "Unreserved tutorials",
+    "reserved": "Reserved",
+    "unreserved": "Unreserved",
+    "student": "Student",
+    "link": "Link",
+    "update": "Update",
+    "cancel": "Cancel",
+    "uLink": "Update link"
   }
 }
