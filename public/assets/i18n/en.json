@@ -42,6 +42,7 @@
     "description": "Description"
   },
   "courses": {
+    "course": "Courses",
     "courses": "My courses",
     "rating": "Leave a rating",
     "leave": "Go to My Courses",

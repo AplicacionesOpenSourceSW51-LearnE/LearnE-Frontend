@@ -42,6 +42,7 @@
     "description": "Descripción"
   },
   "courses": {
+    "course": "Cursos",
     "courses": "Mis cursos",
     "rating": "Deja tu calificación",
     "leave": "Ir a Mis Cursos",
