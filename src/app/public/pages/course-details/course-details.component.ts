@@ -5,8 +5,19 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { NgClass, NgForOf, NgIf, NgOptimizedImage } from '@angular/common';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import {RatingDialogComponent} from "../rating-dialog/rating-dialog.component";
+import {CourseService} from "../../../learning/services/course.service";
+import {Course} from "../../../learning/model/course.entity";
+import {User} from "../../../learning/model/user.entity";
+import {UserService} from "../../../learning/services/user.service";
+import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
+import {Exam} from "../../../learning/model/exam.entity";
+import {ExamService} from "../../../learning/services/exam.service";
+import {TranslateModule} from "@ngx-translate/core";
+import {CoursesEnrollmentService} from "../../../learning/services/courses-enrollment.service";
+import {CoursesEnrollment} from "../../../learning/model/courses-enrollment.entity";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-course-details',
@@ -23,45 +34,80 @@ import {RatingDialogComponent} from "../rating-dialog/rating-dialog.component";
     MatProgressBarModule,
     RatingDialogComponent,
     NgOptimizedImage,
+    TranslateModule,
   ],
   templateUrl: './course-details.component.html',
   styleUrls: ['./course-details.component.css'],
 })
 export class CourseDetailsComponent {
-  courseName: string = 'Nombre del Curso';
-  rating: number = 4.5; // Calificación
-  progress: string = 'Tu Progreso: 60%'; // Progreso del curso
-  sessions = ['Introducción', 'Variables y Tipos de Datos', 'Control de Flujo']; // Lista de sesiones
-  showRatings: boolean = false; // Inicializar como false
-  showDescription: boolean = false;
-  ratingValues: number[] = [80, 60, 50, 70, 90]; // Valores de las barras de progreso
+  teachers: User | null = null;
+  selectedCourse: Course | null = null;
+  exams: Array<Exam> = [];
+  enrollments: Array<CoursesEnrollment> = [];
+  studentId = Number(sessionStorage.getItem('id'));
+  typePlan = Number(sessionStorage.getItem('type_plan'));
+  isEnrolled: boolean = false;
 
-  // Método para alternar la visualización de las valoraciones
-  toggleRatings() {
-    this.showRatings = !this.showRatings;
-    console.log(this.showRatings);
+  constructor(private userService: UserService, private courseService: CourseService,
+              private sanitizer: DomSanitizer, private examService: ExamService,
+              private enrollmentCourse: CoursesEnrollmentService, private router: Router) {
   }
 
-  // Método para alternar la visualización de la descripción
-  toggleDescription() {
-    this.showDescription = !this.showDescription;
-    console.log(this.showDescription);
+  ngOnInit() {
+    this.selectedCourse = this.courseService.getSelectedCourse();
+    if (this.selectedCourse) {
+      console.log(this.selectedCourse);
+    }
+    this.getTeacher();
+    this.getAllExams();
   }
 
-  // Método para abrir el diálogo de calificación
-  openRatingDialog() {
-    const dialogRef = this.dialog.open(RatingDialogComponent, {
-      width: '400px',
-    });
+  private getTeacher() {
+    this.userService.getById(this.selectedCourse?.id).subscribe((response: User) => {
+      this.teachers = response;
+      console.log(this.teachers);
+    })
+  }
 
-    // Procesa la calificación cuando se cierre el diálogo
-    dialogRef.afterClosed().subscribe(result => {
-      if (result !== undefined) { // Verifica que result no sea undefined
-        console.log('Calificación recibida:', result);
-        this.rating = result; // Actualiza la calificación
+  private getAllExams() {
+    this.examService.getAll().subscribe((response: Array<Exam>) => {
+      this.exams = response.filter(ex => ex.course_id == this.selectedCourse?.id)
+    })
+  }
+
+  addEnrollmentCourse() {
+    this.enrollmentCourse.getAll().subscribe((response: Array<CoursesEnrollment>) => {
+      this.enrollments = response.filter(en => en.student_id == this.studentId);
+      this.isEnrolled = this.enrollments.some(enrollment => enrollment.course_id === this.selectedCourse?.id);
+      if (this.isEnrolled) {
+        alert('You are already enrolled in this course');
+        return;
       }
-    });
+      if (this.typePlan == 0) {
+        if (this.enrollments.length < 3) {
+          let courseEnrollment = new CoursesEnrollment({
+            student_id: this.studentId,
+            course_id: this.selectedCourse?.id
+          });
+          this.enrollmentCourse.create(courseEnrollment).subscribe(() => {
+            this.router.navigate(['/mainPage/myCourses']);
+          });
+        } else {
+          alert('Your limit is for 3 courses, change your plan if you want more');
+        }
+      } else {
+        let courseEnrollment = new CoursesEnrollment({
+          student_id: this.studentId,
+          course_id: this.selectedCourse?.id
+        });
+        this.enrollmentCourse.create(courseEnrollment).subscribe(() => {
+          this.router.navigate(['/mainPage/myCourses']);
+        });
+      }
+    })
   }
 
-  constructor(private dialog: MatDialog) {}
+  safeUrl(url: string): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 }

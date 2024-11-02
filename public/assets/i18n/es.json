@@ -93,5 +93,13 @@
     "exam": "Examen",
     "grades": "Calificaciones",
     "yhnScore": "No tienes calificaciones"
+  },
+  "courseDetails": {
+    "register": "Inscribirse",
+    "content": "Contenido y Recursos",
+    "features": "Características del Curso",
+    "prior": "Conocimientos Previos",
+    "presentation": "Presentación",
+    "who": "Conoce quién enseña el curso de"
   }
 }

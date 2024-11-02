@@ -16,7 +16,7 @@ import {SectionService} from "../../../learning/services/section.service";
 import {Section} from "../../../learning/model/section.entity";
 import {ExamService} from "../../../learning/services/exam.service";
 import {Exam} from "../../../learning/model/exam.entity";
-import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
+import {SafeResourceUrl} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-course-sidenav',
@@ -45,12 +45,11 @@ export class CourseSidenavComponent implements OnInit{
   sections: Array<Section> = [];
   exams: Array<Exam> = [];
   videoUrl: SafeResourceUrl = '';
-  isLocalVideo: boolean = false;
   openedUnits: Set<number> = new Set();
 
   constructor(private courseService: CourseService, private router: Router, private dialog: MatDialog,
               private unitService: UnitService, private sectionService: SectionService,
-              private examService: ExamService, private sanitizer: DomSanitizer) {
+              private examService: ExamService) {
   }
 
   ngOnInit(): void {
@@ -61,7 +60,6 @@ export class CourseSidenavComponent implements OnInit{
     this.getAllUnits();
     this.getAllSections();
     this.getAllExams();
-    this.loadVideo(0);
   }
 
   private getAllUnits() {
@@ -129,25 +127,5 @@ export class CourseSidenavComponent implements OnInit{
     if (this.selectedCourse) {
       this.router.navigate(['/courseSidenav/material'], {queryParams: {id: this.selectedCourse.id}});
     }
-  }
-
-  loadVideo(index: number) {
-    const selectedUnit = this.units[index];
-    if (selectedUnit) {
-      this.unitService.getById(selectedUnit.id).subscribe(unit => {
-        if (selectedUnit && selectedUnit.url_video) {
-          this.videoUrl = this.sanitizeUrl(selectedUnit.url_video);
-          this.isLocalVideo = selectedUnit.url_video.endsWith('.mp4');
-          console.log('Video URL cargada:', this.videoUrl);
-          console.log('Es video local:', this.isLocalVideo);
-        } else {
-          console.error('Enlace inválido');
-        }
-      });
-    }
-  }
-
-  sanitizeUrl(url: string): SafeResourceUrl {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

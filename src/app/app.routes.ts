@@ -21,6 +21,7 @@ import {CourseTutoringComponent} from "./public/pages/course-tutoring/course-tut
 import {CourseMaterialComponent} from "./public/pages/course-material/course-material.component";
 import {MainToolbarComponent} from "./public/components/main-toolbar/main-toolbar.component";
 import {GradesComponent} from "./public/pages/grades/grades.component";
+import {CatalogCoursesComponent} from "./public/pages/catalog-courses/catalog-courses.component";
 
 export const routes: Routes = [
   { path: 'mainToolbar', component: MainToolbarComponent, children: [
@@ -32,6 +33,8 @@ export const routes: Routes = [
   { path: 'payment',        component: PaymentComponent},
   { path: 'payment/success',component: RegisterConfirmationComponent},
   { path: 'mainPage',            component: MainPageComponent, children: [
+      { path: 'catalog', component: CatalogCoursesComponent },
+      { path: 'courseDetails', component: CourseDetailsComponent },
       { path: 'plans', component:AllPlansComponent},
       { path: 'paymentSuccesful', component: PaymentSuccesfulComponent},
       { path: 'myCourses', component: MyCoursesComponent},

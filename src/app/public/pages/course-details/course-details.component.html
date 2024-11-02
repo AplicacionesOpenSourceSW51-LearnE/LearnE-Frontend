@@ -1,123 +1,53 @@
-<div class="course-header">
-  <h2>{{ courseName }}</h2>
-  <div class="course-info">
-    <button mat-button (click)="openRatingDialog()">
-      <mat-icon>star</mat-icon>
-      Deja tu calificación: {{ rating }}
-    </button>
-    <button mat-button>
-      <mat-icon>emoji_events</mat-icon>
-      Tu progreso: {{ progress }}
-    </button>
+<div class="course-details-container">
+  <mat-card class="course-card">
+    <div class="course-wrapper">
+      <div class="course-info">
+        <mat-card-title>{{ this.selectedCourse?.title }}</mat-card-title>
+        <div class="rating-info">
+          <span>{{ this.selectedCourse?.level }}</span>
+        </div>
+        <mat-card-subtitle class="course-description">{{ this.selectedCourse?.description }}</mat-card-subtitle>
+        <button
+          mat-raised-button color="primary"
+          class="enroll-button"
+          (click)="addEnrollmentCourse()"
+          [disabled]="isEnrolled">{{ 'courseDetails.register' | translate }}</button>
+      </div>
+      <img class="side-image" [src]="this.selectedCourse?.principal_image" alt="{{this.selectedCourse?.title}}" />
+    </div>
+  </mat-card>
+  <div class="content-section">
+    <h3 class="content-title"><b>{{ 'courseDetails.content' | translate }}</b></h3>
+    <div class="content-grid">
+      <mat-card class="course-features">
+        <mat-card-header>
+          <mat-card-title>{{ 'courseDetails.features' | translate }}:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="feature">
+            <mat-icon>fitness_center</mat-icon>
+            <span class="feature-text">{{'courses.exam' | translate}}: {{this.exams.length}}</span>
+          </div>
+          <h4 class="course-prerequisites"><br>{{ 'courseDetails.prior' | translate }}:</h4>
+          <p>{{this.selectedCourse?.prior_knowledge}}</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="video-section">
+        <mat-card-header>
+          <mat-card-title>{{ 'courseDetails.presentation' | translate }}:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <iframe [src]="safeUrl(this.selectedCourse?.url_video || '')" width="300" height="200" allowfullscreen></iframe>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="instructor-section">
+      <h3 class="instructor-title">{{ 'courseDetails.who' | translate }} {{this.selectedCourse?.title}}</h3>
+      <img class="instructor-image" height="80px" width="80px" src="assets/img/profile-picture.png" alt="teacher image"  />
+      <h3 class="instructor-center">{{teachers?.firstName}} {{teachers?.lastName}}</h3>
+    </div>
   </div>
 </div>
 
-<div class="course-content">
-  <div class="video-container">
-    <mat-card>
-      <iframe
-        width="100%"
-        height="500"
-        src="https://www.youtube.com/embed/9k91jETchkI"
-        allowfullscreen>
-      </iframe>
-    </mat-card>
-
-    <div class="button-container">
-      <button mat-button class="info-button" (click)="toggleDescription()">Descripción general</button>
-      <button mat-button class="info-button">Tutoria</button>
-      <button mat-button class="info-button" (click)="toggleRatings()">Valoraciones</button>
-    </div>
-
-    <div *ngIf="showDescription" class="description-section">
-      <h3 class="description-title">Aprende a programar desde cero...</h3>
-      <div class="course-stats">
-        <div class="stat-block">
-          <span class="rating">4 ⭐⭐⭐⭐</span>
-          <span>25,135 calificaciones</span>
-        </div>
-        <div class="stat-block">
-          <span class="students">75,575</span>
-          <span>Estudiantes</span>
-        </div>
-        <div class="stat-block">
-          <span class="total-hours">33 horas</span>
-          <span>Total</span>
-        </div>
-      </div>
-      <div class="additional-info">
-        <span class="update">
-          <mat-icon>warning</mat-icon> Última actualización septiembre de 2024
-        </span>
-        <span class="language">
-          <mat-icon>language</mat-icon> Español [automático]
-        </span>
-      </div>
-
-
-      <hr class="separator">
-      <div class="additional-details">
-        <h4>Por cifras</h4>
-        <span>Nivel de habilidad: Todos los niveles</span>
-        <span>Estudiantes: 75,575</span>
-        <span>Idiomas: Español</span>
-        <span>Subtítulos: Sí</span>
-        <span>Clases: 295</span>
-        <span>Vídeo: 33 horas en total</span>
-      </div>
-      <hr/>
-      <div class="certificates">
-        <h4>Certificados</h4>
-        <div class="certificate-info-container">
-          <span class="certificate-info">Consigue el certificado de Udemy al completar todo el curso</span>
-          <button mat-button class="certificate-button">Certificado de Learned</button>
-        </div>
-      </div>
-    </div>
-
-    <div *ngIf="showRatings" class="rating-section">
-      <div class="comments-header">
-        <h3 class="description-title">Comentarios de los estudiantes</h3>
-      </div>
-
-      <div class="rating-summary-container">
-        <div class="rating-summary">
-          <div class="rating-value">4.5</div>
-          <div class="rating-stars">⭐⭐⭐⭐⭐</div>
-          <div class="rating-text">Valoración del curso</div>
-        </div>
-
-        <div class="progress-bars">
-          <div *ngFor="let value of ratingValues; let i = index" class="progress-bar-container">
-            <mat-progress-bar mode="determinate" [value]="value"></mat-progress-bar>
-            <span class="star-emoji">{{ '⭐'.repeat(5 - i) }}</span>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="comment">
-        <img src="profile-picture-url.jpg" alt="Profile Picture" class="profile-picture">
-        <div class="comment-content">
-          <div class="comment-header">
-            <span class="comment-name">Daniel G.</span>
-            <div class="comment-subheader">
-              <span class="comment-stars">⭐⭐⭐⭐</span>
-              <span class="comment-time">hace un mes</span>
-            </div>
-          </div>
-          <div class="comment-text">
-            El instructor, Víctor, es muy bueno, se nota que pone muchas ganas y le gusta explicar bien las cosas,
-            todo está explicado de una manera muy clara y fácil de entender. En cuanto al temario del curso,
-            la parte de JS está muy bien, pero la de Angular está desactualizada. He querido hacer el curso con Angular18,
-            pero he tenido que buscar en la doc oficial.
-          </div>
-        </div>
-
-      </div>
-      <hr>
-
-    </div>
-
-  </div>
-</div>
