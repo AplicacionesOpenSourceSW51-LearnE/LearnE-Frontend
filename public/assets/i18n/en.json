@@ -88,5 +88,13 @@
     "sub": "Extra Materials",
     "free": "Now you cannot access this content. Try our Premium Plan for access",
     "enter": "Enter"
+  },
+  "courseDetails": {
+    "register": "Register",
+    "content": "Content and resources",
+    "features": "Course Features",
+    "prior": "Prior Knowledge",
+    "presentation": "Presentation",
+    "who": "Find out who teaches the course of"
   }
 }

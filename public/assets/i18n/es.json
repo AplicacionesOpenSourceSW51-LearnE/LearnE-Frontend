@@ -88,5 +88,13 @@
     "sub": "Materiales Extras",
     "free": "Ahora no puedes acceder a este contenido. Prueba nuestro plan Premium para el acceso",
     "enter": "Ingresar"
+  },
+  "courseDetails": {
+    "register": "Inscribirse",
+    "content": "Contenido y Recursos",
+    "features": "Características del Curso",
+    "prior": "Conocimientos Previos",
+    "presentation": "Presentación",
+    "who": "Conoce quién enseña el curso de"
   }
 }

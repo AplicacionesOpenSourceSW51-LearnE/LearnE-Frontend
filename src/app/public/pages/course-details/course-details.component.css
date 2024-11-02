@@ -1,292 +1,126 @@
-.course-header {
+/*.course-details-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
 }
-.description-section{
-  margin-left: 20px;
-}
-.description-title {
-  font-size: 24px; /* Aumentar el tamaño de la fuente */
-  font-weight: normal; /* Cambiar a normal para quitar el grosor */
-  margin-bottom: 10px; /* Espacio debajo del título */
+
+.course-wrapper {
+  width: 50%;
 }
 
 .course-info {
-  display: flex; /* Usar flexbox para alinear los botones */
-  gap: 10px; /* Espacio entre los botones */
+  text-align: left;
 }
 
-.course-content {
-  display: flex; /* Usar flexbox para organizar el video y la lista de sesiones */
+.course-card, .content-section {
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.video-container {
-  flex: 0 0 70%; /* Ocupa el 70% del ancho */
-  margin-right: 20px; /* Espacio entre el video y la lista */
-  margin-top: 20px; /* Añadir margen superior para espacio adicional */
+.side-image {
+  width: 50%;
 }
 
-
-.session-list {
-  flex: 0 0 30%; /* Ocupa el 30% del ancho */
-  margin-top: 20px; /* Añadir margen superior para espacio adicional */
-}
-
-.session-list h3 {
-  margin-top: 0; /* Eliminar margen superior del encabezado de sesiones */
-}
-.button-container {
-  display: flex; /* Usar flexbox para alinear los botones */
-  gap: 20px; /* Espacio entre los botones */
-  margin-top: 10px; /* Espacio entre el video y los botones */
-}
-
-.info-button {
-  position: relative; /* Para usar el subrayado */
-  text-decoration: none; /* Eliminar subrayado por defecto */
-}
-
-.info-button:hover {
-  text-decoration: underline; /* Subrayar al pasar el mouse */
-  color: #1976d2; /* Cambiar color al pasar el mouse (opcional) */
-}
-
-.rating-section {
-  display: flex; /* Usar flexbox para la alineación */
-  justify-content: space-between; /* Espacio entre los elementos */
-  align-items: center; /* Centrar verticalmente */
-  margin-top: 20px; /* Espacio superior */
-  margin-left: 30px;
-}
-
-.rating-left {
-  display: flex; /* Usar flexbox para alinear número y estrellas */
-  flex-direction: column; /* Colocar el número encima de las estrellas */
-  text-align: left; /* Alinear texto a la izquierda */
-  margin-right: 20px; /* Espacio a la derecha del número */
-}
-
-
-.description-title {
-  font-size: 24px; /* Aumentar el tamaño de la fuente */
-  font-weight: bold; /* Hacerlo negrita */
-  margin-bottom: 10px; /* Espacio debajo del título */
-}
-
-.course-stats {
-  display: flex; /* Usar flexbox para alinear los elementos */
-  justify-content: flex-start; /* Alinear los bloques a la izquierda */
-  margin-top: 20px; /* Espacio superior */
-}
-
-.stat-block {
-  display: flex; /* Usar flexbox para alinear verticalmente */
-  flex-direction: column; /* Apilar los elementos verticalmente */
-  align-items: flex-start; /* Alinear a la izquierda */
-  margin-right: 40px; /* Aumentar espacio entre bloques */
-}
-
-.stat-block:last-child {
-  margin-right: 0; /* Eliminar margen del último bloque */
-}
-
-.rating,
-.students,
-.total-hours {
-  font-weight: bold; /* Hacer texto en negrita */
-}
-
-
-.additional-details {
-  margin-top: 20px; /* Espacio entre la información adicional y la sección de actualización/lenguaje */
-  font-size: 14px; /* Ajusta el tamaño de la fuente según sea necesario */
-  display: flex; /* Usar flexbox para apilar elementos */
-  flex-direction: column; /* Colocar elementos en columna */
-}
-.additional-info {
-  margin-top: 20px; /* Aumenta el margen inferior para separar de las calificaciones */
-
-  font-size: 14px; /* Tamaño de fuente para información adicional */
-}
-
-
-.additional-details span {
-  margin-bottom: 5px; /* Espacio entre cada línea */
-}
-
-.additional-details h4 {
-  margin-bottom: 10px; /* Espacio debajo del encabezado */
-  font-weight: bold; /* Negrita para el encabezado */
-}
-
-.language {
-  display: flex; /* Alinear icono y texto en línea */
-  align-items: center; /* Centrar verticalmente */
-  margin-bottom: 18px;
-}
-
-.update {
-  display: flex; /* Alinear icono y texto en línea */
-  align-items: center; /* Centrar verticalmente */
-  margin-bottom: 18px;
-
-}
-.certificates {
-  margin-top: 20px; /* Espacio superior para separar de la sección anterior */
-  display: flex; /* Usar flexbox para alinear elementos */
-  justify-content: flex-start; /* Alinear a la izquierda */
-  align-items: flex-start; /* Alinear al inicio para que el texto quede arriba */
-}
-
-.certificate-info-container {
-  display: flex; /* Usar flexbox para alinear el texto y el botón */
-  flex-direction: column; /* Colocar el texto encima del botón */
-  align-items: flex-start; /* Alinear ambos a la izquierda */
-}
-
-.certificate-info {
-  font-size: 14px; /* Tamaño de fuente para la información de certificados */
-  margin-bottom: 5px; /* Espacio entre el texto y el botón */
-  margin-left: 100px;
-}
-
-.certificate-button {
-  padding: 10px 20px; /* Espacio interno para el botón */
-  background-color: #1976d2; /* Color de fondo (puedes cambiarlo) */
-  color: white; /* Color del texto */
-  border-radius: 5px; /* Bordes redondeados (opcional) */
-  text-align: center; /* Alinear texto al centro */
-  margin-left: 100px;
-
-}
-
-
-
-
-.rating-section {
-  display: flex;
-  flex-direction: column; /* Alinear elementos verticalmente */
-  align-items: flex-start; /* Alinear a la izquierda */
-  margin-top: 20px; /* Espacio superior */
-}
-
-.comments-header {
-  margin-bottom: 10px; /* Espacio debajo del encabezado */
-}
-
-
-.rating-stars {
-  font-size: 25px;
-  margin-top: 35px;/* Tamaño de fuente para las estrellas */
-}
-
-.rating-text {
-  font-size: 16px; /* Tamaño de fuente para el texto */
-  margin-top: 10px; /* Espacio encima del texto */
+.content-title, .instructor-title, .instructor-center {
   text-align: center;
 }
 
-.progress-bars {
+.enroll-button {
+  margin: 20px auto 0;
+}*/
+.course-card {
   display: flex;
-  flex-direction: column; /* Alinear las barras en columna */
-  gap: 5px; /* Espacio entre las barras de progreso */
-  width: 100px; /* Establecer un ancho fijo o ajustar según lo necesites */
-  margin-left: 350px;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 1200px;
 }
 
-mat-progress-bar {
-  height: 20px; /* Altura de la barra */
-  background-color: #1976d2; /* Color de fondo */
+.course-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
-.rating-summary-container {
-  display: flex; /* Usar flexbox para alinear horizontalmente */
-  align-items: center; /* Alinear verticalmente al centro */
-  gap: 20px; /* Espacio entre la calificación y las barras */
+
+.course-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  text-align: left;
+}
+
+.enroll-button {
+  margin-top: 20px;
+  align-self: flex-start;
+}
+
+.side-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
   margin-left: 20px;
 }
 
-.rating-summary {
-  margin-top: 23px;
-  margin-left: 30px;
-  flex: 1; /* Permitir que la calificación ocupe el espacio disponible */
-}
-
-.rating-value {
-  font-size: 100px; /* Aumentar el tamaño de la fuente */
-  font-weight: bold; /* Hacerlo en negrita para mayor énfasis */
-  margin-top: 15px;
+.rating-info {
+  padding: 0.5rem;
+  width: 15%;
+  justify-content: center;
   text-align: center;
-
+  border-radius: 1rem;
+  background-color: rgb(150,0,205,0.5);
+  color: white;
 }
 
-.progress-bars {
-  display: flex;
-  flex-direction: column; /* Alinear las barras en columna */
-  gap: 5px; /* Espacio entre las barras de progreso */
-  width: 500px; /* Ajustar el ancho de las barras (más largas) */
-  margin-left: 250px;
-}
-
-.progress-bar-container {
-  display: flex;
-  align-items: center; /* Alinear verticalmente */
-  gap: 10px; /* Espacio entre la barra y la estrella */
-}
-
-.star-emoji {
-  font-size: 20px; /* Tamaño del emoji */
-}
-.comment {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  margin-left: 90px;
-  margin-top: 40px;
-}
-
-.profile-picture {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%; /* Hace que la imagen sea circular */
-  margin-right: 10px;
-}
-
-.comment-content {
-  display: flex;
+.content-section {
   flex-direction: column;
+  width: 90%;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+  text-align: center;
 }
 
-.comment-header {
+.content-grid {
   display: flex;
-  flex-direction: column; /* Las estrellas y el tiempo están debajo del nombre */
-  margin-bottom: 5px;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
 }
 
-.comment-name {
+.course-features {
+  width: 50%;
+  height: 17rem;
+  text-align: left;
+}
+
+.video-section {
+  width: 50%;
+  height: 17rem;
+  text-align: left;
+}
+
+.video-section.content {
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+.instructor-section {
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+.instructor-title, .instructor-center {
+  font-size: 1.2em;
   font-weight: bold;
-  margin-bottom: 5px; /* Espacio entre el nombre y el subheader */
-}
-
-.comment-subheader {
-  display: flex;
-  gap: 10px; /* Espacio entre estrellas y tiempo */
-}
-
-.comment-stars {
-  color: #FFD700; /* Color dorado para las estrellas */
-}
-
-.comment-time {
-  font-size: 12px;
-  color: #888;
-}
-
-.comment-text {
-  font-size: 14px;
-  line-height: 1.5; /* Espacio entre líneas */
-  max-width: 800px; /* Ajusta este valor según lo que necesites */
-  margin-top: 5px;
-  word-wrap: break-word; /* Para que las palabras largas no desborden el contenedor */
 }
