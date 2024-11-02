@@ -49,18 +49,6 @@
     </mat-sidenav>
 
     <mat-sidenav-content class="content">
-      <div class="video-container" *ngIf="videoUrl">
-        <video *ngIf="isLocalVideo" controls>
-          <source [src]="videoUrl" type="video/mp4">
-          Tu navegador no soporta la reproducción de videos.
-        </video>
-        <iframe *ngIf="!isLocalVideo"
-                [src]="videoUrl"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-        </iframe>
-      </div>
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>

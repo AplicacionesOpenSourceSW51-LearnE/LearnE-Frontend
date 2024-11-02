@@ -7,9 +7,11 @@ export class Course {
   duration: string;
   prior_knowledge: string;
   principal_image: string;
+  url_video: string;
 
   constructor(course: {id?: number, title?: string, description?: string, teacher_id?: number,
-    level?: string, duration?: string, prior_knowledge?: string, principal_image?:string}) {
+    level?: string, duration?: string, prior_knowledge?: string, principal_image?:string,
+    url_video?: string}) {
     this.id = course.id || 0;
     this.title = course.title || "";
     this.description = course.description || "";
@@ -18,5 +20,6 @@ export class Course {
     this.duration = course.duration || "";
     this.prior_knowledge = course.prior_knowledge || "";
     this.principal_image = course.principal_image || "";
+    this.url_video = course.url_video || "";
   }
 }

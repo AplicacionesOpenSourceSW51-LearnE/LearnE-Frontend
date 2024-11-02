@@ -50,7 +50,8 @@
       "level": "Beginner",
       "duration": "3 hours content",
       "prior_knowledge": "Nothing",
-      "principal_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA47f0Lhu3roG-3duVbKXDq0kPeDDOakrYZg&s"
+      "principal_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA47f0Lhu3roG-3duVbKXDq0kPeDDOakrYZg&s",
+      "url_video": "https://www.youtube.com/embed/Rv910T1BJUw"
     },
     {
       "id": 2,
@@ -60,7 +61,8 @@
       "level": "Beginner",
       "duration": "4 hours content",
       "prior_knowledge": "Basic HTML and CSS",
-      "principal_image": "https://stride.com.co/wp-content/uploads/2023/01/gabriel-heinzer-g5jpH62pwes-unsplash-768x576.jpg"
+      "principal_image": "https://stride.com.co/wp-content/uploads/2023/01/gabriel-heinzer-g5jpH62pwes-unsplash-768x576.jpg",
+      "url_video": "https://www.youtube.com/embed/8GTaO9XhA5M"
     }
   ],
   "courses_enrollment": [
@@ -79,8 +81,7 @@
     {
       "id": 1,
       "course_id": 1,
-      "title": "Introduction",
-      "url_video": "https://www.youtube.com/embed/Rv910T1BJUw"
+      "title": "Introduction"
     }
   ],
   "sections": [

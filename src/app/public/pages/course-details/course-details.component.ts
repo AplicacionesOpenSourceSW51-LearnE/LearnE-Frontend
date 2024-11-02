@@ -7,6 +7,8 @@ import { NgClass, NgForOf, NgIf, NgOptimizedImage } from '@angular/common';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import {RatingDialogComponent} from "../rating-dialog/rating-dialog.component";
+import {CourseService} from "../../../learning/services/course.service";
+import {Course} from "../../../learning/model/course.entity";
 
 @Component({
   selector: 'app-course-details',
@@ -28,6 +30,7 @@ import {RatingDialogComponent} from "../rating-dialog/rating-dialog.component";
   styleUrls: ['./course-details.component.css'],
 })
 export class CourseDetailsComponent {
+  selectedCourses: Course | null = null;
   courseName: string = 'Nombre del Curso';
   rating: number = 4.5; // Calificación
   progress: string = 'Tu Progreso: 60%'; // Progreso del curso
@@ -35,19 +38,16 @@ export class CourseDetailsComponent {
   showRatings: boolean = false; // Inicializar como false
   showDescription: boolean = false;
   ratingValues: number[] = [80, 60, 50, 70, 90]; // Valores de las barras de progreso
-
   // Método para alternar la visualización de las valoraciones
   toggleRatings() {
     this.showRatings = !this.showRatings;
     console.log(this.showRatings);
   }
-
   // Método para alternar la visualización de la descripción
   toggleDescription() {
     this.showDescription = !this.showDescription;
     console.log(this.showDescription);
   }
-
   // Método para abrir el diálogo de calificación
   openRatingDialog() {
     const dialogRef = this.dialog.open(RatingDialogComponent, {
@@ -62,6 +62,12 @@ export class CourseDetailsComponent {
       }
     });
   }
+  constructor(private dialog: MatDialog, private courseService: CourseService) {}
 
-  constructor(private dialog: MatDialog) {}
+  ngOnInit() {
+    this.selectedCourses = this.courseService.getSelectedCourse();
+    if (this.selectedCourses) {
+      console.log(this.selectedCourses)
+    }
+  }
 }

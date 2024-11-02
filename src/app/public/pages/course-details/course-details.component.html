@@ -1,4 +1,4 @@
-<div class="course-header">
+<!--<div class="course-header">
   <h2>{{ courseName }}</h2>
   <div class="course-info">
     <button mat-button (click)="openRatingDialog()">
@@ -120,4 +120,12 @@
     </div>
 
   </div>
-</div>
+</div>-->
+<mat-card class="general-info">
+  <mat-card-title>
+    {{this.selectedCourses?.title}}
+  </mat-card-title>
+  <mat-card-subtitle>
+    {{this.selectedCourses?.description}}
+  </mat-card-subtitle>
+</mat-card>
