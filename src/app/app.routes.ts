@@ -22,6 +22,9 @@ import {CourseMaterialComponent} from "./public/pages/course-material/course-mat
 import {MainToolbarComponent} from "./public/components/main-toolbar/main-toolbar.component";
 import {GradesComponent} from "./public/pages/grades/grades.component";
 import {CatalogCoursesComponent} from "./public/pages/catalog-courses/catalog-courses.component";
+import {ManagementComponent} from "./public/pages/management/management.component";
+import {CourseManagementComponent} from "./public/pages/course-management/course-management.component";
+import {CourseEditContentComponent} from "./public/pages/course-edit-content/course-edit-content.component";
 
 export const routes: Routes = [
   { path: 'mainToolbar', component: MainToolbarComponent, children: [
@@ -41,8 +44,11 @@ export const routes: Routes = [
       { path: 'calendar',component: CalendarComponent},
       { path: 'myNotes', component: MyNotesComponent},
       { path: 'profile', component: ProfileComponent},
-      { path: 'grades', component: GradesComponent}
+      { path: 'grades', component: GradesComponent},
+      { path: 'management', component: ManagementComponent },
+      { path: 'courseManagement', component: CourseManagementComponent }
     ]},
+  { path: 'courseEditContent', component: CourseEditContentComponent },
   { path: 'courseSidenav', component: CourseSidenavComponent, children: [
       { path: 'courseVideo', component: CourseVideoComponent },
       { path: 'exam', component: ExamComponent},

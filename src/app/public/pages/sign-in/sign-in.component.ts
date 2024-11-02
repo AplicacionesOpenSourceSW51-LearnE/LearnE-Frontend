@@ -49,7 +49,11 @@ export class SignInComponent {
   }
 
   private enterUser() {
-    this.router.navigate(['/mainPage/catalog']);
+    if (Number(sessionStorage.getItem('type_user')) == 1) {
+      this.router.navigate(['/mainPage/catalog']);
+    } else {
+      this.router.navigate(['/mainPage/management']);
+    }
   }
 
   public validateUser() {

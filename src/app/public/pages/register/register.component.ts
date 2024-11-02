@@ -54,29 +54,12 @@ export class RegisterComponent {
       }
     });
   }
-
-  /*protected async getIdOfUser() {
-    this.userService.getAll().subscribe((response: Array<User>) => {
-      this.users = response;
-      console.log(this.users);
-    if (this.users.length > 0) {
-      const lastUser = this.users[this.users.length - 1];
-      sessionStorage.setItem('id', String(lastUser.id));
-      console.log(lastUser.id);
-    } else {
-      console.error('No users found');
-    }
-  }, error => {
-    console.error('Error fetching users:', error);
-    });
-  }*/
-
   private typeUserIdentification() {
     if (Number(sessionStorage.getItem('type_user')) == 1) {
       this.router.navigate(['/subscriptions']);
     } else {
       sessionStorage.setItem('type_plan', String(this.user.type_plan));
-      this.router.navigate(['/mainPage/catalog']);
+      this.router.navigate(['/mainPage/management']);
     }
   }
 }

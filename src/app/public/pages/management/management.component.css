@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  font-size: 2.5rem;
+  color: black;
+  font-weight: 500;
+  margin:3vw;
+  justify-content: space-between;
+}
+
+.add-icon {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  margin: 2vw auto;
+  width: 95%;
+  height: 100%;
+  background-color: #F1E9FA;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.course-card {
+  margin-top: 1vw;
+  margin-left: 1vw;
+  height: 20vw;
+  border-radius: 30px;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imageCard {
+  margin-top: 1vw;
+  height: 13vw;
+  width: 13vw;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1rem;
+}

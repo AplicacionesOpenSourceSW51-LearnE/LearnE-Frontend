@@ -16,7 +16,6 @@ import {SectionService} from "../../../learning/services/section.service";
 import {Section} from "../../../learning/model/section.entity";
 import {ExamService} from "../../../learning/services/exam.service";
 import {Exam} from "../../../learning/model/exam.entity";
-import {SafeResourceUrl} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-course-sidenav',
@@ -44,7 +43,6 @@ export class CourseSidenavComponent implements OnInit{
   units: Array<Unit> = [];
   sections: Array<Section> = [];
   exams: Array<Exam> = [];
-  videoUrl: SafeResourceUrl = '';
   openedUnits: Set<number> = new Set();
 
   constructor(private courseService: CourseService, private router: Router, private dialog: MatDialog,

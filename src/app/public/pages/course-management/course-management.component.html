@@ -1,13 +1,13 @@
 <div class="title-container">
-  <h1 class="title">Course: ########</h1>
+  <h1 class="title">{{'courses.course1' | translate}}: {{this.selectedCourse?.title}}</h1>
 </div>
 
 <div class="options-container">
   <mat-card class="action-card">
     <mat-card-header>
-      <div class="header-content">
+      <div class="header-content" routerLink="/courseEditContent">
         <mat-icon class="header-icon">menu_book</mat-icon>
-        <mat-card-title class="header-title">Editar contenido</mat-card-title>
+        <mat-card-title class="header-title">{{'courses.content' | translate}}</mat-card-title>
       </div>
     </mat-card-header>
   </mat-card>
@@ -16,7 +16,16 @@
     <mat-card-header>
       <div class="header-content">
         <mat-icon class="header-icon">videocam</mat-icon>
-        <mat-card-title class="header-title">Tutorías</mat-card-title>
+        <mat-card-title class="header-title">{{'courses.tutorials' | translate}}</mat-card-title>
+      </div>
+    </mat-card-header>
+  </mat-card>
+
+  <mat-card class="action-card">
+    <mat-card-header>
+      <div class="header-content">
+        <mat-icon class="header-icon">assignment</mat-icon>
+        <mat-card-title class="header-title">{{'courses.materials' | translate}}</mat-card-title>
       </div>
     </mat-card-header>
   </mat-card>

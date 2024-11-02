@@ -43,6 +43,7 @@
   },
   "courses": {
     "course": "Cursos",
+    "course1": "Curso",
     "courses": "Mis cursos",
     "rating": "Deja tu calificación",
     "leave": "Ir a Mis Cursos",
@@ -52,7 +53,8 @@
     "description": "Descripción general",
     "tutorials": "Tutorías",
     "materials": "Materiales Extras",
-    "ratings": "Valoraciones"
+    "ratings": "Valoraciones",
+    "content": "Editar contenido"
   },
   "mainPage": {
     "courses": "Mis Cursos",
