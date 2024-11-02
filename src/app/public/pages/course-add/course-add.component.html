@@ -1,0 +1,37 @@
+<div class="title-container">
+  <h1 class="title">{{'courses.course1' | translate }}</h1>
+</div>
+
+<div class="form">
+  <div class="input-content">
+    <mat-label class="label">Title:</mat-label>
+    <input [(ngModel)]="course.title" class="input" matInput name="title" placeholder="Title" required>
+  </div>
+  <div class="input-content">
+    <mat-label class="label">Description:</mat-label>
+    <input [(ngModel)]="course.description" class="input" matInput name="description" placeholder="Description" required>
+  </div>
+  <div class="input-content">
+    <mat-label class="label">Level:</mat-label>
+    <input [(ngModel)]="course.level" class="input" matInput name="level" placeholder="Level" required>
+  </div>
+  <div class="input-content">
+    <mat-label class="label">Duration:</mat-label>
+    <input [(ngModel)]="course.duration" class="input" matInput name="duration" placeholder="Duration" required>
+  </div>
+  <div class="input-content">
+    <mat-label class="label">Prior Knowledge:</mat-label>
+    <input [(ngModel)]="course.prior_knowledge" class="input" matInput name="prior_knowledge" placeholder="Prior Knowledge" required>
+  </div>
+  <div class="input-content">
+    <mat-label class="label">Image:</mat-label>
+    <input [(ngModel)]="course.principal_image" class="input" matInput name="principal_image" placeholder="Image" required>
+  </div>
+  <div class="input-content">
+    <mat-label class="label">Video:</mat-label>
+    <input [(ngModel)]="course.url_video" class="input" matInput name="url_video" placeholder="Video" required>
+  </div>
+  <div class="question-container">
+    <button class="button" (click)="createNewCourse()">Save course</button>
+  </div>
+</div>

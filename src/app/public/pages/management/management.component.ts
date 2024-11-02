@@ -1,6 +1,6 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {CourseService} from "../../../learning/services/course.service";
-import {Router} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 import {Course} from "../../../learning/model/course.entity";
 import {MatCard, MatCardContent, MatCardHeader, MatCardImage, MatCardTitle} from "@angular/material/card";
 import {NgForOf} from "@angular/common";
@@ -10,16 +10,17 @@ import {MatIcon} from "@angular/material/icon";
 @Component({
   selector: 'app-management',
   standalone: true,
-  imports: [
-    MatCard,
-    MatCardContent,
-    MatCardHeader,
-    MatCardImage,
-    MatCardTitle,
-    NgForOf,
-    TranslateModule,
-    MatIcon
-  ],
+    imports: [
+        MatCard,
+        MatCardContent,
+        MatCardHeader,
+        MatCardImage,
+        MatCardTitle,
+        NgForOf,
+        TranslateModule,
+        MatIcon,
+        RouterLink
+    ],
   templateUrl: './management.component.html',
   styleUrl: './management.component.css'
 })

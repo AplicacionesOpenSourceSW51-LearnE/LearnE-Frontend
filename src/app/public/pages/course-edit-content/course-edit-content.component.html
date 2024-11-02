@@ -1,1 +1,45 @@
-<p>course-edit-content works!</p>
+<div class="main-container">
+  <div class="header">
+    <span class="selectedCourse">{{ selectedCourse?.title }}</span>
+    <span class="spacer"></span>
+    <button mat-raised-button color="primary">Update course</button>
+    <button mat-raised-button color="primary" routerLink="/mainPage/management">{{'courses.leave' | translate}}</button>
+    <div class="button-language-container">
+      <app-language-switcher></app-language-switcher>
+    </div>
+  </div>
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened position="end">
+      <mat-nav-list>
+        <div *ngFor="let unit of units">
+          <mat-list-item (click)="toggleUnit(unit.id)">
+            <span>{{'courses.unit' | translate}}</span>
+            <span>: </span>
+            {{ unit.title }}
+          </mat-list-item>
+          <div *ngIf="isUnitOpen(unit.id)" class="nested">
+            <div *ngFor="let section of sections">
+              <mat-list-item (click)="navigateToVideo(section.id)">
+                <span>{{ 'courses.section' | translate }}</span>
+                <span>: </span>
+                {{ section.title }}
+              </mat-list-item>
+            </div>
+            <div *ngFor="let exam of exams">
+              <mat-list-item (click)="navigateToExam(exam.id)">
+                {{ 'courses.exam' | translate }}: {{ exam.title }}
+              </mat-list-item>
+            </div>
+            <mat-icon class="add-icon" (click)="openAddDialog(unit.id)">add_box</mat-icon>
+          </div>
+        </div>
+        <mat-icon class="add-icon" (click)="addUnit()">add_circle</mat-icon>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>

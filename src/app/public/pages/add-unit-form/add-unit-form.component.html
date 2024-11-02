@@ -1,0 +1,12 @@
+<div class="title-container">
+  <h1 class="title">{{'courses.unit' | translate }}</h1>
+</div>
+<div class="form">
+  <div class="input-content">
+    <mat-label class="label">Title:</mat-label>
+    <input [(ngModel)]="unit.title" class="input" matInput name="title" placeholder="Title" required>
+  </div>
+  <div class="question-container">
+    <button class="button" (click)="createNewUnit()">Add Unit</button>
+  </div>
+</div>

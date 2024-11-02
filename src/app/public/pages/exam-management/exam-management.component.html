@@ -1,33 +1,53 @@
-<div class="title-container">
-  <h1 class="title">Exam</h1>
+<!--<div class="title-container">
+  <h1 class="title">{{'courses.exam' | translate}}</h1>
 </div>
-
 <div class="form">
   <div class="input-content">
     <mat-label class="label">Title</mat-label>
     <input class="input" placeholder="Tile">
   </div>
   <h2><b>Add question</b></h2>
-  <div class="question-container">
+  <div *ngFor="let question of exam.questions; let i = index" class="question-container">
     <div class="input-content">
       <mat-label class="label">Question</mat-label>
-      <input class="input" placeholder="Write your question">
+      <input class="input" placeholder="Write your question" [(ngModel)]="question.question">
     </div>
-    <div class="input-content">
-      <mat-label class="label">Answer 1</mat-label>
-      <input class="input" placeholder="Write your answer">
+    <div class="input-content" *ngFor="let answer of question.answers; let j = index">
+      <mat-label class="label">Answer {{j + 1}}</mat-label>
+      <input class="input" placeholder="Write your answer" [(ngModel)]="answer.description">
+      <mat-checkbox [(ngModel)]="answer.is_correct">Correct Answer</mat-checkbox>
     </div>
-    <div class="input-content">
-      <mat-label class="label">Answer 2</mat-label>
-      <input class="input" placeholder="Write your answer">
-    </div>
-    <div class="input-content">
-      <mat-label class="label">Answer 3</mat-label>
-      <input class="input" placeholder="Write your answer">
-    </div>
-    <button class="button">Save question</button>
   </div>
+  <button class="button" (click)="addQuestion()">Add More Questions</button>
+  <button class="button" (click)="saveExam()">Save Exam</button>
   <div class="saved-questions">
-    AAAAAAAAA
+    <h3>Saved Exam:</h3>
+    <pre>{{ exam | json }}</pre>
   </div>
+</div>-->
+<div>
+  <h2>Gestión de Exámenes</h2>
+  <form (ngSubmit)="saveExam()">
+    <div>
+      <label for="examTitle">Título del Examen:</label>
+      <input id="examTitle" [(ngModel)]="examData.title" name="title" required />
+    </div>
+    <h3>Preguntas</h3>
+    <div *ngFor="let question of questions; let i = index">
+      <div>
+        <label for="question{{i}}">Pregunta {{i + 1}}:</label>
+        <input id="question{{i}}" [(ngModel)]="question.question" name="question" required />
+        <button type="button" (click)="addAnswer(question.id)">Agregar Respuesta</button>
+      </div>
+      <div *ngFor="let answer of getAnswersForQuestion(question.id)">
+        <label>Respuesta:</label>
+        <input [(ngModel)]="answer.description" name="description" required />
+        <label>
+          <input type="checkbox" [(ngModel)]="answer.is_correct" name="is_correct" /> Correcta
+        </label>
+      </div>
+    </div>
+    <button type="button" (click)="addQuestion()">Agregar Pregunta</button>
+    <button type="submit">Guardar Examen</button>
+  </form>
 </div>
