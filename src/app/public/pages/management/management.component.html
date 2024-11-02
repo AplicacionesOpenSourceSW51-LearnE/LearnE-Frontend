@@ -1,6 +1,6 @@
 <div class="header">
   <span>{{ 'courses.courses' | translate }}</span>
-  <mat-icon class="add-icon">playlist_add</mat-icon>
+  <mat-icon class="add-icon" routerLink="/mainPage/courseAdd">playlist_add</mat-icon>
 </div>
 <div class="container">
   <mat-card class="course-card" *ngFor="let course of dataSource">

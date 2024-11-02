@@ -25,6 +25,10 @@
         </mat-card-header>
         <mat-card-content>
           <div class="feature">
+            <mat-icon class="icon">hourglass_empty</mat-icon>
+            <span class="feature-text">{{this.selectedCourse?.duration}}</span>
+          </div>
+          <div class="feature">
             <mat-icon class="icon">fitness_center</mat-icon>
             <span class="feature-text">{{'courses.exam' | translate}}: {{this.exams.length}}</span>
           </div>

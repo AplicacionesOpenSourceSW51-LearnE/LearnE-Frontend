@@ -31,7 +31,6 @@ export class RegisterComponent {
   @Input() user!: User;
   @Output() protected userAddRequested = new EventEmitter<User>();
   protected UserType = UserType;
-  users: Array<User> = [];
 
   private userService: UserService = inject(UserService);
 

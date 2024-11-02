@@ -66,7 +66,7 @@ export class SignInComponent {
           sessionStorage.setItem('password', this.password);
           sessionStorage.setItem('type_user', String(user1.type_user));
           sessionStorage.setItem('id', String(user1.id));
-          sessionStorage.setItem('type_plan', String(user1.type_plan))
+          sessionStorage.setItem('type_plan', String(user1.type_plan));
           this.enterUser();
         } else {
           alert('Password or email incorrect');

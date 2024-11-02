@@ -25,6 +25,7 @@ import {CatalogCoursesComponent} from "./public/pages/catalog-courses/catalog-co
 import {ManagementComponent} from "./public/pages/management/management.component";
 import {CourseManagementComponent} from "./public/pages/course-management/course-management.component";
 import {CourseEditContentComponent} from "./public/pages/course-edit-content/course-edit-content.component";
+import {CourseAddComponent} from "./public/pages/course-add/course-add.component";
 
 export const routes: Routes = [
   { path: 'mainToolbar', component: MainToolbarComponent, children: [
@@ -46,7 +47,8 @@ export const routes: Routes = [
       { path: 'profile', component: ProfileComponent},
       { path: 'grades', component: GradesComponent},
       { path: 'management', component: ManagementComponent },
-      { path: 'courseManagement', component: CourseManagementComponent }
+      { path: 'courseManagement', component: CourseManagementComponent },
+      { path: 'courseAdd', component: CourseAddComponent }
     ]},
   { path: 'courseEditContent', component: CourseEditContentComponent },
   { path: 'courseSidenav', component: CourseSidenavComponent, children: [
