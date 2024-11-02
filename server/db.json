@@ -204,7 +204,14 @@
       "student_id": 1
     }
   ],
-  "notes": [],
+  "notes": [
+    {
+      "id": 1,
+      "student_id": 2,
+      "exam_id": 1,
+      "note": 10
+    }
+  ],
   "materials": [
     {
       "id": 1,

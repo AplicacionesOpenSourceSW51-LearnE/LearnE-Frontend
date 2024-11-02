@@ -87,5 +87,11 @@
     "sub": "Extra Materials",
     "free": "Now you cannot access this content. Try our Premium Plan for access",
     "enter": "Enter"
+  },
+  "grades": {
+    "course": "Course",
+    "exam": "Exam",
+    "grades": "Grades",
+    "yhnScore": "You have no scores"
   }
 }

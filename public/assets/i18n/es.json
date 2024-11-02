@@ -87,5 +87,11 @@
     "sub": "Materiales Extras",
     "free": "Ahora no puedes acceder a este contenido. Prueba nuestro plan Premium para el acceso",
     "enter": "Ingresar"
+  },
+  "grades": {
+    "course": "Curso",
+    "exam": "Examen",
+    "grades": "Calificaciones",
+    "yhnScore": "No tienes calificaciones"
   }
 }
