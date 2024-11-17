@@ -3,10 +3,11 @@
 </div>
 <div class="form">
   <div class="input-content">
-    <mat-label class="label">Title:</mat-label>
-    <input [(ngModel)]="unit.title" class="input" matInput name="title" placeholder="Title" required>
+    <mat-label class="label">{{'editSection.title'|translate}}:</mat-label>
+    <input [(ngModel)]="unit.title" class="input" matInput name="title" placeholder="{{'editSection.title'|translate}}" required>
   </div>
   <div class="question-container">
-    <button class="button" (click)="createNewUnit()">Add Unit</button>
+    <button class="button" (click)="createNewUnit()">{{'editSection.add'|translate}}</button>
+    <button class="button" (click)="cancelUnit()">{{'editSection.cancel'|translate}}</button>
   </div>
 </div>

@@ -54,7 +54,8 @@
     "tutorials": "Tutorials",
     "materials": "Extra Materials",
     "ratings": "Ratings",
-    "content": "Edit content"
+    "content": "Edit content",
+    "update": "Update Course"
   },
   "mainPage": {
     "courses": "My Courses",
@@ -120,5 +121,36 @@
     "update": "Update",
     "cancel": "Cancel",
     "uLink": "Update link"
+  },
+  "editExam": {
+    "title": "Exam title",
+    "question": "Question",
+    "answer": "Answer",
+    "correct": "Correct",
+    "add": "Add Question",
+    "cancel": "Cancel",
+    "save": "Save Exam"
+  },
+  "editSection": {
+    "title": "Title",
+    "description": "Description",
+    "video": "Video URL",
+    "add": "Add Section",
+    "cancel": "Cancel Section"
+  },
+  "editUnit": {
+    "add": "Add Unit",
+    "cancel": "Cancel Unit"
+  },
+  "addCourse": {
+    "title": "Title",
+    "description": "Description",
+    "level": "Level",
+    "duration": "Duration",
+    "prior": "Prior Knowledge",
+    "image": "Image",
+    "video": "Video",
+    "save": "Save Course",
+    "cancel": "Cancel Course"
   }
 }

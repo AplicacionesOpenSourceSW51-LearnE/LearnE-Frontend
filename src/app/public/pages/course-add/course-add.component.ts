@@ -39,6 +39,9 @@ export class CourseAddComponent {
     }
     this.courseService.create(this.course).subscribe();
     this.router.navigate(['/mainPage/management']);
+  }
 
+  cancelCourse() {
+    this.router.navigate(['/mainPage/management']);
   }
 }

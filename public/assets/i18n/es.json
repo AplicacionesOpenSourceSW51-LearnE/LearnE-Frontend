@@ -54,7 +54,8 @@
     "tutorials": "Tutorías",
     "materials": "Materiales Extras",
     "ratings": "Valoraciones",
-    "content": "Editar contenido"
+    "content": "Editar contenido",
+    "update": "Actualizar Curso"
   },
   "mainPage": {
     "courses": "Mis Cursos",
@@ -120,5 +121,36 @@
     "update": "Actualizar",
     "cancel": "Cancelar",
     "uLink": "Actualizar link"
+  },
+  "editExam": {
+    "title": "Título del Examen",
+    "question": "Pregunta",
+    "answer": "Respuesta",
+    "correct": "Correcta",
+    "add": "Agregar Pregunta",
+    "cancel": "Cancelar",
+    "save": "Guardar Examen"
+  },
+  "editSection": {
+    "title": "Título",
+    "description": "Descripción",
+    "video": "URL del Video",
+    "add": "Agregar Sección",
+    "cancel": "Cancelar Sección"
+  },
+  "editUnit": {
+    "add": "Agregar Unidad",
+    "cancel": "Cancelar Unidad"
+  },
+  "addCourse": {
+    "title": "Título",
+    "description": "Descripción",
+    "level": "Nivel",
+    "duration": "Duración",
+    "prior": "Conocimientos Previos",
+    "image": "Imagen",
+    "video": "Video",
+    "save": "Guardar Curso",
+    "cancel": "Cancelar Curso"
   }
 }

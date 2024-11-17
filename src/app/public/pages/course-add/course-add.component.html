@@ -4,34 +4,35 @@
 
 <div class="form">
   <div class="input-content">
-    <mat-label class="label">Title:</mat-label>
-    <input [(ngModel)]="course.title" class="input" matInput name="title" placeholder="Title" required>
+    <mat-label class="label">{{'addCourse.title'|translate}}:</mat-label>
+    <input [(ngModel)]="course.title" class="input" matInput name="title" placeholder="{{'addCourse.title'|translate}}" required>
   </div>
   <div class="input-content">
-    <mat-label class="label">Description:</mat-label>
-    <input [(ngModel)]="course.description" class="input" matInput name="description" placeholder="Description" required>
+    <mat-label class="label">{{'addCourse.description'|translate}}:</mat-label>
+    <input [(ngModel)]="course.description" class="input" matInput name="description" placeholder="{{'addCourse.description'|translate}}" required>
   </div>
   <div class="input-content">
-    <mat-label class="label">Level:</mat-label>
-    <input [(ngModel)]="course.level" class="input" matInput name="level" placeholder="Level" required>
+    <mat-label class="label">{{'addCourse.level'|translate}}:</mat-label>
+    <input [(ngModel)]="course.level" class="input" matInput name="level" placeholder="{{'addCourse.level'|translate}}" required>
   </div>
   <div class="input-content">
-    <mat-label class="label">Duration:</mat-label>
-    <input [(ngModel)]="course.duration" class="input" matInput name="duration" placeholder="Duration" required>
+    <mat-label class="label">{{'addCourse.duration'|translate}}:</mat-label>
+    <input [(ngModel)]="course.duration" class="input" matInput name="duration" placeholder="{{'addCourse.duration'|translate}}" required>
   </div>
   <div class="input-content">
-    <mat-label class="label">Prior Knowledge:</mat-label>
-    <input [(ngModel)]="course.prior_knowledge" class="input" matInput name="prior_knowledge" placeholder="Prior Knowledge" required>
+    <mat-label class="label">{{'addCourse.prior'|translate}}:</mat-label>
+    <input [(ngModel)]="course.prior_knowledge" class="input" matInput name="prior_knowledge" placeholder="{{'addCourse.prior'|translate}}" required>
   </div>
   <div class="input-content">
-    <mat-label class="label">Image:</mat-label>
-    <input [(ngModel)]="course.principal_image" class="input" matInput name="principal_image" placeholder="Image" required>
+    <mat-label class="label">{{'addCourse.image'|translate}}:</mat-label>
+    <input [(ngModel)]="course.principal_image" class="input" matInput name="principal_image" placeholder="{{'addCourse.image'|translate}}" required>
   </div>
   <div class="input-content">
-    <mat-label class="label">Video:</mat-label>
-    <input [(ngModel)]="course.url_video" class="input" matInput name="url_video" placeholder="Video" required>
+    <mat-label class="label">{{'addCourse.video'|translate}}:</mat-label>
+    <input [(ngModel)]="course.url_video" class="input" matInput name="url_video" placeholder="{{'addCourse.video'|translate}}" required>
   </div>
   <div class="question-container">
-    <button class="button" (click)="createNewCourse()">Save course</button>
+    <button class="button" (click)="createNewCourse()">{{'addCourse.save'|translate}}</button>
+    <button class="button" (click)="cancelCourse()">{{'addCourse.cancel'|translate}}</button>
   </div>
 </div>

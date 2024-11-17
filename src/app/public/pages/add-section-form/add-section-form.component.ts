@@ -49,4 +49,8 @@ export class AddSectionFormComponent {
     this.sectionService.create(this.section).subscribe();
     this.router.navigate(['/courseEditContent']);
   }
+
+  cancelAddSection() {
+    this.router.navigate(['/courseEditContent']);
+  }
 }

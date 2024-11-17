@@ -39,4 +39,8 @@ export class AddUnitFormComponent {
     this.unitService.create(this.unit).subscribe();
     this.router.navigate(['/courseEditContent']);
   }
+
+  cancelUnit() {
+    this.router.navigate(['/courseEditContent']);
+  }
 }

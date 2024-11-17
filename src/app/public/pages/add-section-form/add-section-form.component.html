@@ -3,18 +3,19 @@
 </div>
 <div class="form">
   <div class="input-content">
-    <mat-label class="label">Title:</mat-label>
-    <input [(ngModel)]="section.title" class="input" matInput name="title" placeholder="Title" required>
+    <mat-label class="label">{{'editSection.title'|translate}}:</mat-label>
+    <input [(ngModel)]="section.title" class="input" matInput name="title" placeholder="{{'editSection.title'|translate}}" required>
   </div>
   <div class="input-content">
-    <mat-label class="label">Description:</mat-label>
-    <input [(ngModel)]="section.description" class="input" matInput name="description" placeholder="Description" required>
+    <mat-label class="label">{{'editSection.description'|translate}}:</mat-label>
+    <input [(ngModel)]="section.description" class="input" matInput name="description" placeholder="{{'editSection.description'|translate}}" required>
   </div>
   <div class="input-content">
-    <mat-label class="label">Video URL:</mat-label>
-    <input [(ngModel)]="section.url_video" class="input" matInput name="url_video" placeholder="Video URL" required>
+    <mat-label class="label">{{'editSection.video'|translate}}:</mat-label>
+    <input [(ngModel)]="section.url_video" class="input" matInput name="url_video" placeholder="{{'editSection.video'|translate}}" required>
   </div>
   <div class="question-container">
-    <button class="button" (click)="addNewSection()">Add Section</button>
+    <button class="button" (click)="addNewSection()">{{'editSection.add'|translate}}</button>
+    <button class="button" (click)="cancelAddSection()">{{'editSection.cancel'|translate}}</button>
   </div>
 </div>
