@@ -1,0 +1,24 @@
+<mat-card class="exam-container">
+
+  <mat-card-header class="exam-header-container">
+    <div class="grade">0/20</div>
+    <mat-card-title class="title">{{ 'exams.exam' | translate}}: {{exam?.title}}</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="exam-content-container">
+    <div class="exam-content">
+      <div *ngFor="let question of questions; let i = index">
+        <p class="question">{{question.id}}. {{question.question}}</p>
+        <div *ngFor="let answer of answers">
+          <div *ngIf="answer.question_id == question.id">
+            <mat-radio-group
+              aria-labelledby="user-radio-group-label"
+              [disabled]="examSend">
+              <mat-radio-button [value]="answer.id" class="option">{{answer.description}}</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

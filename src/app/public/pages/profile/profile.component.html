@@ -1,0 +1,31 @@
+<div class="profile-container">
+  <div class="profile-header">
+    <img src="assets/img/profile-picture.png" alt="Benito Benitez" class="profile-picture">
+    <div class="profile-info">
+      <h2>{{user.firstName}} {{user.lastName}}</h2>
+      <div *ngIf="user.type_user === 1">
+        <p>{{ 'profile.student' | translate }}</p>
+      </div>
+      <div *ngIf="user.type_user === 0">
+        <p>{{ 'profile.teacher' | translate }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile-details">
+    <h3>{{ 'profile.information' | translate }}</h3>
+    <hr>
+    <div class="info-section">
+      <p><strong>{{ 'profile.fullName' | translate }}: </strong>{{user.firstName}} {{user.lastName}}</p>
+      <p><strong>{{ 'profile.username' | translate }}: </strong>{{user.username}}</p>
+      <p><strong>{{ 'profile.email' | translate }}: </strong>{{user.email}}</p>
+      <div *ngIf="user.type_user === 1">
+        <p *ngIf="user.type_plan === 1"><strong>{{ 'profile.typePlan' | translate }}: </strong>{{ 'profile.premium' | translate }}</p>
+        <p *ngIf="user.type_plan === 0"><strong>{{ 'profile.typePlan' | translate }}: </strong>{{ 'profile.free' | translate }}</p>
+      </div>
+      <div *ngIf="user.type_user === 0">
+        <p><strong>{{ 'profile.typePlan' | translate }}: </strong>{{ 'profile.nothing' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,21 +1,44 @@
 {
-  "users": [],
-  "students": [
+  "users": [
     {
       "id": 1,
-      "firstname": "Jorge",
+      "firstName": "Jorge",
       "lastName": "Orrego",
-      "username": "jorge1201",
-      "email": "example@gmail.com",
-      "password": "1234A"
+      "username": "testing1234",
+      "email": "testing1234@gmail.com",
+      "password": "1234",
+      "type_user": 1,
+      "type_plan": 0
     },
     {
       "id": 2,
+      "firstName": "Pepe",
+      "lastName": "Vazques",
+      "username": "PepeProfe",
+      "email": "pepeprofe@gmail.com",
+      "password": "1234",
+      "type_user": 1,
+      "type_plan": 1
+    },
+    {
+      "id": 3,
       "firstName": "John",
       "lastName": "Doe",
-      "username": "jdoe1234",
-      "email": "example@gmail.com",
-      "password": "1234"
+      "username": "jdoe1245",
+      "email": "jdoe1@gmail.com",
+      "password": "1234",
+      "type_user": 0,
+      "type_plan": 2
+    },
+    {
+      "id": 4,
+      "firstName": "Mary",
+      "lastName": "Doe",
+      "username": "mdoe1234",
+      "email": "mdoe@gmail.com",
+      "password": "1234",
+      "type_user": 0,
+      "type_plan": 2
     }
   ],
   "courses": [
@@ -23,68 +46,180 @@
       "id": 1,
       "title": "Python's Introduction",
       "description": "Basic Python course focused on people who are beginners in the world of programming. In addition, basic programming concepts will be taught.",
-      "teacher": [
-        {
-          "name": "John Doe",
-          "lastname": "Doe Doe",
-          "speciality": "Fronted Dev",
-          "image": "https://covalto.com/static/78498ccda70933a5f1e3edc3e40d3cbe/34aca/Hero_Mobile_Cuenta_Personas_V1_1_8046e424ea.webp"
-        }
-      ],
+      "teacher_id": 3,
       "level": "Beginner",
       "duration": "3 hours content",
       "prior_knowledge": "Nothing",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA47f0Lhu3roG-3duVbKXDq0kPeDDOakrYZg&s",
-      "units": [
-        {
-          "id": 1,
-          "title": "Introduction",
-          "link": "https://www.youtube.com/embed/Rv910T1BJUw",
-          "sections": [
-            {
-              "id": 1,
-              "title": "Introduction video",
-              "link": "https://www.youtube.com/embed/DAdRO6ByBoU",
-              "tutorials": [
-                {
-                  "date": "12/07/2024",
-                  "hour": [
-                    {
-                      "hour": "12:10"
-                    },
-                    {
-                      "hour": "13:10"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": 2,
-              "title": "Introduction video 2",
-              "link": "https://www.youtube.com/embed/UzHFkEdnRuc"
-            }
-          ],
-          "exams": [
-            {
-              "id": 1,
-              "title": "Theory of object-oriented programming",
-              "time": 30,
-              "questions": [
-                {
-                  "id": 1,
-                  "question": "Briefly describe the four pillars of object-oriented programming."
-                },
-                {
-                  "id": 2,
-                  "question": "Explain how you could implement the above in developing an application."
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      "principal_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA47f0Lhu3roG-3duVbKXDq0kPeDDOakrYZg&s",
+      "url_video": "https://www.youtube.com/embed/Rv910T1BJUw"
+    },
+    {
+      "id": 2,
+      "title": "JavaScript Basics",
+      "description": "This course covers the fundamentals of JavaScript, including variables, data types, loops, and functions, suitable for beginners.",
+      "teacher_id": 4,
+      "level": "Beginner",
+      "duration": "4 hours content",
+      "prior_knowledge": "Basic HTML and CSS",
+      "principal_image": "https://stride.com.co/wp-content/uploads/2023/01/gabriel-heinzer-g5jpH62pwes-unsplash-768x576.jpg",
+      "url_video": "https://www.youtube.com/embed/8GTaO9XhA5M"
+    }
+  ],
+  "courses_enrollment": [
+    {
+      "id": 1,
+      "student_id": 2,
+      "course_id": 1
+    },
+    {
+      "id": 2,
+      "student_id": 1,
+      "course_id": 2
+    }
+  ],
+  "units": [
+    {
+      "id": 1,
+      "course_id": 1,
+      "title": "Introduction"
+    }
+  ],
+  "sections": [
+    {
+      "id": 1,
+      "unit_id": 1,
+      "title": "Introduction video",
+      "description": "Explain about variables and functions",
+      "url_video": "https://www.youtube.com/embed/DAdRO6ByBoU"
+    },
+    {
+      "id": 2,
+      "unit_id": 1,
+      "title": "Introduction video 2",
+      "description": "Explain the differences of the functions",
+      "url_video": "https://www.youtube.com/embed/UzHFkEdnRuc"
+    }
+  ],
+  "exams": [
+    {
+      "id": 1,
+      "unit_id": 1,
+      "course_id": 1,
+      "title": "Theory of object-oriented programming"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "exam_id": 1,
+      "question": "Which symbol is used to start a comment in Python?"
+    },
+    {
+      "id": 2,
+      "exam_id": 1,
+      "question": "What function is used to display text in Python?"
+    }
+  ],
+  "answers": [
+    {
+      "id": 1,
+      "question_id": 1,
+      "is_correct": true,
+      "description": "#"
+    },
+    {
+      "id": 2,
+      "question_id": 1,
+      "is_correct": false,
+      "description": "//"
+    },
+    {
+      "id": 3,
+      "question_id": 1,
+      "is_correct": false,
+      "description": "<!-- -->"
+    },
+    {
+      "id": 4,
+      "question_id": 2,
+      "is_correct": false,
+      "description": "echo()"
+    },
+    {
+      "id": 5,
+      "question_id": 2,
+      "is_correct": true,
+      "description": "print()"
+    },
+    {
+      "id": 6,
+      "question_id": 2,
+      "is_correct": false,
+      "description": "display()"
+    }
+  ],
+  "tutorials_courses": [
+    {
+      "id": 1,
+      "courses_id": 1,
+      "teacher_id": 3,
+      "date": "2024-06-22",
+      "hour": "11:50",
+      "is_reservated": false,
+      "link": ""
+    },
+    {
+      "id": 2,
+      "courses_id": 1,
+      "teacher_id": 3,
+      "date": "2024-06-22",
+      "hour": "14:20",
+      "is_reservated": false,
+      "link": ""
+    },
+    {
+      "id": 3,
+      "courses_id": 1,
+      "teacher_id": 3,
+      "date": "2024-06-22",
+      "hour": "17:20",
+      "is_reservated": true,
+      "link": "https://github.com/AplicacionesOpenSourceSW51-LearnE/LearnE-Backend"
+    }
+  ],
+  "tutorials_reservated": [
+    {
+      "id": 1,
+      "student_id": 2,
+      "tutorial_id": 3
+    }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "name_card": "Jorge Orrego",
+      "number_card": "378282246310005",
+      "expire_date": "09/26",
+      "security_code": "2506",
+      "email": "testing1234@gmail.com",
+      "student_id": 1
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "student_id": 2,
+      "exam_id": 1,
+      "note": 10
+    }
+  ],
+  "materials": [
+    {
+      "id": 1,
+      "course_id": 1,
+      "title": "Python Basics",
+      "format": "PDF",
+      "link": "https://bugs.python.org/file47781/Tutorial_EDIT.pdf"
     }
   ]
 }

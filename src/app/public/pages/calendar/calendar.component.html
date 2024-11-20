@@ -1,0 +1,28 @@
+<div class="calendar">
+    <div class="header">
+        <button mat-icon-button (click)="changeMonth(-1)">
+            <mat-icon>chevron_left</mat-icon>
+        </button>
+        <h2>{{ getMonthName(currentMonth) }} {{ currentYear }}</h2>
+        <button mat-icon-button (click)="changeMonth(1)">
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+    </div>
+    <div class="days-of-week">
+        <div *ngFor="let day of ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb']" class="day day-of-week">
+            {{ day }}
+        </div>
+    </div>
+    <div class="days">
+        <div
+                *ngFor="let day of [].constructor(getFirstDayOfMonth(currentMonth, currentYear)) | slice:0:getDaysInMonth(currentMonth, currentYear) - getFirstDayOfMonth(currentMonth, currentYear); let i = index"
+                class="day empty"
+        ></div>
+        <div
+                *ngFor="let day of [].constructor(getDaysInMonth(currentMonth, currentYear)); let dayIndex = index"
+                class="day"
+        >
+            <div class="day-number">{{ dayIndex + 1 }}</div>
+        </div>
+    </div>
+</div>

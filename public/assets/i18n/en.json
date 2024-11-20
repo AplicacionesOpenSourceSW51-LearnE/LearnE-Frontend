@@ -12,10 +12,201 @@
     "choosePlan": "Choose plan",
     "learner": "Learner"
   },
+  "cardPayment": {
+    "myPayment": "Make your payment",
+    "nameCard": "Name on Card",
+    "numberCard": "Card number",
+    "eDate": "Expire date (MM/YY)",
+    "sCode": "Security code (CVC)",
+    "email": "Email",
+    "pay": "Pay",
+    "cancel": "Cancel"
+  },
+  "paymentSuccessful": {
+    "title": "Payment Successful",
+    "thankYouMessage": "Thank you for choosing us!",
+    "subscriptionBenefits": "You will have access to new benefits with your new subscription. Take advantage and continue learning with LearnE.",
+    "goToPlans": "Go to plans",
+    "firstMessage": "Thank you for joining Learn.E! Your subscription has been confirmed successfully",
+    "enter": "Enter"
+  },
   "exams": {
     "exam": "Exam",
     "minutes": "minutes",
     "aRemaining": "attempts remaining",
-    "send": "Send"
+    "send": "Send",
+    "rAnswer": "Write your answer"
+  },
+  "courseRegistration": {
+    "opinions": "Opinions",
+    "join": "Join",
+    "publishedDate": "Published",
+    "description": "Description"
+  },
+  "courses": {
+    "course": "Courses",
+    "course1": "Course",
+    "courses": "My courses",
+    "rating": "Leave a rating",
+    "leave": "Go to My Courses",
+    "unit": "Unit",
+    "section": "Section",
+    "exam": "Exam",
+    "description": "General description",
+    "tutorials": "Tutorials",
+    "materials": "Extra Materials",
+    "ratings": "Ratings",
+    "content": "Edit content",
+    "update": "Update Course"
+  },
+  "mainPage": {
+    "courses": "My Courses",
+    "management": "Course Management",
+    "calendar": "Calendar",
+    "plans": "Plans",
+    "profile": "Profile",
+    "logOut": "Log Out",
+    "grades": "Grades",
+    "catalog": "Catalog"
+  },
+  "tutoring": {
+    "res": "Tutoring reserved",
+    "dis": "Tutoring register",
+    "register": "Register",
+    "reserved": "Reserved",
+    "enter": "Enter",
+    "free": "Now you cannot access this content. Try our Premium Plan for access"
+  },
+  "profile": {
+    "teacher": "Teacher",
+    "student": "Student",
+    "information": "Information",
+    "fullName": "Full name",
+    "username": "Username",
+    "email": "Email",
+    "typePlan": "Type plan",
+    "free": "Free",
+    "premium": "Premium",
+    "nothing": "Nothing"
+  },
+  "material": {
+    "sub": "Extra Materials",
+    "free": "Now you cannot access this content. Try our Premium Plan for access",
+    "enter": "Enter",
+    "delete": "Delete"
+  },
+  "grades": {
+    "course": "Course",
+    "exam": "Exam",
+    "grades": "Grades",
+    "yhnScore": "You have no scores"
+  },
+  "courseDetails": {
+    "register": "Register",
+    "content": "Content and resources",
+    "features": "Course Features",
+    "prior": "Prior Knowledge",
+    "presentation": "Presentation",
+    "who": "Find out who teaches the course of"
+  },
+  "tutorialsManagement": {
+    "tutoring": "Tutoring",
+    "date": "Date",
+    "hour": "Hour",
+    "state": "State",
+    "add": "Add",
+    "rTutorials": "Reserved tutorials",
+    "uTutorials": "Unreserved tutorials",
+    "reserved": "Reserved",
+    "unreserved": "Unreserved",
+    "student": "Student",
+    "link": "Link",
+    "update": "Update",
+    "cancel": "Cancel",
+    "uLink": "Update link"
+  },
+  "editExam": {
+    "title": "Exam title",
+    "question": "Question",
+    "answer": "Answer",
+    "correct": "Correct",
+    "add": "Add Question",
+    "cancel": "Cancel",
+    "save": "Save Exam"
+  },
+  "editSection": {
+    "title": "Title",
+    "description": "Description",
+    "video": "Video URL",
+    "add": "Add Section",
+    "cancel": "Cancel Section"
+  },
+  "editUnit": {
+    "add": "Add Unit",
+    "cancel": "Cancel Unit"
+  },
+  "addCourse": {
+    "title": "Title",
+    "description": "Description",
+    "level": "Level",
+    "duration": "Duration",
+    "prior": "Prior Knowledge",
+    "image": "Image",
+    "video": "Video",
+    "save": "Save Course",
+    "cancel": "Cancel Course"
+  },
+  "landingPage": {
+    "title": "The fun, effective and free way to learn",
+    "subtitle": "Make learning fun!",
+    "register": "Start Now",
+    "login": "Login",
+    "institutes": "Affiliated institutions"
+  },
+  "signIn": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "enter": "Enter",
+    "forgot": "Forgot your password?"
+  },
+  "register": {
+    "title": "Register on Learn.E",
+    "name": "First Name",
+    "lastName": "Last Name",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "choose": "Choose your role",
+    "teacher": "Teacher",
+    "student": "Student",
+    "create": "Create account",
+    "have": "Do you already have an account?",
+    "signIn": "Log in here"
+  },
+  "subscriptions": {
+    "title": "Our Plans and Prices",
+    "subtitle": "Upgrade to unlock access to educational videos, collaborative repositories, and more",
+    "subscribe": "Subscribe",
+    "nameFree": "Free Plan",
+    "costFree": "S/.0 per month",
+    "namePremium": "Learn.E Plan",
+    "costPremium": "S/.20 per month"
+  },
+  "payment": {
+    "title": "Add Payment by Card",
+    "titular": "Owner's Name",
+    "number": "Card Number",
+    "date": "Expiration Date (MM/YY)",
+    "code": "Security Code (CVC)",
+    "email": "Email",
+    "paid": "Pay"
+  },
+  "materialAdd": {
+    "title": "Title",
+    "format": "Format",
+    "link": "Link",
+    "create": "Add material",
+    "cancel": "Cancel material"
   }
 }

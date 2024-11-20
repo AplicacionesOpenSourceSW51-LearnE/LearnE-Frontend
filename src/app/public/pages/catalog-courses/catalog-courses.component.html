@@ -1,0 +1,13 @@
+<div class="header">
+  <span>{{ 'courses.course' | translate }}</span>
+</div>
+<div class="container">
+  <mat-card class="course-card" *ngFor="let course of courses">
+    <mat-card-header>
+      <a (click)="this.goToCourseDetails(course)"><img class="imageCard" [alt]="course.title" [src]="course.principal_image" mat-card-image></a>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-card-title class="title">{{course.title}}</mat-card-title>
+    </mat-card-content>
+  </mat-card>
+</div>

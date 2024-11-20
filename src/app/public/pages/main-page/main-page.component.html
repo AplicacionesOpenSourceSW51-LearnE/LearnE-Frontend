@@ -1,40 +1,69 @@
-<mat-sidenav-container class="sidenav-container">
+<div *ngIf="type_user === 1">
+  <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #sidenav mode="side" opened class="main-sidenav"
                  [fixedInViewport]="false">
       <mat-nav-list class="options-list">
+        <div class="logo-container">
+          <img class="logo" src="https://i.imgur.com/1DP47wd.jpeg" alt="LearneLogo" width="100" height="100" routerLink="/mainPage/catalog">
+        </div>
         <mat-list-item>
-          <a routerLink="/mainPage/myCourses"><mat-icon>class</mat-icon> Mis Cursos</a>
+          <a routerLink="/mainPage/catalog"><mat-icon>view_list</mat-icon>{{ 'mainPage.catalog' | translate }}</a>
         </mat-list-item>
         <mat-list-item>
-          <p><mat-icon>checklist</mat-icon> Actividades</p>
+          <a routerLink="/mainPage/myCourses"><mat-icon>class</mat-icon>{{ 'mainPage.courses' | translate }}</a>
         </mat-list-item>
         <mat-list-item>
-          <p><mat-icon>history</mat-icon> Historial de Cursos</p>
+          <a routerLink="/mainPage/grades"><mat-icon>grade</mat-icon>{{ 'mainPage.grades' | translate }}</a>
         </mat-list-item>
         <mat-list-item>
-          <p><mat-icon>calendar_today</mat-icon> Calendario</p>
+          <a routerLink="/mainPage/calendar"><mat-icon>calendar_today</mat-icon>{{ 'mainPage.calendar' | translate }}</a>
         </mat-list-item>
         <mat-list-item>
-          <a routerLink="/mainPage/allPlans"><mat-icon>card_membership</mat-icon> Planes</a>
+          <a routerLink="/mainPage/plans"><mat-icon>card_membership</mat-icon>{{ 'mainPage.plans' | translate }}</a>
         </mat-list-item>
         <mat-list-item>
-          <p><mat-icon>assignment</mat-icon> Mis Notas</p>
+          <a routerLink="/mainPage/profile"><mat-icon>account_circle</mat-icon>{{ 'mainPage.profile' | translate }}</a>
         </mat-list-item>
         <mat-list-item>
-          <p><mat-icon>account_circle</mat-icon> Perfil</p>
-        </mat-list-item>
-        <mat-list-item>
-          <p><mat-icon>logout</mat-icon> Cerrar Sesión</p>
+          <a (click)="logout()"><mat-icon>logout</mat-icon>{{ 'mainPage.logOut' | translate }}</a>
         </mat-list-item>
       </mat-nav-list>
       <div class="button-language-container">
         <app-language-switcher></app-language-switcher>
       </div>
     </mat-sidenav>
-  <mat-sidenav-content>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+<div *ngIf="type_user === 0">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened class="main-sidenav"
+                 [fixedInViewport]="false">
+      <mat-nav-list class="options-list">
+        <div class="logo-container">
+          <img class="logo" src="https://i.imgur.com/1DP47wd.jpeg" alt="LearneLogo" width="100" height="100" routerLink="/mainPage/management">
+        </div>
+        <mat-list-item>
+          <a routerLink="/mainPage/management"><mat-icon>history</mat-icon>{{ 'mainPage.management' | translate }}</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a routerLink="/mainPage/profile"><mat-icon>account_circle</mat-icon>{{ 'mainPage.profile' | translate }}</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a (click)="logout()"><mat-icon>logout</mat-icon>{{ 'mainPage.logOut' | translate }}</a>
+        </mat-list-item>
+      </mat-nav-list>
+      <div class="button-language-container">
+        <app-language-switcher></app-language-switcher>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
 
 
 

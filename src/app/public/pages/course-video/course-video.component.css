@@ -28,6 +28,11 @@ iframe, video {
 
 .tab-group {
   flex: 0 0 auto;
+  font-size: 1rem;
   margin-top: 16px;
 }
 
+.description-content {
+  margin-top: 5px;
+  font-weight: bolder;
+}

@@ -1,0 +1,38 @@
+<div class="sign-up-container">
+  <mat-card class="sign-up-card">
+    <mat-card-header>
+      <mat-card-title>{{'register.title'|translate}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="sign-up-form">
+        <mat-form-field appearance="fill" >
+          <input [(ngModel)]="user.firstName" matInput name="firstName" placeholder="{{'register.name'|translate}}" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <input [(ngModel)]="user.lastName" matInput name="lastName" placeholder="{{'register.lastName'|translate}}" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <input [(ngModel)]="user.username" matInput name="username" placeholder="{{'register.username'|translate}}" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <input [(ngModel)]="user.email" matInput name="email" placeholder="{{'register.email'|translate}}" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <input [(ngModel)]="user.password" matInput type="password" name="password" placeholder="{{'register.password'|translate}}" required>
+        </mat-form-field>
+        <label id="user-radio-group-label">{{'register.choose'|translate}}</label>
+        <mat-radio-group
+          aria-labelledby="user-radio-group-label"
+          class="user-radio-group"
+          [(ngModel)]="user.type_user" name="userType">
+          <mat-radio-button class="user-radio-button" [value]="UserType.TEACHER">{{'register.teacher'|translate}}</mat-radio-button>
+          <mat-radio-button class="user-radio-button" [value]="UserType.STUDENT">{{'register.student'|translate}}</mat-radio-button>
+        </mat-radio-group>
+        <ng-container class="buttons">
+          <button mat-raised-button color="primary" (click)="createNewUser()">{{'register.create'|translate}}</button>
+        </ng-container>
+      </form>
+      <p class="login-link">{{'register.have'|translate}} <a routerLink="/mainToolbar/signIn">{{'register.signIn'|translate}}</a></p>
+    </mat-card-content>
+  </mat-card>
+</div>

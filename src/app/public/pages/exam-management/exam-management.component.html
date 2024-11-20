@@ -1,0 +1,68 @@
+<div class="exam-form">
+  <form class="exam">
+    <mat-card class="form">
+      <mat-card-header>
+        <mat-card-title>{{ 'courses.exam' | translate }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <!-- Campo para el título del examen -->
+        <mat-form-field appearance="fill" class="exam-input">
+          <mat-label>{{'editExam.title' | translate}}</mat-label>
+          <input matInput type="text" [(ngModel)]="examData.title" name="title" required />
+        </mat-form-field>
+        <!-- Sección de preguntas -->
+        <div *ngFor="let qa of questionsWithAnswers; let i = index" class="question-section">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>{{'editExam.question'|translate}} {{ i + 1 }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <!-- Campo para la pregunta -->
+              <mat-form-field appearance="fill" class="question-input">
+                <mat-label>{{'editExam.question'|translate}}</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  [(ngModel)]="qa.question.question"
+                  name="question{{ i }}"
+                  required
+                />
+              </mat-form-field>
+              <!-- Respuestas asociadas a la pregunta -->
+              <div *ngFor="let answer of qa.answers; let j = index" class="answer-section">
+                <!-- Campo descripción -->
+                <mat-form-field appearance="fill" class="answer-input">
+                  <mat-label>{{'editExam.answer'|translate}} {{ j + 1 }}</mat-label>
+                  <input
+                    matInput
+                    type="text"
+                    [(ngModel)]="answer.description"
+                    name="description{{ i }}{{ j }}"
+                    required
+                  />
+                </mat-form-field>
+                <!-- Checkbox para indicar si es correcta -->
+                <mat-checkbox [(ngModel)]="answer.is_correct" name="is_correct{{ i }}{{ j }}">
+                  {{'editExam.correct'|translate}}
+                </mat-checkbox>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <!-- Botón para añadir más preguntas -->
+        <div class="actions">
+          <button mat-raised-button color="primary" type="button" (click)="addQuestion()">
+            {{'editExam.add'|translate}}
+          </button>
+          <button mat-raised-button color="warn" type="button" (click)="cancelExamCreation()">
+            {{'editExam.cancel'|translate}}
+          </button>
+        </div>
+        <!-- Botón para guardar el examen -->
+        <button mat-raised-button color="accent" type="submit" (click)="saveNewExam()">
+          {{'editExam.save'|translate}}
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</div>

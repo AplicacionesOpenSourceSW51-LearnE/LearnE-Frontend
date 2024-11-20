@@ -1,29 +1,25 @@
-import {Unit} from "./unit.entity";
-import {Teacher} from "./teacher.entity";
-
 export class Course {
   id: number;
   title: string;
   description: string;
-  teacher: Array<Teacher>;
+  teacher_id: number;
   level: string;
   duration: string;
   prior_knowledge: string;
-  logo: string;
-  image: string;
-  units: Array<Unit>;
+  principal_image: string;
+  url_video: string;
 
-  constructor(course: {id?: number, title?: string, description?: string, teacher?: Array<Teacher>,
-    level?: string, duration?: string, prior_knowledge?: string, logo?: string, image?:string, units?: Array<Unit>}) {
+  constructor(course: {id?: number, title?: string, description?: string, teacher_id?: number,
+    level?: string, duration?: string, prior_knowledge?: string, principal_image?:string,
+    url_video?: string}) {
     this.id = course.id || 0;
     this.title = course.title || "";
     this.description = course.description || "";
-    this.teacher = course.teacher || [];
+    this.teacher_id = course.teacher_id || 0;
     this.level = course.level || "";
     this.duration = course.duration || "";
     this.prior_knowledge = course.prior_knowledge || "";
-    this.logo = course.logo || "";
-    this.image = course.image || "";
-    this.units = course.units || [];
+    this.principal_image = course.principal_image || "";
+    this.url_video = course.url_video || "";
   }
 }

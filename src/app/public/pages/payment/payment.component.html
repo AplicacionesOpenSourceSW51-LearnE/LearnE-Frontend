@@ -1,32 +1,32 @@
 <div class="payment-container">
   <mat-card class="payment-card">
     <mat-card-header>
-      <mat-card-title>Añadir Pago por Tarjeta</mat-card-title>
+      <mat-card-title>{{'payment.title'|translate}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <form class="payment-form">
         <mat-form-field appearance="fill">
-          <mat-label>Nombre del Titular</mat-label>
+          <mat-label>{{'payment.titular'|translate}}</mat-label>
           <input matInput>
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <mat-label>Número de la Tarjeta</mat-label>
+          <mat-label>{{'payment.number'|translate}}</mat-label>
           <input matInput>
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <mat-label>Fecha de Expiración (MM/AA)</mat-label>
+          <mat-label>{{'payment.date'|translate}}</mat-label>
           <input matInput>
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <mat-label>Código de Seguridad (CVC)</mat-label>
+          <mat-label>{{'payment.code'|translate}}</mat-label>
           <input matInput>
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <mat-label>Correo electrónico</mat-label>
+          <mat-label>{{'payment.email'|translate}}</mat-label>
           <input matInput type="password">
         </mat-form-field>
         <div class="buttons">
-          <a mat-raised-button color="primary" routerLink="/home/payment/success">Pagar</a>
+          <a mat-raised-button color="primary" routerLink="/payment/success">{{'payment.pay'|translate}}</a>
         </div>
       </form>
     </mat-card-content>

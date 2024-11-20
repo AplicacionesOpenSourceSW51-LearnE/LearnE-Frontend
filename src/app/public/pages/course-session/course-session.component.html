@@ -1,0 +1,116 @@
+<mat-card class="course-card">
+  <div class="course-wrapper">
+    <div class="course-details">
+      <img src="https://pontia.tech/wp-content/uploads/2023/06/Python-Symbol_0-1024x576.png" alt="Imagen del curso" class="course-image" />
+      <div class="course-info">
+        <h2 mat-card-title>Título del Curso</h2>
+        <div class="rating-info">
+          <mat-icon *ngFor="let star of stars" class="star">star</mat-icon>
+          <span class="reviews-count"> ({{ reviewsCount }} opiniones) </span>
+          <span class="level">{{ level }}</span>
+        </div>
+        <p mat-card-subtitle class="course-description">
+          Curso básico de Python enfocado a personas que son<br> principiantes en el mundo de la programación.<br> Además, se enseñarán conceptos básicos de programación.
+          En total, hay cuatro unidades enfocadas en el desarrollo<br> de ejercicios prácticos para reforzar lo aprendido<br> con la teoría.</p>
+        <button mat-raised-button color="primary" class="enroll-button">Inscribirse</button>
+      </div>
+    </div>
+    <img src="https://i.ytimg.com/vi/K9ndJGNjsKY/maxresdefault.jpg" alt="Imagen lateral" class="side-image" />
+  </div>
+</mat-card>
+
+
+<div class="content-section">
+  <h3 class="content-title">Contenido y Recursos</h3>
+
+  <div class="content-grid">
+    <!-- Características del Curso -->
+    <mat-card class="course-features">
+      <mat-card-header>
+        <mat-card-title>Características del Curso:</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="feature" *ngFor="let feature of features">
+          <mat-icon>{{ feature.icon }}</mat-icon>
+          <span class="feature-text">{{ feature.text }}</span>
+        </div>
+
+        <h4 class="course-prerequisites"><br>Conocimientos Previos:</h4>
+        <p><span class="bullet">•</span> Ninguno</p>
+        <p>Se requiere de una computadora con Python instalado</p>
+        <img src="https://i.ytimg.com/vi/tWnyBD2src0/maxresdefault.jpg" alt="Requerimiento" class="requirement-image" />
+
+        <!-- Subtítulos y Descripción dentro del 30% -->
+        <h4 class="subtitle">Proyectos del curso</h4>
+        <h5 class="small-subtitle">Tema de proyecto o examen</h5>
+        <p class="description">
+          Se tendrá que hacer una pequeña aplicación de escritorio como proyecto final. El tema queda a elección del estudiante.
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Unidades y Video -->
+    <mat-card class="video-section">
+      <mat-card-header>
+        <mat-card-title>Unidades:</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="video-container">
+          <iframe
+          width="300"
+          height="200"
+          src="https://www.youtube.com/embed/9k91jETchkI"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+
+          <span class="video-title">APRENDE FUNCIONES en PYTHON: def, pass, sintaxis</span>
+        </div>
+
+        <div class="video-container">
+          <iframe
+            width="300"
+            height="200"
+            src="https://www.youtube.com/embed/w53HiWSZnzU"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+
+
+          <span class="video-title">Estructuras de Control de Flujo en Python: if, else, elif, while, for, break, continue</span>
+        </div>
+        <div class="video-container">
+          <iframe
+            width="300"
+            height="200"
+            src="https://www.youtube.com/embed/v25-m1LOUiU"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+
+          <span class="video-title">Estructuras de datos con Python en 8 minutos: Listas, Tuplas, Conjuntos y Diccionarios</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Información del Instructor -->
+  <div class="instructor-section">
+    <h3 class="instructor-title">Conoce quién enseña el curso de Introducción a Python</h3>
+    <img src="https://avatars.githubusercontent.com/u/1561955?v=4" alt="Instructor" class="instructor-image" />
+    <p>🌟 Frontend Dev</p>
+    <p>💻 Lorem Ipsum!</p>
+    <p>🚑 Tech Enthusiast</p>
+    <p>🙋🏻‍♀️ Teacher</p>
+    <button mat-raised-button color="accent" class="learn-more-button">Conoce más</button>
+  </div>
+
+  <!-- Sección de Reconocimiento -->
+  <div class="recognition-section">
+    <img src="https://marketplace.canva.com/EAFQNGff-B8/1/0/1600w/canva-certificado-de-reconocimiento-simple-azul-y-amarillo-jVqupEcSv7g.jpg" alt="Reconocimiento" class="recognition-image" />
+    <div class="recognition-text">
+      <h2 class="recognition-title">¡Obtén reconocimiento por tu trabajo!</h2>
+      <p class="recognition-description">Cada vez que completas un curso obtienes un certificado de participación.</p>
+    </div>
+  </div>
+</div>

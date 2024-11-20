@@ -8,8 +8,10 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
 import {MatListItem, MatNavList} from "@angular/material/list";
 import {MatIcon} from "@angular/material/icon";
-import {RouterLink, RouterOutlet} from "@angular/router";
+import {Router, RouterLink, RouterOutlet} from "@angular/router";
 import {LanguageSwitcherComponent} from "../../components/language-switcher/language-switcher.component";
+import {TranslateModule} from "@ngx-translate/core";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-main-page',
@@ -29,10 +31,28 @@ import {LanguageSwitcherComponent} from "../../components/language-switcher/lang
     RouterLink,
     RouterOutlet,
     LanguageSwitcherComponent,
+    TranslateModule,
+    NgIf,
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css'
 })
 export class MainPageComponent {
+  type_user = 2;
 
+  ngOnInit() {
+    this.type_user = Number(sessionStorage.getItem('type_user'));
+  }
+
+  constructor(private router: Router) {
+  }
+
+  public logout() {
+    sessionStorage.removeItem('email');
+    sessionStorage.removeItem('password');
+    sessionStorage.removeItem('type_user');
+    sessionStorage.removeItem('type_plan');
+    sessionStorage.removeItem('id');
+    this.router.navigate(['/mainToolbar/home']);
+  }
 }

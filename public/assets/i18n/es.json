@@ -12,10 +12,201 @@
     "choosePlan": "Elegir plan",
     "learner": "Alumno"
   },
+  "cardPayment": {
+    "myPayment": "Realice su pago",
+    "nameCard": "Nombre en la tarjeta",
+    "numberCard": "Número de tarjeta",
+    "eDate": "Fecha de vencimiento (MM/AA)",
+    "sCode": "Código de seguridad (CVC)",
+    "email": "Correo electrónico",
+    "pay": "Pagar",
+    "cancel": "Cancelar"
+  },
+  "paymentSuccessful": {
+    "title": "Pago Exitoso",
+    "thankYouMessage": "¡Gracias por contar con nosotros!",
+    "subscriptionBenefits": "Tendrás acceso a nuevos beneficios con tu nueva suscripción. Aprovecha y sigue estudiando con LearnE.",
+    "goToPlans": "Ir a planes",
+    "firstMessage": "¡Gracias por unirte a Learn.E! Tu subscripción ha sido confirmada con éxito",
+    "enter": "Ingresar"
+  },
   "exams": {
     "exam": "Examen",
     "minutes": "minutos",
     "aRemaining": "intentos restantes",
-    "send": "Enviar"
+    "send": "Enviar",
+    "rAnswer": "Escribe tu respuesta"
+  },
+  "courseRegistration": {
+    "opinions": "Opiniones",
+    "join": "Unirse",
+    "publishedDate": "Publicado",
+    "description": "Descripción"
+  },
+  "courses": {
+    "course": "Cursos",
+    "course1": "Curso",
+    "courses": "Mis cursos",
+    "rating": "Deja tu calificación",
+    "leave": "Ir a Mis Cursos",
+    "unit": "Unidad",
+    "section": "Sección",
+    "exam": "Exámen",
+    "description": "Descripción general",
+    "tutorials": "Tutorías",
+    "materials": "Materiales Extras",
+    "ratings": "Valoraciones",
+    "content": "Editar contenido",
+    "update": "Actualizar Curso"
+  },
+  "mainPage": {
+    "courses": "Mis Cursos",
+    "management": "Gestión de Cursos",
+    "calendar": "Calendario",
+    "plans": "Planes",
+    "profile": "Perfil",
+    "logOut": "Cerrar Sesión",
+    "grades": "Calificaciones",
+    "catalog": "Catálogo"
+  },
+  "tutoring": {
+    "res": "Tutorías reservadas",
+    "dis": "Tutorías disponibles",
+    "register": "Inscribirse",
+    "reserved": "Reservado",
+    "enter": "Ingresar",
+    "free": "Ahora no puedes acceder a este contenido. Prueba nuestro plan Premium para el acceso"
+  },
+  "profile": {
+    "teacher": "Profesor",
+    "student": "Estudiante",
+    "information": "Información",
+    "fullName": "Nombre completo",
+    "username": "Nombre de usuario",
+    "email": "Correo",
+    "typePlan": "Tipo de plan",
+    "free": "Gratis",
+    "premium": "Premium",
+    "nothing": "Ninguno"
+  },
+  "material": {
+    "sub": "Materiales Extras",
+    "free": "Ahora no puedes acceder a este contenido. Prueba nuestro plan Premium para el acceso",
+    "enter": "Ingresar",
+    "delete": "Eliminar"
+  },
+  "grades": {
+    "course": "Curso",
+    "exam": "Examen",
+    "grades": "Calificaciones",
+    "yhnScore": "No tienes calificaciones"
+  },
+  "courseDetails": {
+    "register": "Inscribirse",
+    "content": "Contenido y Recursos",
+    "features": "Características del Curso",
+    "prior": "Conocimientos Previos",
+    "presentation": "Presentación",
+    "who": "Conoce quién enseña el curso de"
+  },
+  "tutorialsManagement": {
+    "tutoring": "Tutorías",
+    "date": "Fecha",
+    "hour": "Hora",
+    "state": "Estado",
+    "add": "Añadir",
+    "rTutorials": "Tutoriales reservados",
+    "uTutorials": "Tutoriales no reservados",
+    "reserved": "Reservado",
+    "unreserved": "No reservado",
+    "student": "Estudiante",
+    "link": "Enlace",
+    "update": "Actualizar",
+    "cancel": "Cancelar",
+    "uLink": "Actualizar link"
+  },
+  "editExam": {
+    "title": "Título del Examen",
+    "question": "Pregunta",
+    "answer": "Respuesta",
+    "correct": "Correcta",
+    "add": "Agregar Pregunta",
+    "cancel": "Cancelar",
+    "save": "Guardar Examen"
+  },
+  "editSection": {
+    "title": "Título",
+    "description": "Descripción",
+    "video": "URL del Video",
+    "add": "Agregar Sección",
+    "cancel": "Cancelar Sección"
+  },
+  "editUnit": {
+    "add": "Agregar Unidad",
+    "cancel": "Cancelar Unidad"
+  },
+  "addCourse": {
+    "title": "Título",
+    "description": "Descripción",
+    "level": "Nivel",
+    "duration": "Duración",
+    "prior": "Conocimientos Previos",
+    "image": "Imagen",
+    "video": "Video",
+    "save": "Guardar Curso",
+    "cancel": "Cancelar Curso"
+  },
+  "landingPage": {
+    "title": "La forma divertida, efectiva y gratuita de aprender",
+    "subtitle": "¡Haz que aprender sea divertido!",
+    "register": "Comienza Ahora",
+    "login": "Iniciar Sesion",
+    "institutes": "Instituciones afiliadas"
+  },
+  "signIn": {
+    "title": "Iniciar Sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "enter": "Ingresar",
+    "forgot": "¿Olvidaste tu contraseña?"
+  },
+  "register": {
+    "title": "Registrarse en Learn.E",
+    "name": "Nombre",
+    "lastName": "Apellido",
+    "username": "Usuario",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "choose": "Escoge tu rol",
+    "teacher": "Profesor",
+    "student": "Estudiante",
+    "create": "Crear cuenta",
+    "have": "¿Ya tienes una cuenta?",
+    "signIn": "Inicia sesión aquí"
+  },
+  "subscriptions": {
+    "title": "Nuestros Planes y Precios",
+    "subtitle": "Actualiza para desbloquear acceso a videos educativos, repositorios colaborativos y mucho más",
+    "subscribe": "Subscribirme",
+    "nameFree": "Plan Free",
+    "costFree": "S/.0 al mes",
+    "namePremium": "Plan Learn.E",
+    "costPremium": "S/.20 al mes"
+  },
+  "payment": {
+    "title": "Añadir Pago por Tarjeta",
+    "titular": "Nombre del Titular",
+    "number": "Número de la Tarjeta",
+    "date": "Fecha de Expiración (MM/AA)",
+    "code": "Código de Seguridad (CVC)",
+    "email": "Correo electrónico",
+    "paid": "Pagar"
+  },
+  "materialAdd": {
+    "title": "Título",
+    "format": "Formato",
+    "link": "Enlace",
+    "create": "Añadir material",
+    "cancel": "Cancelar material"
   }
 }

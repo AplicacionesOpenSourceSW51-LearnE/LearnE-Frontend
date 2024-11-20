@@ -6,6 +6,16 @@ import {NgForOf, NgIf} from "@angular/common";
 import {CourseService} from "../../../learning/services/course.service";
 import {Course} from "../../../learning/model/course.entity";
 import {Router, RouterLink, RouterOutlet} from "@angular/router";
+import {MatDialog } from "@angular/material/dialog";
+import {RatingDialogComponent} from "../rating-dialog/rating-dialog.component";
+import {TranslateModule} from "@ngx-translate/core";
+import {LanguageSwitcherComponent} from "../../components/language-switcher/language-switcher.component";
+import {Unit} from "../../../learning/model/unit.entity";
+import {UnitService} from "../../../learning/services/unit.service";
+import {SectionService} from "../../../learning/services/section.service";
+import {Section} from "../../../learning/model/section.entity";
+import {ExamService} from "../../../learning/services/exam.service";
+import {Exam} from "../../../learning/model/exam.entity";
 
 @Component({
   selector: 'app-course-sidenav',
@@ -20,16 +30,24 @@ import {Router, RouterLink, RouterOutlet} from "@angular/router";
     NgIf,
     NgForOf,
     RouterLink,
-    RouterOutlet
+    RouterOutlet,
+    RatingDialogComponent,
+    TranslateModule,
+    LanguageSwitcherComponent
   ],
   templateUrl: './course-sidenav.component.html',
   styleUrl: './course-sidenav.component.css'
 })
 export class CourseSidenavComponent implements OnInit{
-  selectedCourse: Course | null = null
+  selectedCourse: Course | null = null;
+  units: Array<Unit> = [];
+  sections: Array<Section> = [];
+  exams: Array<Exam> = [];
   openedUnits: Set<number> = new Set();
 
-  constructor(private courseService: CourseService, private router: Router) {
+  constructor(private courseService: CourseService, private router: Router, private dialog: MatDialog,
+              private unitService: UnitService, private sectionService: SectionService,
+              private examService: ExamService) {
   }
 
   ngOnInit(): void {
@@ -37,6 +55,42 @@ export class CourseSidenavComponent implements OnInit{
     if (this.selectedCourse) {
       console.log('Selected course:', this.selectedCourse);
     }
+    this.getAllUnits();
+    this.getAllSections();
+    this.getAllExams();
+  }
+
+  private getAllUnits() {
+    this.unitService.getAll().subscribe((response: Array<Unit>) => {
+      this.units = response.filter(unit => unit.course_id == this.selectedCourse?.id);
+      console.log(this.units);
+    })
+  }
+
+  private getAllSections() {
+    this.sectionService.getAll().subscribe((response: Array<Section>) => {
+      const unitIds = this.units.map(unit => unit.id);
+      this.sections = response.filter(section => unitIds.includes(section.unit_id));
+      console.log(this.sections);
+    })
+  }
+
+  private getAllExams() {
+    this.examService.getAll().subscribe((response: Array<Exam>) => {
+      const unitIds = this.units.map(unit => unit.id);
+      this.exams = response.filter(exam => unitIds.includes(exam.unit_id));
+      console.log(this.exams);
+    })
+  }
+
+  openRatingDialog(): void {
+    const dialogRef = this.dialog.open(RatingDialogComponent);
+
+    dialogRef.afterClosed().subscribe(rating => {
+      if (rating) {
+        console.log('Calificación recibida: ', rating);
+      }
+    });
   }
 
   toggleUnit(unitId: number) {
@@ -53,5 +107,23 @@ export class CourseSidenavComponent implements OnInit{
 
   navigateToVideo(sectionId: number) {
     this.router.navigate(['/courseSidenav/courseVideo'], { queryParams: { id: sectionId } });
+  }
+
+  navigateToExam(examId: number) {
+    this.router.navigate(['/courseSidenav/exam'], { queryParams: { id: examId } });
+  }
+
+  navigateToTutoring() {
+    if (this.selectedCourse) {
+      this.router.navigate(['/courseSidenav/tutoring'], { queryParams: { id: this.selectedCourse.id } });
+    } else {
+      console.error('No selected course');
+    }
+  }
+
+  navigateToMaterial() {
+    if (this.selectedCourse) {
+      this.router.navigate(['/courseSidenav/material'], {queryParams: {id: this.selectedCourse.id}});
+    }
   }
 }

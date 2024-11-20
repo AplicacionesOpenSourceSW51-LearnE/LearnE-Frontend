@@ -1,0 +1,50 @@
+<div class="container">
+  <div *ngIf="studentPlan === 1" class="premium-part">
+    <h3 class="mat-subtitle-1"><b>{{ 'tutoring.res' | translate }}</b></h3>
+    <mat-card class="tutoring-card" *ngFor="let reserved of tutorialResInfo">
+      <mat-card-header>
+        <mat-card-title>
+          {{reserved.date}}
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-subtitle>{{reserved.hour}}</mat-card-subtitle>
+      </mat-card-content>
+      <div class="actions">
+      <span class="reserved">
+        {{ 'tutoring.reserved' | translate }}
+      </span>
+      </div>
+      <div class="actions">
+        <button *ngIf="reserved.link != ''"
+                mat-raised-button
+                color="primary"
+                (click)="enterLink(reserved.id)">{{ 'tutoring.enter' | translate }}</button>
+      </div>
+    </mat-card>
+    <h3 class="mat-subtitle-1"><b>{{ 'tutoring.dis' | translate }}</b></h3>
+    <mat-card class="tutoring-card" *ngFor="let tutorial of tutoring">
+      <mat-card-header>
+        <mat-card-title>
+          {{tutorial.date}}
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-subtitle>{{tutorial.hour}}</mat-card-subtitle>
+      </mat-card-content>
+      <div class="actions">
+        <button mat-raised-button
+                color="primary"
+                (click)="registerTutorial(tutorial.id, studentId)">
+          {{ 'tutoring.register' | translate }}
+        </button>
+      </div>
+    </mat-card>
+  </div>
+  <div *ngIf="studentPlan === 0" class="free-part">
+    <p><b>{{ 'tutoring.free' | translate }}</b></p>
+    <div class="buttons">
+      <a mat-raised-button color="primary" class="subscription" routerLink="/mainPage/plans">{{ 'tutoring.enter' | translate }}</a>
+    </div>
+  </div>
+</div>

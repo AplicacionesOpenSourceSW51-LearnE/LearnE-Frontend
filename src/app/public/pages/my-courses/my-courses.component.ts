@@ -4,6 +4,9 @@ import {CourseService} from "../../../learning/services/course.service";
 import {MatCard, MatCardContent, MatCardHeader, MatCardImage, MatCardTitle} from "@angular/material/card";
 import {NgForOf} from "@angular/common";
 import {Router} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
+import {CoursesEnrollmentService} from "../../../learning/services/courses-enrollment.service";
+import {CoursesEnrollment} from "../../../learning/model/courses-enrollment.entity";
 
 @Component({
   selector: 'app-my-courses',
@@ -14,13 +17,15 @@ import {Router} from "@angular/router";
     MatCardImage,
     MatCardContent,
     MatCardTitle,
-    NgForOf
+    NgForOf,
+    TranslateModule
   ],
   templateUrl: './my-courses.component.html',
   styleUrl: './my-courses.component.css'
 })
 export class MyCoursesComponent implements OnInit{
   private courseService: CourseService = inject(CourseService);
+  private courseEnrollmentService: CoursesEnrollmentService = inject(CoursesEnrollmentService);
   protected dataSource!: Array<any>;
 
   constructor(private router: Router) {
@@ -28,13 +33,22 @@ export class MyCoursesComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.getAllCourses();
+    this.getAllCoursesEnrollment();
   }
 
-  private getAllCourses() {
+  private getAllCourses(enrolledCourses: Array<CoursesEnrollment>) {
+    const courseIds = enrolledCourses.map(enrollment => enrollment.course_id);
     this.courseService.getAll().subscribe((response: Array<Course>) => {
-      this.dataSource = response;
-      console.log(response);
+      this.dataSource = response.filter(course => courseIds.includes(course.id));
+      console.log(this.dataSource);
+    })
+  }
+
+  private getAllCoursesEnrollment() {
+    this.courseEnrollmentService.getAll().subscribe((response: Array<CoursesEnrollment>) => {
+      let enrolledCourses = response.filter(enrollment =>
+          enrollment.student_id === Number(sessionStorage.getItem('id')));
+      this.getAllCourses(enrolledCourses);
     })
   }
 

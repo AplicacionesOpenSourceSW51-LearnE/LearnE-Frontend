@@ -1,0 +1,25 @@
+<div class="title-container">
+  <h1 class="main-title">{{ 'grades.grades' | translate}}</h1>
+</div>
+
+<div *ngIf="gradesStudents.length != 0">
+  <mat-card *ngFor="let gradeStudent of gradesStudents">
+    <mat-card-header>
+      {{ 'grades.course' | translate}}: {{gradeStudent.nameCourse}}
+      <hr>
+    </mat-card-header>
+    <mat-card-content>
+      <div>
+        <mat-icon>assignment</mat-icon>
+        {{ 'grades.exam' | translate}}: {{gradeStudent.nameExam}}
+      </div>
+      <div class="score">
+        {{gradeStudent.score}} / 20
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div *ngIf="gradesStudents.length == 0">
+  <h3 class="message">{{ 'grades.yhnScore' | translate}}</h3>
+</div>

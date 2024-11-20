@@ -1,27 +1,34 @@
-
 <mat-card class="exam-container">
 
   <mat-card-header class="exam-header-container">
-    <mat-card-title class="title">{{ 'exams.exam' | translate}} #: Nombre del examen</mat-card-title>
-    <mat-card-subtitle class="detail-container">
-      <p class="detail-left"><mat-icon>access_time</mat-icon># {{ 'exams.minutes' | translate}}</p>
-      <p class="detail-right"># {{ 'exams.aRemaining' | translate}}</p>
-    </mat-card-subtitle>
+    <div class="grade" [ngClass]="{'passed-grade': displayNote > 0, 'default-grade': displayNote === 0}">
+      {{displayNote}} / 20
+    </div>
+    <mat-card-title class="title">{{ 'exams.exam' | translate}}: {{exam?.title}}</mat-card-title>
   </mat-card-header>
 
   <mat-card-content class="exam-content-container">
     <div class="exam-content">
-      <p>#. pregunta</p>
-
-      <mat-form-field class="input" appearance="fill">
-        <mat-label>Escribe tu respuesta aquí</mat-label>
-        <input matInput placeholder="Escribe tu respuesta" required>
-      </mat-form-field>
+        <div *ngFor="let question of questions; let i = index">
+            <p class="question">{{question.id}}. {{question.question}}</p>
+          <div *ngFor="let answer of answers">
+            <div *ngIf="answer.question_id == question.id">
+              <mat-radio-group
+                [(ngModel)]="selectedAnswers[i]"
+                aria-labelledby="user-radio-group-label"
+                [disabled]="examSend">
+                <mat-radio-button [value]="answer.id" class="option">{{answer.description}}</mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </div>
+        </div>
     </div>
   </mat-card-content>
 
   <mat-card-actions class="button-container">
-    <button class="button" mat-button>{{ 'exams.send' | translate}}</button>
+    <button class="button" (click)="calculateScore()" [disabled]="examSend">
+      {{ 'exams.send' | translate}}
+    </button>
   </mat-card-actions>
 </mat-card>
 

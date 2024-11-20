@@ -1,7 +1,7 @@
 .sidenav-container {
   position: absolute;
-  top: 60px;
   bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
 }
@@ -35,4 +35,25 @@ a {
 
 .options-list {
   padding-bottom: 50px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.options-list mat-list-item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.options-list mat-list-item a {
+  display: flex;
+  width: 100%;
 }

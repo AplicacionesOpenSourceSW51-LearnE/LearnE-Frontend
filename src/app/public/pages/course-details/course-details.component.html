@@ -1,0 +1,57 @@
+<div class="course-details-container">
+  <mat-card class="course-card">
+    <div class="course-wrapper">
+      <div class="course-info">
+        <mat-card-title>{{ this.selectedCourse?.title }}</mat-card-title>
+        <div class="rating-info">
+          <span>{{ this.selectedCourse?.level }}</span>
+        </div>
+        <mat-card-subtitle class="course-description">{{ this.selectedCourse?.description }}</mat-card-subtitle>
+        <button
+          mat-raised-button color="primary"
+          class="enroll-button"
+          (click)="addEnrollmentCourse()"
+          [disabled]="isEnrolled">{{ 'courseDetails.register' | translate }}</button>
+      </div>
+      <img class="side-image" [src]="this.selectedCourse?.principal_image" alt="{{this.selectedCourse?.title}}" />
+    </div>
+  </mat-card>
+  <div class="content-section">
+    <h3 class="content-title"><b>{{ 'courseDetails.content' | translate }}</b></h3>
+    <div class="content-grid">
+      <mat-card class="course-features">
+        <mat-card-header>
+          <mat-card-title>{{ 'courseDetails.features' | translate }}:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="feature">
+            <mat-icon class="icon">hourglass_empty</mat-icon>
+            <span class="feature-text">{{this.selectedCourse?.duration}}</span>
+          </div>
+          <div class="feature">
+            <mat-icon class="icon">fitness_center</mat-icon>
+            <span class="feature-text">{{'courses.exam' | translate}}: {{this.exams.length}}</span>
+          </div>
+          <mat-card-title>{{ 'courseDetails.prior' | translate }}:</mat-card-title>
+          <p>{{this.selectedCourse?.prior_knowledge}}</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="video-section">
+        <mat-card-header>
+          <mat-card-title>{{ 'courseDetails.presentation' | translate }}:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <iframe [src]="safeUrl(this.selectedCourse?.url_video || '')" width="300" height="200" allowfullscreen></iframe>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="instructor-section">
+      <h3 class="instructor-title">{{ 'courseDetails.who' | translate }} {{this.selectedCourse?.title}}</h3>
+      <img class="instructor-image" height="80px" width="80px" src="assets/img/profile-picture.png" alt="teacher image"  />
+      <h3 class="instructor-center">{{teachers?.firstName}} {{teachers?.lastName}}</h3>
+    </div>
+  </div>
+</div>
+

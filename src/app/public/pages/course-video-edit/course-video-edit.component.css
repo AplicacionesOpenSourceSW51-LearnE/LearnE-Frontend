@@ -1,0 +1,53 @@
+.video-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: 1rem;
+}
+
+.video-content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.video-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+iframe, video {
+  width: 100%;
+  height: 70%;
+}
+
+.tab-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.tab-group {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.description-content {
+  margin-top: 5px;
+  font-weight: bolder;
+}
+
+.update-button {
+  margin-top: 10px;
+  align-self: flex-start;
+}

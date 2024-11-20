@@ -1,0 +1,100 @@
+.course-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+}
+
+.course-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.course-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  text-align: left;
+  margin: auto;
+}
+
+.enroll-button {
+  margin-top: 20px;
+  align-self: flex-start;
+}
+
+.side-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin-left: 20px;
+}
+
+.rating-info {
+  padding: 0.5rem;
+  width: 15%;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: rgb(150,0,205,0.5);
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content-section {
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.content-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.course-features {
+  width: 50%;
+  height: 17rem;
+  text-align: left;
+}
+
+.video-section {
+  width: 50%;
+  height: 17rem;
+  text-align: left;
+}
+
+.video-section.content {
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+.instructor-section {
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+.instructor-title, .instructor-center {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 20px;
+  margin-right: 0.5rem;
+}
