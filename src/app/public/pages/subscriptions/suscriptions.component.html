@@ -2,42 +2,42 @@
   <div class="our-plans-container">
     <mat-card class="our-plans">
       <mat-card-header>
-        <mat-card-title>Nuestros Planes y Precios</mat-card-title>
-        <mat-card-subtitle>Actualiza para desbloquear acceso a videos educativos, repositorios colaborativos y mucho más</mat-card-subtitle>
+        <mat-card-title>{{'subscriptions.title'|translate}}</mat-card-title>
+        <mat-card-subtitle>{{'subscriptions.subtitle'|translate}}</mat-card-subtitle>
       </mat-card-header>
     </mat-card>
   </div>
   <div class="plans-container">
     <mat-card class="plan">
       <mat-card-header>
-        <mat-card-title>Plan Free</mat-card-title>
-        <mat-card-subtitle>S/.0 al mes</mat-card-subtitle>
+        <mat-card-title>{{'subscriptions.nameFree'|translate}}</mat-card-title>
+        <mat-card-subtitle>{{'subscriptions.costFree'|translate}}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
         <ul>
-          <li><mat-icon>assignment_late</mat-icon> Máximo 3 cursos inscritos al mes</li>
-          <li><mat-icon>assignment_ind</mat-icon> Sin tutorías personalizadas</li>
-          <li><mat-icon>folder</mat-icon> Sin acceso a material extra</li>
+          <li><mat-icon>assignment_late</mat-icon> {{'allPlans.f1Characteristic'|translate}}</li>
+          <li><mat-icon>assignment_ind</mat-icon> {{'allPlans.f2Characteristic'|translate}}</li>
+          <li><mat-icon>folder</mat-icon> {{'allPlans.f3Characteristic'|translate}}</li>
         </ul>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-raised-button color="primary" (click)="updatePlan(Plan.FREE)" routerLink="/mainPage">Suscribirme</button>
+        <button mat-raised-button color="primary" (click)="updatePlan(Plan.FREE)" routerLink="/mainPage">{{'subscriptions.subscribe'|translate}}</button>
       </mat-card-actions>
     </mat-card>
     <mat-card class="plan">
       <mat-card-header>
-        <mat-card-title>Plan Learn.E</mat-card-title>
-        <mat-card-subtitle>S/.20 al mes</mat-card-subtitle>
+        <mat-card-title>{{'subscriptions.namePremium'|translate}}</mat-card-title>
+        <mat-card-subtitle>{{'subscriptions.costPremium'|translate}}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
         <ul>
-          <li><mat-icon>assignment_turned_in</mat-icon> Inscríbete a cursos ilimitados</li>
-          <li><mat-icon>assignment_ind</mat-icon> Tutorías personalizadas</li>
-          <li><mat-icon>folder</mat-icon> Acceso a material extra</li>
+          <li><mat-icon>assignment_turned_in</mat-icon> {{'allPlans.p1Characteristic'|translate}}</li>
+          <li><mat-icon>assignment_ind</mat-icon> {{'allPlans.p2Characteristic'|translate}}</li>
+          <li><mat-icon>folder</mat-icon> {{'allPlans.p3Characteristic'|translate}}</li>
         </ul>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-raised-button color="primary" (click)="updatePlan(Plan.PREMIUM)" routerLink="/payment">Suscribirme</button>
+        <button mat-raised-button color="primary" (click)="updatePlan(Plan.PREMIUM)" routerLink="/payment">{{'subscriptions.subscribe'|translate}}</button>
       </mat-card-actions>
     </mat-card>
   </div>

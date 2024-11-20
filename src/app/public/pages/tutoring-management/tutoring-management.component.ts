@@ -54,6 +54,7 @@ export class TutoringManagementComponent {
 
   ngOnInit() {
     this.getCourseId();
+    console.log(this.courseId);
     this.getTutorials();
   }
 

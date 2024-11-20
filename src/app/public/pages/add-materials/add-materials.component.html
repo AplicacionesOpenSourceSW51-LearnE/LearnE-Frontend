@@ -1,0 +1,17 @@
+<div class="title-container">
+  <h1 class="title">{{'courses.materials' | translate }}</h1>
+</div>
+<div class="form">
+  <div class="input-content">
+    <mat-label class="label">{{'materialAdd.title'|translate}}:</mat-label>
+    <input [(ngModel)]="material.title" class="input" matInput name="title" placeholder="{{'materialAdd.title'|translate}}" required>
+    <mat-label class="label">{{'materialAdd.format'|translate}}:</mat-label>
+    <input [(ngModel)]="material.format" class="input" matInput name="format" placeholder="{{'materialAdd.format'|translate}}" required>
+    <mat-label class="label">{{'materialAdd.link'|translate}}:</mat-label>
+    <input [(ngModel)]="material.link" class="input" matInput name="link" placeholder="{{'materialAdd.link'|translate}}" required>
+  </div>
+  <div class="question-container">
+    <button class="button" (click)="addNewMaterial()">{{'materialAdd.create'|translate}}</button>
+    <button class="button" (click)="cancelMaterial()">{{'materialAdd.cancel'|translate}}</button>
+  </div>
+</div>

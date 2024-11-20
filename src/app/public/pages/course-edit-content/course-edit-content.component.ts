@@ -119,4 +119,10 @@ export class CourseEditContentComponent {
       }
     });
   }
+
+  navigateToMaterial() {
+    if (this.selectedCourse) {
+      this.router.navigate(['/courseEditContent/materialEdit'], {queryParams: {id: this.selectedCourse.id}});
+    }
+  }
 }

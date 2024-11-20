@@ -2,7 +2,6 @@
   <div class="header">
     <span class="selectedCourse">{{ selectedCourse?.title }}</span>
     <span class="spacer"></span>
-    <button mat-raised-button color="primary">{{'courses.update' | translate}}</button>
     <button mat-raised-button color="primary" routerLink="/mainPage/management">{{'courses.leave' | translate}}</button>
     <div class="button-language-container">
       <app-language-switcher></app-language-switcher>
@@ -35,6 +34,11 @@
           </div>
         </div>
         <mat-icon class="add-icon" (click)="addUnit()">add_circle</mat-icon>
+        <div class="material-extras-part">
+          <mat-list-item (click)="navigateToMaterial()">
+            {{ 'courses.materials' | translate }}
+          </mat-list-item>
+        </div>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content class="content">

@@ -26,7 +26,9 @@
     "title": "Pago Exitoso",
     "thankYouMessage": "¡Gracias por contar con nosotros!",
     "subscriptionBenefits": "Tendrás acceso a nuevos beneficios con tu nueva suscripción. Aprovecha y sigue estudiando con LearnE.",
-    "goToPlans": "Ir a planes"
+    "goToPlans": "Ir a planes",
+    "firstMessage": "¡Gracias por unirte a Learn.E! Tu subscripción ha sido confirmada con éxito",
+    "enter": "Ingresar"
   },
   "exams": {
     "exam": "Examen",
@@ -90,7 +92,8 @@
   "material": {
     "sub": "Materiales Extras",
     "free": "Ahora no puedes acceder a este contenido. Prueba nuestro plan Premium para el acceso",
-    "enter": "Ingresar"
+    "enter": "Ingresar",
+    "delete": "Eliminar"
   },
   "grades": {
     "course": "Curso",
@@ -152,5 +155,58 @@
     "video": "Video",
     "save": "Guardar Curso",
     "cancel": "Cancelar Curso"
+  },
+  "landingPage": {
+    "title": "La forma divertida, efectiva y gratuita de aprender",
+    "subtitle": "¡Haz que aprender sea divertido!",
+    "register": "Comienza Ahora",
+    "login": "Iniciar Sesion",
+    "institutes": "Instituciones afiliadas"
+  },
+  "signIn": {
+    "title": "Iniciar Sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "enter": "Ingresar",
+    "forgot": "¿Olvidaste tu contraseña?"
+  },
+  "register": {
+    "title": "Registrarse en Learn.E",
+    "name": "Nombre",
+    "lastName": "Apellido",
+    "username": "Usuario",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "choose": "Escoge tu rol",
+    "teacher": "Profesor",
+    "student": "Estudiante",
+    "create": "Crear cuenta",
+    "have": "¿Ya tienes una cuenta?",
+    "signIn": "Inicia sesión aquí"
+  },
+  "subscriptions": {
+    "title": "Nuestros Planes y Precios",
+    "subtitle": "Actualiza para desbloquear acceso a videos educativos, repositorios colaborativos y mucho más",
+    "subscribe": "Subscribirme",
+    "nameFree": "Plan Free",
+    "costFree": "S/.0 al mes",
+    "namePremium": "Plan Learn.E",
+    "costPremium": "S/.20 al mes"
+  },
+  "payment": {
+    "title": "Añadir Pago por Tarjeta",
+    "titular": "Nombre del Titular",
+    "number": "Número de la Tarjeta",
+    "date": "Fecha de Expiración (MM/AA)",
+    "code": "Código de Seguridad (CVC)",
+    "email": "Correo electrónico",
+    "paid": "Pagar"
+  },
+  "materialAdd": {
+    "title": "Título",
+    "format": "Formato",
+    "link": "Enlace",
+    "create": "Añadir material",
+    "cancel": "Cancelar material"
   }
 }

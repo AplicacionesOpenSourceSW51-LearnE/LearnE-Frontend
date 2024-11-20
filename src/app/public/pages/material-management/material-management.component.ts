@@ -2,34 +2,33 @@ import { Component } from '@angular/core';
 import {Material} from "../../../learning/model/material.entity";
 import {ActivatedRoute, RouterLink} from "@angular/router";
 import {MaterialsService} from "../../../learning/services/materials.service";
-import {NgForOf, NgIf} from "@angular/common";
-import {MatCard, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardTitle} from "@angular/material/card";
 import {MatAnchor, MatButton} from "@angular/material/button";
+import {MatCard, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardTitle} from "@angular/material/card";
+import {NgForOf, NgIf} from "@angular/common";
 import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-course-material',
+  selector: 'app-material-management',
   standalone: true,
   imports: [
-    NgIf,
+    MatAnchor,
+    MatButton,
     MatCard,
+    MatCardContent,
     MatCardHeader,
+    MatCardSubtitle,
     MatCardTitle,
     NgForOf,
-    MatCardContent,
-    MatCardSubtitle,
-    MatButton,
-    TranslateModule,
-    MatAnchor,
-    RouterLink
+    NgIf,
+    RouterLink,
+    TranslateModule
   ],
-  templateUrl: './course-material.component.html',
-  styleUrl: './course-material.component.css'
+  templateUrl: './material-management.component.html',
+  styleUrl: './material-management.component.css'
 })
-export class CourseMaterialComponent {
+export class MaterialManagementComponent {
   courseId: number | null = null;
   materials: Array<Material> = [];
-  studentType = Number(sessionStorage.getItem('type_plan'));
 
   constructor(private route: ActivatedRoute, private materialService: MaterialsService) {
   }
@@ -51,13 +50,16 @@ export class CourseMaterialComponent {
     }
   }
 
-  enterLink(materialId: number) {
+  deleteMaterial(materialId: number) {
     const material = this.materials.find(mat => mat.id === materialId);
-    if (material && material.link != '') {
-      console.log(material.link);
-      window.open(material.link, '_blank');
-    } else {
-      console.warn('Material invalid link');
-    }
+    this.materialService.delete(material?.id).subscribe({
+      next: (response) => {
+        alert("Material deleted successfully.");
+      },
+      error: (err) => {
+        alert("Error deleting material.");
+        console.error(err);
+      }
+    });
   }
 }

@@ -26,7 +26,9 @@
     "title": "Payment Successful",
     "thankYouMessage": "Thank you for choosing us!",
     "subscriptionBenefits": "You will have access to new benefits with your new subscription. Take advantage and continue learning with LearnE.",
-    "goToPlans": "Go to plans"
+    "goToPlans": "Go to plans",
+    "firstMessage": "Thank you for joining Learn.E! Your subscription has been confirmed successfully",
+    "enter": "Enter"
   },
   "exams": {
     "exam": "Exam",
@@ -90,7 +92,8 @@
   "material": {
     "sub": "Extra Materials",
     "free": "Now you cannot access this content. Try our Premium Plan for access",
-    "enter": "Enter"
+    "enter": "Enter",
+    "delete": "Delete"
   },
   "grades": {
     "course": "Course",
@@ -152,5 +155,58 @@
     "video": "Video",
     "save": "Save Course",
     "cancel": "Cancel Course"
+  },
+  "landingPage": {
+    "title": "The fun, effective and free way to learn",
+    "subtitle": "Make learning fun!",
+    "register": "Start Now",
+    "login": "Login",
+    "institutes": "Affiliated institutions"
+  },
+  "signIn": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "enter": "Enter",
+    "forgot": "Forgot your password?"
+  },
+  "register": {
+    "title": "Register on Learn.E",
+    "name": "First Name",
+    "lastName": "Last Name",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "choose": "Choose your role",
+    "teacher": "Teacher",
+    "student": "Student",
+    "create": "Create account",
+    "have": "Do you already have an account?",
+    "signIn": "Log in here"
+  },
+  "subscriptions": {
+    "title": "Our Plans and Prices",
+    "subtitle": "Upgrade to unlock access to educational videos, collaborative repositories, and more",
+    "subscribe": "Subscribe",
+    "nameFree": "Free Plan",
+    "costFree": "S/.0 per month",
+    "namePremium": "Learn.E Plan",
+    "costPremium": "S/.20 per month"
+  },
+  "payment": {
+    "title": "Add Payment by Card",
+    "titular": "Owner's Name",
+    "number": "Card Number",
+    "date": "Expiration Date (MM/YY)",
+    "code": "Security Code (CVC)",
+    "email": "Email",
+    "paid": "Pay"
+  },
+  "materialAdd": {
+    "title": "Title",
+    "format": "Format",
+    "link": "Link",
+    "create": "Add material",
+    "cancel": "Cancel material"
   }
 }
