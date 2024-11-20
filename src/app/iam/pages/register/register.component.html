@@ -6,25 +6,25 @@
     <mat-card-content>
       <form class="sign-up-form">
         <mat-form-field appearance="fill" >
-          <input [(ngModel)]="user.firstName" matInput name="firstName" placeholder="Nombre" required>
+          <input [(ngModel)]="firstName" matInput name="firstName" placeholder="Nombre" required>
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <input [(ngModel)]="user.lastName" matInput name="lastName" placeholder="Apellido" required>
+          <input [(ngModel)]="lastName" matInput name="lastName" placeholder="Apellido" required>
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <input [(ngModel)]="user.username" matInput name="username" placeholder="Usuario" required>
+          <input [(ngModel)]="username" matInput name="username" placeholder="Usuario" required>
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <input [(ngModel)]="user.email" matInput name="email" placeholder="Correo electrónico" required>
+          <input [(ngModel)]="email" matInput name="email" placeholder="Correo electrónico" required>
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <input [(ngModel)]="user.password" matInput type="password" name="password" placeholder="Contraseña" required>
+          <input [(ngModel)]="password" matInput type="password" name="password" placeholder="Contraseña" required>
         </mat-form-field>
         <label id="user-radio-group-label">Escoge tu rol</label>
         <mat-radio-group
           aria-labelledby="user-radio-group-label"
           class="user-radio-group"
-          [(ngModel)]="user.type_user" name="userType">
+          [(ngModel)]="type_user" name="userType">
           <mat-radio-button class="user-radio-button" [value]="UserType.TEACHER">Profesor</mat-radio-button>
           <mat-radio-button class="user-radio-button" [value]="UserType.STUDENT">Alumno</mat-radio-button>
         </mat-radio-group>

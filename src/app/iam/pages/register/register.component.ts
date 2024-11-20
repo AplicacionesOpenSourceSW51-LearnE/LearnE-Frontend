@@ -1,14 +1,16 @@
-import {Component, EventEmitter, inject, Input, Output} from '@angular/core';
+import {Component} from '@angular/core';
 import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
-import {Router, RouterLink} from "@angular/router";
+import {RouterLink} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
-import {User} from "../../../learning/model/user.entity";
-import {UserService} from "../../../learning/services/user.service";
 import {UserType} from "../../../learning/model/user.enum";
+import {BaseFormComponent} from "../../../shared/components/base-form.component";
+import {AuthenticationService} from "../../services/authentication.service";
+import {Plan} from "../../../learning/model/plan.enum";
+import {SignUpRequest} from "../../model/sign-up.request";
 
 @Component({
   selector: 'app-register',
@@ -27,18 +29,27 @@ import {UserType} from "../../../learning/model/user.enum";
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
-export class RegisterComponent {
-  @Input() user!: User;
-  @Output() protected userAddRequested = new EventEmitter<User>();
-  protected UserType = UserType;
+export class RegisterComponent extends BaseFormComponent{
+  submitted = false;
+  firstName: string;
+  lastName: string;
+  username: string;
+  email: string;
+  password: string;
+  type_user = UserType;
+  type_plan: Plan;
 
-  private userService: UserService = inject(UserService);
-
-  constructor(private router: Router) {
-    this.user = new User({});
+  constructor(private authenticationService: AuthenticationService) {
+    super();
+    this.firstName = "";
+    this.lastName = "";
+    this.username = "";
+    this.email = "";
+    this.password = "";
+    this.type_plan = Plan.NOTHING;
   }
 
-  protected async createNewUser(){
+  /*protected async createNewUser(){
     this.userService.create(this.user).subscribe({
       next: (newUser: User) => {
         sessionStorage.setItem('id', String(newUser.id));
@@ -60,5 +71,13 @@ export class RegisterComponent {
       sessionStorage.setItem('type_plan', String(this.user.type_plan));
       this.router.navigate(['/mainPage/management']);
     }
+  }*/
+  createNewUser() {
+    let username = this.username;
+    let password = this.password;
+    const signUpRequest = new SignUpRequest(username, password);
+    this.authenticationService.signUp(signUpRequest);
+    this.submitted = true;
   }
+  protected readonly UserType = UserType;
 }
