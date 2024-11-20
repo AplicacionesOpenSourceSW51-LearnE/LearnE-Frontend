@@ -54,6 +54,7 @@ export class CourseMaterialComponent {
   enterLink(materialId: number) {
     const material = this.materials.find(mat => mat.id === materialId);
     if (material && material.link != '') {
+      console.log(material.link);
       window.open(material.link, '_blank');
     } else {
       console.warn('Material invalid link');

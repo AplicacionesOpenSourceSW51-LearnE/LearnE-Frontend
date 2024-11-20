@@ -33,6 +33,7 @@ import {ExamEditComponent} from "./public/pages/exam-edit/exam-edit.component";
 import {CourseVideoEditComponent} from "./public/pages/course-video-edit/course-video-edit.component";
 import {TutoringManagementComponent} from "./public/pages/tutoring-management/tutoring-management.component";
 import {AddMaterialsComponent} from "./public/pages/add-materials/add-materials.component";
+import {MaterialManagementComponent} from "./public/pages/material-management/material-management.component";
 
 export const routes: Routes = [
   { path: 'mainToolbar', component: MainToolbarComponent, children: [
@@ -64,7 +65,8 @@ export const routes: Routes = [
     ]},
   { path: 'courseEditContent', component: CourseEditContentComponent, children: [
       { path: 'sectionEdit', component: CourseVideoEditComponent },
-      { path: 'examEdit', component: ExamEditComponent }
+      { path: 'examEdit', component: ExamEditComponent },
+      { path: 'materialEdit', component: MaterialManagementComponent}
     ]},
   { path: 'courseSidenav', component: CourseSidenavComponent, children: [
       { path: 'courseVideo', component: CourseVideoComponent },

@@ -7,6 +7,7 @@ import {Plan} from "../../../learning/model/plan.enum";
 import {MatButtonToggle} from "@angular/material/button-toggle";
 import {UserService} from "../../../learning/services/user.service";
 import {User} from "../../../learning/model/user.entity";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-subscriptions',
@@ -16,7 +17,8 @@ import {User} from "../../../learning/model/user.entity";
     MatIconModule,
     MatButtonModule,
     RouterLink,
-    MatButtonToggle
+    MatButtonToggle,
+    TranslateModule
   ],
   templateUrl: './suscriptions.component.html',
   styleUrl: './suscriptions.component.css'

@@ -9,6 +9,7 @@ import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 import {User} from "../../../learning/model/user.entity";
 import {UserService} from "../../../learning/services/user.service";
 import {UserType} from "../../../learning/model/user.enum";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-register',
@@ -21,7 +22,8 @@ import {UserType} from "../../../learning/model/user.enum";
     RouterLink,
     FormsModule,
     MatRadioGroup,
-    MatRadioButton
+    MatRadioButton,
+    TranslateModule
 
   ],
   templateUrl: './register.component.html',

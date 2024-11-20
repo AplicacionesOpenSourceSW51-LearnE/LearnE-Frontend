@@ -4,6 +4,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {RouterLink} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-payment',
@@ -13,7 +14,8 @@ import {RouterLink} from "@angular/router";
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    RouterLink
+    RouterLink,
+    TranslateModule
   ],
   templateUrl: './payment.component.html',
   styleUrl: './payment.component.css'

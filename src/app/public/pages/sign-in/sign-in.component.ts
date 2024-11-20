@@ -9,6 +9,7 @@ import {Router, RouterLink, RouterModule} from "@angular/router";
 import {UserService} from "../../../learning/services/user.service";
 import {User} from "../../../learning/model/user.entity";
 import {Course} from "../../../learning/model/course.entity";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-sign-in',
@@ -21,7 +22,8 @@ import {Course} from "../../../learning/model/course.entity";
     MatInput,
     MatLabel,
     RouterModule,
-    RouterLink
+    RouterLink,
+    TranslateModule
   ],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.css'
